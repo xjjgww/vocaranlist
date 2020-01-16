@@ -4,10 +4,7 @@ function myFunction() {
 }
 
 function myfilter() {
-    // Declare variables
-    var test = "#62";
     var input, i, lines, idd, filteri;
-    // var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById('filterinput').value;
     lines = document.getElementsByTagName('div');
     filteri = 0;
@@ -18,8 +15,6 @@ function myfilter() {
         if(idd.indexOf(input) > -1)
         {
             lines[i].style.display = "";
-            // if(filteri%2==0) { lines[i].style.backgroundColor = "#fafafa"; }
-            // else { lines[i].style.backgroundColor = "white"; }
             if(filteri%2==0) { lines[i].className = "btn-group gray-background"; }
             else { lines[i].className = "btn-group white-background"; }
             filteri++;
@@ -35,4 +30,19 @@ function copylink(str) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+    document.getElementById('clipboardtxt').innerHTML = "Copied the link.";
+}
+
+function darkendate(str) {
+    document.getElementById(str).style.opacity = "1";
+}
+function fadedate(str) {
+    document.getElementById(str).style.opacity = "0.6";
+}
+
+function showurl(str) {
+    document.getElementById('clipboardtxt').innerHTML = str;
+}
+function hideurl() {
+    document.getElementById('clipboardtxt').innerHTML = "&nbsp;";
 }

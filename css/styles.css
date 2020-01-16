@@ -17,17 +17,19 @@ body {
     color: var(--color-default);
     text-align: center;
     border: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* text */
-h1 { font-size: 3.6rem; }
+h1 { font-size: 3.2rem; }
 h2 { font-size: 1.6rem; }
 p { font-size: 1.6rem; }
 
 #header {
-    margin-top: -17rem;
+    margin-top: -16rem;
     margin-bottom: 0rem;
-    height: 17rem;
+    height: 16rem;
     width: 100%;
     position: fixed;
     background-color: white;
@@ -36,7 +38,7 @@ p { font-size: 1.6rem; }
 #body {
     width: 100%;
     overflow: auto;
-    margin-top: 17rem;
+    margin-top: 16rem;
     z-index: 1;
 }
 
@@ -67,13 +69,13 @@ button {
     width: 13.4rem;
     float: left;
     display: block;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .leftfloat { float: left; }
 
-.txttoblock-nico { color: var(--color-nico); transition: color 0.3s; }
+.txttoblock-nico { color: var(--color-nico); transition: color 0.2s; }
 .txttoblock-nico:hover { background-color: var(--color-nico); color: white; opacity: 1.0; }
-.txttoblock-song { color: var(--color-song); transition: color 0.3s; }
+.txttoblock-song { color: var(--color-song); transition: color 0.2s; }
 .txttoblock-song:hover { background-color: var(--color-song); color: white; opacity: 1.0; }
 
 .btn-invisible {
@@ -81,12 +83,12 @@ button {
     width: 2.8rem;
     float: left;
     background-color: white;
-    opacity: 0.0;
+    opacity: 0.2;
     border-radius: 50%;
     margin-top: 0.4rem;
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
 }
-.btn-invisible:hover { opacity: 0.6; }
+.btn-invisible:hover { opacity: 1.0; }
 
 .whiteblock-nico { color: var(--color-nico); }
 .whiteblock-song { color: var(--color-song); }
@@ -97,8 +99,18 @@ button {
     opacity: 0.6;
     margin-left: 0.5rem;
     cursor: text;
+    transition: opacity: 0.2s;
 }
 .fadetxt:hover { opacity: 1.0; }
+
+/* notification */
+.elementToFadeInAndOut {
+    width:20rem;
+    height: 20rem;
+    background: red;
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+}
 
 /* search */
 
@@ -111,7 +123,7 @@ button {
     font-size: 1.6rem;
     color: #999999;
     opacity: 0.6;
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
     padding-left: 1rem;
 }
 #filterinput:hover {
@@ -122,3 +134,36 @@ button {
 }
 
 
+/* clipboard */
+#footer {
+    height: 2.0rem;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    background-color: white;
+    text-align: center;
+    z-index: 200;
+}
+#container {
+    height: 2.0rem;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    z-index: 200;
+}
+#clipboard {
+    height: 2.0rem;
+    width: 70rem;
+    margin: 0 auto;
+    top: 0;
+    color: white;
+    background-color: var(--color-default);
+    text-align: center;
+}
+#clipboardtxt {
+    margin-top: 0.1rem;
+    font-size: 1.3rem;
+}
