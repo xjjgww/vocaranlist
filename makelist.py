@@ -49,7 +49,7 @@ for i in range(1,13):
 
         mytext = vtit.text
         if '週刊VOCALOIDとUTAUランキング　#' not in mytext or mytext == lastr: continue
-        mytext = mytext.replace("・", "&#171;&#187;")
+        # mytext = mytext.replace("・", "&#171;&#187;")
         number = re.search(r'#(\d)(\d)(\d)[^\s]+', mytext)
         episode = number.group(1)+number.group(2)+number.group(3)
 
@@ -63,7 +63,7 @@ for i in range(1,13):
         if date: datetxt = date.group(1)
         
         # print(number.group(), '|', mylink, '|', sm, '|', songrium, '|', date.group(1))
-        lineid = '#'+episode+sm+datetxt;
+        lineid = '#'+episode+sm+'d'+datetxt;
         attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\'d'+sm+'\')" onmouseout="fadedate(\'d'+sm+'\')"'
         urlanin = 'onmouseover="statusbar(\''+mylink+'\')" onmouseout="statusbar(\'&nbsp;\')"';
         urlanis = 'onmouseover="statusbar(\''+songrium+'\')" onmouseout="statusbar(\'&nbsp;\')"';
