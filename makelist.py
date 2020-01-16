@@ -30,7 +30,7 @@ header = """
 print(preparation)
 print(header)
 
-for i in range(1,2):
+for i in range(1,13):
     url = 'https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i)
     r = session.get(url)
     # seltit = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > p > a'
@@ -65,13 +65,15 @@ for i in range(1,2):
         # print(number.group(), '|', mylink, '|', sm, '|', songrium, '|', date.group(1))
         lineid = '#'+episode+sm+datetxt;
         attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\'d'+sm+'\')" onmouseout="fadedate(\'d'+sm+'\')"'
-        urlanin = 'onmouseover="showurl(\''+mylink+'\')" onmouseout="hideurl()"';
-        urlanis = 'onmouseover="showurl(\''+songrium+'\')" onmouseout="hideurl()"';
+        urlanin = 'onmouseover="statusbar(\''+mylink+'\')" onmouseout="statusbar(\'&nbsp;\')"';
+        urlanis = 'onmouseover="statusbar(\''+songrium+'\')" onmouseout="statusbar(\'&nbsp;\')"';
+        webn = 'onmouseover="statusbar(\'&#187; NicoNico &#187;\')" onmouseout="statusbar(\'&nbsp;\')"';
+        webs = 'onmouseover="statusbar(\'&#187; songrium &#187;\')" onmouseout="statusbar(\'&nbsp;\')"';
         if oe%2==0: print('<div class="btn-group gray-background" '+attrs+'>')
         else: print('<div class="btn-group white-background" '+attrs+'>')
-        print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');">'+number.group()+'</button>')
+        print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');" '+webn+'>'+number.group()+'</button>')
         print('<button class="btn-invisible whiteblock-nico" onclick="copylink(\''+mylink+'\')" '+urlanin+'>N</button>')
-        print('<button id="b'+sm+'" class="btn txttoblock-song textaligncenter" onclick="window.open(\''+songrium +'\', \'_blank\');">'+sm+'</button>')
+        print('<button id="b'+sm+'" class="btn txttoblock-song textaligncenter" onclick="window.open(\''+songrium +'\', \'_blank\');" '+webs+'>'+sm+'</button>')
         print('<button class="btn-invisible whiteblock-song" onclick="copylink(\''+songrium+'\')" '+urlanis+'>S</button>')
         print('<button id="d'+sm+'" class="fadetxt textalignleft">'+datetxt+'</button>')
         print('</div>')
@@ -93,13 +95,4 @@ print(board)
 print('</body>')
 print('</html>')
 
-##
-# sel = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li:nth-child(1) > div.itemContent > p > a'
-# mylist.append((mytext, mylink))
-# vtits = r.html.find(sel)
-# print(r.html.text)
-# print(r.html.absolute_links)
-# print(vtits[0].absolute_links)
-# print(vtits)
-# print(get_text_link_from_sel(sel))
 

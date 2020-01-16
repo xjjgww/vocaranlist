@@ -40,9 +40,6 @@ function fadedate(str) {
     document.getElementById(str).style.opacity = "0.6";
 }
 
-function showurl(str) {
+function statusbar(str) {
     document.getElementById('clipboardtxt').innerHTML = str;
-}
-function hideurl() {
-    document.getElementById('clipboardtxt').innerHTML = "&nbsp;";
 }
