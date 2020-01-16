@@ -1,3 +1,7 @@
+html{
+    font-size:10px;
+}
+
 /* colors */
 :root {
     --color-default: #484848;
@@ -8,7 +12,7 @@
 /* body */
 body {
     font-family: courier,Osaka;
-    font-size: 16px;
+    font-size: 1.6rem;
     background-color: inherit;
     color: var(--color-default);
     text-align: center;
@@ -16,14 +20,14 @@ body {
 }
 
 /* text */
-h1 { font-size: 36px; }
-h2 { font-size: 16px; }
-p { font-size: 16px; }
+h1 { font-size: 3.6rem; }
+h2 { font-size: 1.6rem; }
+p { font-size: 1.6rem; }
 
 #header {
-    margin-top: -170px;
-    margin-bottom: 0px;
-    height: 170px;
+    margin-top: -17rem;
+    margin-bottom: 0rem;
+    height: 17rem;
     width: 100%;
     position: fixed;
     background-color: white;
@@ -32,22 +36,22 @@ p { font-size: 16px; }
 #body {
     width: 100%;
     overflow: auto;
-    margin-top: 170px;
+    margin-top: 17rem;
     z-index: 1;
 }
 
 /* button */
 button {
     font-family: courier;
-    font-size: 16px;
+    font-size: 1.6rem;
     outline: none;
     border: none;
     background-color: inherit;
     cursor: pointer;
 }
 .btn-group {
-    height: 36px;
-    width: 700px;
+    height: 3.6rem;
+    width: 70rem;
     margin: auto;
     text-align: left;
 }
@@ -59,8 +63,8 @@ button {
 .textaligncenter { text-align: center; }
 
 .btn {
-    height: 36px;
-    width: 134px;
+    height: 3.6rem;
+    width: 13.4rem;
     float: left;
     display: block;
     opacity: 0.6;
@@ -73,13 +77,13 @@ button {
 .txttoblock-song:hover { background-color: var(--color-song); color: white; opacity: 1.0; }
 
 .btn-invisible {
-    height: 28px;
-    width: 28px;
+    height: 2.8rem;
+    width: 2.8rem;
     float: left;
     background-color: white;
     opacity: 0.0;
     border-radius: 50%;
-    margin-top: 4px;
+    margin-top: 0.4rem;
     transition: opacity 0.3s;
 }
 .btn-invisible:hover { opacity: 0.6; }
@@ -88,10 +92,10 @@ button {
 .whiteblock-song { color: var(--color-song); }
 
 .fadetxt {
-    height: 36px;
-    width: 350px;
+    height: 3.6rem;
+    width: 35rem;
     opacity: 0.6;
-    margin-left: 5px;
+    margin-left: 0.5rem;
     cursor: text;
 }
 .fadetxt:hover { opacity: 1.0; }
@@ -101,14 +105,14 @@ button {
 #filterinput {
     outline: none;
     font-family: courier;
-    height: 36px;
-    width: 300px;
+    height: 3.6rem;
+    width: 30rem;
     margin: auto;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #999999;
     opacity: 0.6;
     transition: opacity 0.3s;
-    padding-left: 10px;
+    padding-left: 1rem;
 }
 #filterinput:hover {
     opacity: 1.0;
