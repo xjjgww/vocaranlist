@@ -1,0 +1,120 @@
+/* colors */
+:root {
+    --color-default: #484848;
+    --color-nico: #0C457D;
+    --color-song: #D27979;
+}
+
+/* body */
+body {
+    font-family: courier,Osaka;
+    font-size: 16px;
+    background-color: inherit;
+    color: var(--color-default);
+    text-align: center;
+    border: none;
+}
+
+/* text */
+h1 { font-size: 36px; }
+h2 { font-size: 16px; }
+p { font-size: 16px; }
+
+#header {
+    margin-top: -170px;
+    margin-bottom: 0px;
+    height: 170px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 200;
+}
+#body {
+    width: 100%;
+    overflow: auto;
+    margin-top: 170px;
+    z-index: 1;
+}
+
+/* button */
+button {
+    font-family: courier;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.btn-group {
+    height: 36px;
+    width: 700px;
+    margin: auto;
+    text-align: left;
+}
+.btn-group:hover { background-color: #f0f0f0; }
+
+.white-background { background-color: #white; }
+.gray-background { background-color: #fafafa; }
+.textalignleft { text-align: left; }
+.textaligncenter { text-align: center; }
+
+.btn {
+    height: 36px;
+    width: 134px;
+    float: left;
+    display: block;
+    opacity: 0.6;
+}
+.leftfloat { float: left; }
+
+.txttoblock-nico { color: var(--color-nico); transition: color 0.3s; }
+.txttoblock-nico:hover { background-color: var(--color-nico); color: white; opacity: 1.0; }
+.txttoblock-song { color: var(--color-song); transition: color 0.3s; }
+.txttoblock-song:hover { background-color: var(--color-song); color: white; opacity: 1.0; }
+
+.btn-invisible {
+    height: 28px;
+    width: 28px;
+    float: left;
+    background-color: white;
+    opacity: 0.0;
+    border-radius: 50%;
+    margin-top: 4px;
+    transition: opacity 0.3s;
+}
+.btn-invisible:hover { opacity: 0.6; }
+
+.whiteblock-nico { color: var(--color-nico); }
+.whiteblock-song { color: var(--color-song); }
+
+.fadetxt {
+    height: 36px;
+    width: 350px;
+    opacity: 0.6;
+    margin-left: 5px;
+    cursor: text;
+}
+.fadetxt:hover { opacity: 1.0; }
+
+/* search */
+
+#filterinput {
+    outline: none;
+    font-family: courier;
+    height: 36px;
+    width: 300px;
+    margin: auto;
+    font-size: 16px;
+    color: #999999;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    padding-left: 10px;
+}
+#filterinput:hover {
+    opacity: 1.0;
+}
+::placeholder {
+    color: #999999;
+}
+
+

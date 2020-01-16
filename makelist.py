@@ -4,95 +4,31 @@ from lxml import etree
 
 session = HTMLSession()
 
-header = """
-<!DOCTYPE NETSCAPE-Bookmark-file-1>
+preparation = """
+<!DOCTYPE html>
 <html>
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
- .title {
- border: none;
- background-color: inherit;
- font-family:courier,Osaka;
-  text-align: center;
-color: #484848
- }
- .h {
- font-size: 40px;
- }
- .hh {
- font-size: 16px;
- }
-
-.btn-group {
-height: 36px;
-width: 700px;
-margin-left: auto;
-  margin-right: auto;
-}
-.btn-group:hover {background-color: #f0f0f0;}
-.white-background {background-color: #white;}
-.gray-background {background-color: #fafafa;}
-
- .btn {
- border: none;
- outline:none;
- background-color: inherit;
- padding: 9px 19px;
- font-size: 16px;
- font-family:courier;
- cursor: pointer;
- float: left;
- display: block;
- opacity: 0.6;
- }
- .btn:hover {color: white; opacity: 1.0;}
-
- .mydarkblue {color: #0C457D;}
- .mydarkblue:hover {background-color: #0C457D;}
- .myorange {color: #DE9C9C;}
- .myorange:hover {background-color: #DE9C9C;}
-
- .btn-copy {
- border: none;
- outline:none;
- padding: 9px 10px;
- font-size: 16px;
- font-family:courier;
- float: left;
- cursor: pointer;
- display: inline-block;
- align:center;
- background-color: white;
- opacity: 0.0;
- border-radius: 5px;
-position: relative;
- }
- .mydarkblue-b {color: #0C457D;}
- .myorange-b {color: #DE9C9C;}
- .btn-copy:hover {opacity: 0.8;}
-
- .fadetxt {
- border: 2px;
- background-color: inherit;
- padding: 5px 20px;
- font-size: 16px;
- font-family:courier;
- opacity: 0.6;
- display: block;
- }
- .fadetxt:hover {opacity: 1.0;}
-</style>
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
+<body>
+<title>週刊VOCALOIDとUTAUランキング</title>
+
+<div id="body">
 """
+header = """
+<div id="header">
+<h1 id="title">週刊VOCALOIDとUTAUランキング (Vocaran)</h1>
+<input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search...">
+<script src="js/scripts.js"></script>
+</div>
+"""
+print(preparation)
 print(header)
 
-print('<body>')
-print('<Title>週刊VOCALOIDとUTAUランキング</Title>')
-print('<h1 class="title h">週刊VOCALOIDとUTAUランキング (Vocaran)</h1><br>')
-
-for i in range(1,2):
+for i in range(1,13):
     url = 'https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i)
     r = session.get(url)
     # seltit = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > p > a'
@@ -112,7 +48,8 @@ for i in range(1,2):
         mytext = vtit.text
         if '週刊VOCALOIDとUTAUランキング　#' not in mytext or mytext == lastr: continue
         mytext = mytext.replace("・", "&#171;&#187;")
-        number = re.search(r'#(\d)(\d)[^\s]+', mytext)
+        number = re.search(r'#(\d)(\d)(\d)[^\s]+', mytext)
+        episode = number.group(1)+number.group(2)+number.group(3)
 
         mylink = list(vtit.absolute_links)[0]
         sm = re.search(r'sm(\d+)', mylink).group(0)
@@ -120,27 +57,25 @@ for i in range(1,2):
 
         mydescription = vdes.text
         date = re.search(r'VOCALOID：([^～]+～[^\s]+)', mydescription)
-        if date: date = date.group(1)
-        else: date = ''
+        datetxt = ''
+        if date: datetxt = date.group(1)
         
-        # if "99・" in mytext:
-        #     m = number.group(1)
-        #     print('------------',m)
-        if "9・" in mytext:
-            m = number.group(1)+number.group(2)
-            print('<h2 class="title hh">#'+m+'0 ～ '+m+'9</h2><br>')
-
         # print(number.group(), '|', mylink, '|', sm, '|', songrium, '|', date.group(1))
-        if oe%2==0: print('<div class="btn-group gray-background">')
-        else: print('<div class="btn-group white-background">')
-        print('<button class="btn mydarkblue" onclick="window.open(\''+mylink +'\', \'_blank\');">'+number.group()+'</button>')
-        print('<button class="btn-copy mydarkblue-b">C</button>')
-        print('<button class="btn myorange" onclick="window.open(\''+songrium +'\', \'_blank\');">'+sm+'</button>')
-        print('<button class="btn-copy myorange-b">C</button>')
-        print('<button class="fadetxt">'+date+'</button>')
+        lineid = '#'+episode+sm+datetxt;
+        if oe%2==0: print('<div class="btn-group gray-background" type="line" id="'+lineid+'">')
+        else: print('<div class="btn-group white-background" type="line" id="'+lineid+'">')
+        print('<button id="b'+episode+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');">'+number.group()+'</button>')
+        print('<button class="btn-invisible whiteblock-nico" onclick="copylink(\''+mylink+'\')">L</button>')
+        print('<button id="b'+sm+'"class="btn txttoblock-song textaligncenter" onclick="window.open(\''+songrium +'\', \'_blank\');">'+sm+'</button>')
+        print('<button class="btn-invisible whiteblock-song" onclick="copylink(\''+songrium+'\')">L</button>')
+        print('<button class="fadetxt textalignleft">'+datetxt+'</button>')
         print('</div>')
         lastr = mytext
         oe = oe + 1
+
+print('</div>')
+print('</body>')
+print('</html>')
 
 ##
 # sel = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li:nth-child(1) > div.itemContent > p > a'
@@ -152,5 +87,3 @@ for i in range(1,2):
 # print(vtits)
 # print(get_text_link_from_sel(sel))
 
-print('</body>')
-print('</html>')
