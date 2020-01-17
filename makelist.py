@@ -30,7 +30,7 @@ header = """
 print(preparation)
 print(header)
 
-for i in range(1,2):
+for i in range(1,13):
     url = 'https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i)
     r = session.get(url)
     # seltit = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > p > a'

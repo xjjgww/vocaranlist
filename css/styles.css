@@ -23,7 +23,7 @@ body {
 }
 
 /* text */
-h1 { font-size: 2.8rem; }
+h1 { font-size: 2.7rem; }
 h2 { font-size: 1.6rem; }
 p { font-size: 1.6rem; }
 
@@ -118,7 +118,7 @@ button {
 #filterinput {
     outline: none;
     font-family: courier;
-    height: 3.0rem;
+    height: 2.8rem;
     width: 30rem;
     margin: auto;
     font-size: 1.6rem;
