@@ -23,14 +23,14 @@ function myfilter() {
     }
 }
 
-function copylink(str) {
+function copylink(str, noti) {
     const el = document.createElement('textarea');
     el.value = str;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    document.getElementById('clipboardtxt').innerHTML = "Copied the link.";
+    document.getElementById('clipboardtxt').innerHTML = "Copied "+noti+".";
 }
 
 function darkendate(str) {

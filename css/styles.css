@@ -99,7 +99,7 @@ button {
     width: 35rem;
     opacity: 0.6;
     margin-left: 0.5rem;
-    cursor: text;
+    cursor: default;
     transition: opacity: 0.2s;
 }
 .fadetxt:hover { opacity: 1.0; }
@@ -118,7 +118,7 @@ button {
 #filterinput {
     outline: none;
     font-family: courier;
-    height: 3.6rem;
+    height: 3.0rem;
     width: 30rem;
     margin: auto;
     font-size: 1.6rem;
