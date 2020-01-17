@@ -43,3 +43,8 @@ function fadedate(str) {
 function statusbar(str) {
     document.getElementById('clipboardtxt').innerHTML = str;
 }
+
+function appinput(str) {
+    document.getElementById('filterinput').value += str;
+    myfilter();
+}

@@ -24,6 +24,8 @@ header = """
 <div id="header">
 <h1 id="title">週刊VOCALOIDとUTAUランキング</h1>
 <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date">
+<button id="appyear" class="yrmo" onclick="appinput('年')" onmouseover="darkendate('appyear')" onmouseout="fadedate('appyear')">年</button>
+<button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
 <script src="js/scripts.js"></script>
 </div>
 """
