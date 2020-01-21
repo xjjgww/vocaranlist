@@ -1,8 +1,5 @@
-from requests_html import HTMLSession
 import re
-from lxml import etree
-
-session = HTMLSession()
+import json
 
 preparation = """
 <!DOCTYPE html>
@@ -18,8 +15,6 @@ preparation = """
 
 <body>
 <div id="body">
-"""
-header = """
 <div id="ranlist">
 </div>
 <div id="toc">
@@ -33,40 +28,20 @@ header = """
 </div>
 """
 print(preparation)
-print(header)
 
-for i in range(1,13):
-    url = 'https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i)
-    r = session.get(url)
-    # seltit = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > p > a'
-    # seldes = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > div.wrap > p.itemDescription'
-    sel = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent'
-
-    lastr = ''
+with open('json/episodelist.json') as json_file:
+    data = json.load(json_file)
     oe = 0
-    vresults = r.html.find(sel)
-    for vresult in vresults:
-        if len(vresult.find('a')) <= 0 or len(vresult.find('p.itemDescription')) <= 0: continue
-
-        vtit = list(vresult.find('a'))[0]
-        vdes = list(vresult.find('p.itemDescription'))[0]
-        if len(vtit.absolute_links) <= 0: continue
-
-        mytext = vtit.text
-        if '週刊VOCALOIDとUTAUランキング　#' not in mytext or mytext == lastr: continue
-        number = re.search(r'#(\d)(\d)(\d)[^\s]+', mytext)
-        episode = number.group(1)+number.group(2)+number.group(3)
-
-        mylink = list(vtit.absolute_links)[0]
-        sm = re.search(r'sm(\d+)', mylink).group(0)
-        songrium = 'http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F'+sm
-
-        mydescription = vdes.text
-        date = re.search(r'VOCALOID：([^～]+～[^\s]+)', mydescription)
-        datetxt = ''
-        if date: datetxt = date.group(1)
+    for s in data:
+        thislist = list(data[s])
+        sm = s
+        mylink = 'https://www.nicovideo.jp/watch/' + sm
+        songrium = 'http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F' + sm
+        episode = thislist[0]
+        number = thislist[1]
+        datetxt = thislist[2]
         
-        lineid = '#'+episode+sm+' '+datetxt;
+        lineid = '#'+episode+' '+sm+' '+datetxt;
         attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\'d'+sm+'\')" onmouseout="fadedate(\'d'+sm+'\')"'
         urlanin = 'onmouseover="statusbar(\''+mylink+'\')" onmouseout="statusbar(\'&nbsp;\')"';
         urlanis = 'onmouseover="statusbar(\''+songrium+'\')" onmouseout="statusbar(\'&nbsp;\')"';
@@ -74,14 +49,12 @@ for i in range(1,13):
         webs = 'onmouseover="statusbar(\'&#187; songrium &#187;\')" onmouseout="statusbar(\'&nbsp;\')"';
         if oe%2==0: print('<div class="btn-group gray-background" '+attrs+'>')
         else: print('<div class="btn-group white-background" '+attrs+'>')
-        print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');" '+webn+'>'+number.group()+'</button>')
+        print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');" '+webn+'>'+number+'</button>')
         print('<button class="btn-invisible whiteblock-nico" onclick="copylink(\''+sm+'\', \'the sm #\')" '+urlanin+'>N</button>')
         print('<button id="b'+sm+'" class="btn txttoblock-song textaligncenter" onclick="window.open(\''+songrium +'\', \'_blank\');" '+webs+'>'+sm+'</button>')
         print('<button class="btn-invisible whiteblock-song" onclick="copylink(\''+songrium+'\', \'the songrium link\')" '+urlanis+'>S</button>')
         print('<button id="d'+sm+'" class="fadetxt textalignleft">'+datetxt+'</button>')
-        # print('<button class="btn-invisible whiteblock-song" onclick="copylink(\''+datetxt+'\')" '+urlanis+'>D</button>')
         print('</div>')
-        lastr = mytext
         oe = oe + 1
 
 board = """
@@ -94,9 +67,7 @@ board = """
 </div>
 </div>
 </div>
+</body>
+</html>
 """
 print(board)
-print('</body>')
-print('</html>')
-
-
