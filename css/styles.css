@@ -1,5 +1,5 @@
 html{
-    font-size: 0.53vw;
+    font-size: 0.54vw;
     overflow-y: scroll;
 }
 
@@ -154,6 +154,8 @@ button {
     opacity: 0.6;
     transition: opacity 0.3s;
     padding-left: 1rem;
+    border: 0.1rem solid #999999;
+    border-radius: 0.3rem;
 }
 #filterinput:hover {
     opacity: 1.0;
