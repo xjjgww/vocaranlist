@@ -1,5 +1,5 @@
 html{
-    font-size: 10px;
+    font-size: 0.53vw;
     overflow-y: scroll;
 }
 
@@ -10,6 +10,7 @@ html{
     --color-song: #D27979;
     --width-toc: 40%;
     --margin-toc: 5%;
+    --size-font-default: 1.6rem;
 }
 
 /* body */
@@ -17,7 +18,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: courier,Osaka;
-    font-size: 1.6rem;
+    font-size: var(--size-font-default);
     background-color: inherit;
     color: var(--color-default);
     text-align: center;
@@ -28,10 +29,10 @@ body {
 
 /* text */
 h1 { font-size: 2.7rem; }
-h2 { font-size: 1.6rem; }
-p { font-size: 1.6rem; }
+h2 { font-size: var(--size-font-default); }
+p { font-size: var(--size-font-default); }
 
-#title { margin-top: 4%; }
+#title { margin-top: 2rem; }
 
 #toc {
     height: 100%;
@@ -52,10 +53,10 @@ p { font-size: 1.6rem; }
     z-index: 210;
 }
 #header {
-    margin-top: -8%;
+    margin-top: -14rem;
     margin-bottom: 0rem;
     margin-left: 0rem;
-    height: 15%;
+    height: 14rem;
     width: var(--width-toc);
     position: fixed;
     background-color: white;
@@ -71,7 +72,7 @@ p { font-size: 1.6rem; }
 /* button */
 button {
     font-family: courier;
-    font-size: 1.6rem;
+    font-size: var(--size-font-default);
     outline: none;
     border: none;
     background-color: inherit;
@@ -148,7 +149,7 @@ button {
     height: 2.8rem;
     width: 30rem;
     margin: auto;
-    font-size: 1.6rem;
+    font-size: var(--size-font-default);
     color: #999999;
     opacity: 0.6;
     transition: opacity 0.3s;
