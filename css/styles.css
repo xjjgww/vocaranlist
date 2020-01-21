@@ -8,10 +8,14 @@ html{
     --color-default: #484848;
     --color-nico: #0C457D;
     --color-song: #D27979;
+    --width-toc: 40%;
+    --margin-toc: 5%;
 }
 
 /* body */
 body {
+    height: 100%;
+    width: 100%;
     font-family: courier,Osaka;
     font-size: 1.6rem;
     background-color: inherit;
@@ -27,11 +31,32 @@ h1 { font-size: 2.7rem; }
 h2 { font-size: 1.6rem; }
 p { font-size: 1.6rem; }
 
+#title { margin-top: 4%; }
+
+#toc {
+    height: 100%;
+    width: var(--width-toc);
+    margin-left: var(--margin-toc);
+    text-aglin: center;
+    /* float: left; */
+ }
+#ranlist {
+    height: 100%;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0;
+    float: right;
+    /* text-aglin: center; */
+    position: fixed;
+    background-color: #C6D9D3;
+    z-index: 210;
+}
 #header {
-    margin-top: -14rem;
+    margin-top: -8%;
     margin-bottom: 0rem;
-    height: 14rem;
-    width: 100%;
+    margin-left: 0rem;
+    height: 15%;
+    width: var(--width-toc);
     position: fixed;
     background-color: white;
     z-index: 200;
@@ -54,7 +79,8 @@ button {
 }
 .btn-group {
     height: 3.6rem;
-    width: 70rem;
+    /* width: var(--width-toc); */
+    width: 100%;
     margin: auto;
     text-align: left;
 }
@@ -155,17 +181,17 @@ button {
 #footer {
     height: 2.0rem;
     width: 100%;
-    bottom: 0;
-    margin: 0;
+    /* bottom: 0; */
+    margin: auto;
     background-color: white;
     text-align: center;
     z-index: 200;
 }
 #container {
     height: 2.0rem;
-    width: 100%;
+    width: var(--width-toc);
     bottom: 0;
-    margin: 0;
+    margin-left: 0;
     background-color: white;
     position: fixed;
     text-align: center;
@@ -173,8 +199,8 @@ button {
 }
 #clipboard {
     height: 2.0rem;
-    width: 70rem;
-    margin: auto;
+    width: 100%;
+    margin-left: 0;
     /* top: 0; */
     color: white;
     background-color: var(--color-default);

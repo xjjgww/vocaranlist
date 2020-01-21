@@ -14,14 +14,17 @@ preparation = """
 <meta name="author" content="Erica Wang">
 <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body>
 <title>週刊VOCALOIDとUTAUランキング</title>
 
+<body>
 <div id="body">
 """
 header = """
+<div id="ranlist">
+</div>
+<div id="toc">
 <div id="header">
+
 <h1 id="title">週刊VOCALOIDとUTAUランキング</h1>
 <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date">
 <button id="appyear" class="yrmo" onclick="appinput('年')" onmouseover="darkendate('appyear')" onmouseout="fadedate('appyear')">年</button>
@@ -81,14 +84,14 @@ for i in range(1,13):
         lastr = mytext
         oe = oe + 1
 
-print('</div>')
-
 board = """
 <div id="footer">
 </div>
 <div id="container">
 <div id="clipboard">
 <p id="clipboardtxt">&nbsp;</p>
+</div>
+</div>
 </div>
 </div>
 """
