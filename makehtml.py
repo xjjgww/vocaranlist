@@ -10,6 +10,7 @@ prep1 = """
 <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング">
 <meta name="author" content="Erica Wang">
 <link rel="stylesheet" href="css/styles.css">
+<script data-main="js/scripts.js" src="js/episodelist.js"></script>
 <script data-main="js/scripts.js" src="js/songlist.js"></script>
 <script src="js/scripts.js"></script>
 </head>
@@ -19,6 +20,8 @@ prep1 = """
 <div id="body">
 <div id="ranlist">
 <table id="songlist">
+<tr class="songitemtitle" id="tr-1"><th class="songtitle" id="td-1"><a class="songtexttitle" id="tda-1">&nbsp;</a></th></tr>
+<tr class="songitemtitle" id="trdull"><th class="songtitle" id="tddull"><a class="songtexttitle" id="tdadull">&nbsp;</a></th></tr>
 """
 print(prep1)
 

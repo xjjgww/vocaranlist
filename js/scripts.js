@@ -35,14 +35,18 @@ function copylink(str, noti) {
 
 function darkendate(sm) {
     document.getElementById('d'+sm).style.opacity = "1";
-    for(var i=0; i<42; i++)
+    for(var i=-1; i<42; i++)
     {
         ida = "tda"+i;
         document.getElementById(ida).innerHTML = "&nbsp;";
-        if(i < jsonobj[sm].length)
+        if(i < 0)
         {
-            document.getElementById(ida).href = jsonobj[sm][i]['url'];
-            document.getElementById(ida).innerHTML = jsonobj[sm][i]['title'];
+            document.getElementById(ida).innerHTML = '【'+episodejsonobj[sm][1]+'】 '+episodejsonobj[sm][2];
+        }
+        else if(i < songjsonobj[sm].length)
+        {
+            document.getElementById(ida).href = songjsonobj[sm][i]['url'];
+            document.getElementById(ida).innerHTML = songjsonobj[sm][i]['title'];
         }
     }
 }
