@@ -24,7 +24,7 @@ print(prep1)
 
 for i in range(0, 42):
     print('<tr class="songitem" id="tr'+str(i)+'">')
-    print('<td class="songtext" id="tda'+str(i)+'">test placeholder '+str(i)+'</td>')
+    print('<td class="songtext" id="tda'+str(i)+'">&nbsp;</td>')
     print('</tr>')
 
 prep2  = """

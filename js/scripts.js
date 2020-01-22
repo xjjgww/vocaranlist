@@ -35,10 +35,14 @@ function copylink(str, noti) {
 
 function darkendate(sm) {
     document.getElementById('d'+sm).style.opacity = "1";
-    for(var i=0; i<jsonobj[sm].length; i++)
+    for(var i=0; i<42; i++)
     {
         id = "tda"+i;
-        document.getElementById(id).innerHTML = jsonobj[sm][i]['title'];
+        document.getElementById(id).innerHTML = "&nbsp;";
+        if(i < jsonobj[sm].length)
+        {
+            document.getElementById(id).innerHTML = jsonobj[sm][i]['title'];
+        }
     }
 }
 function fadedate(sm) {

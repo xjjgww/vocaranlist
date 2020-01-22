@@ -49,14 +49,16 @@ p { font-size: var(--size-font-default); }
     float: right;
     /* text-aglin: center; */
     position: fixed;
-    background-color: #C6D9D3;
+    background-color: white;
     z-index: 210;
+    border: none;
+    overflow: auto;
 }
 #songlist {
     border-collapse: collapse;
     width: 100%;
-    border: 0.1rem solid #ddd;
-    font-size: 1rem;
+    /* border: 0.1rem solid #ddd; */
+    font-size: 1.4rem;
 }
 .songitem {
     text-align: left;
