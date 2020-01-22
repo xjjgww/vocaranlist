@@ -23,12 +23,13 @@ prep1 = """
 print(prep1)
 
 for i in range(0, 42):
-    print('<tr class="songitem" id="tr'+str(i)+'">')
-    print('<td class="songtext" id="tda'+str(i)+'">&nbsp;</td>')
-    print('</tr>')
+    print('<tr class="songitem" id="tr'+str(i)+'"><td class="songunit" id="td'+str(i)+'"><a class="songtext" id="tda'+str(i)+'" href="#">&nbsp;</a></td></tr>')
 
 prep2  = """
 </table>
+<div id="songlistfooter">
+<p id="songlisttxt">&nbsp;</p>
+</div>
 </div>
 <div id="toc">
 <div id="header">

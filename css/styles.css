@@ -8,9 +8,13 @@ html{
     --color-default: #484848;
     --color-nico: #0C457D;
     --color-song: #D27979;
-    --width-toc: 40%;
-    --margin-toc: 5%;
-    --size-font-default: 1.6rem;
+    --width-toc: 46%;
+    --margin-toc: 0%;
+    --size-font-default: 2.0rem;
+    --height-btn: 3.8rem;
+    --height-footer: 2.6rem;
+    --size-font-footer: 1.6rem;
+    --radius-btn: 3.0rem;
 }
 
 /* body */
@@ -42,28 +46,48 @@ p { font-size: var(--size-font-default); }
     /* float: left; */
 }
 #ranlist {
-    height: 100%;
-    width: 50%;
+    margin-left: -50%;
+    height: 90%;
+    width: 43%;
     margin-left: 50%;
-    margin-top: 0;
     float: right;
-    /* text-aglin: center; */
     position: fixed;
-    background-color: white;
-    z-index: 210;
+    /* background-color: #fbfbfb; */
+    z-index: 200;
     border: none;
-    overflow: auto;
+    overflow: scroll;
 }
 #songlist {
     border-collapse: collapse;
     width: 100%;
-    /* border: 0.1rem solid #ddd; */
-    font-size: 1.4rem;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.4s;
+    margin-bottom: 10%;
+}
+#songlist:hover {
+    opacity: 1.0;
 }
 .songitem {
     text-align: left;
-    padding: 0;
+    /* padding-left: 5%; */
+    background-color: inherit;
+    transition: background-color 0.3s;
+    color: var(--color-default);
 }
+.songitem:hover {
+    background-color: var(--color-default);
+    color: white;
+}
+.songtext {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: inherit;
+    transition: color 0.4s;
+}
+/* .songtext:hover { */
+/*     color: inherit; */
+/* } */
 #header {
     margin-top: -14rem;
     margin-bottom: 0rem;
@@ -91,7 +115,7 @@ button {
     cursor: pointer;
 }
 .btn-group {
-    height: 3.6rem;
+    height: var(--height-btn);
     /* width: var(--width-toc); */
     width: 100%;
     margin: auto;
@@ -105,28 +129,28 @@ button {
 .textaligncenter { text-align: center; }
 
 .btn {
-    height: 3.6rem;
-    width: 13.4rem;
+    height: var(--height-btn);
+    width: 18%;
     float: left;
     display: block;
     opacity: 0.8;
 }
 .leftfloat { float: left; }
 
-.txttoblock-nico { color: var(--color-nico); transition: color 0.3s; }
+.txttoblock-nico { color: var(--color-nico); transition: color 0.4s; }
 .txttoblock-nico:hover { background-color: var(--color-nico); color: white; opacity: 1.0; }
-.txttoblock-song { color: var(--color-song); transition: color 0.3s; }
+.txttoblock-song { color: var(--color-song); transition: color 0.4s; }
 .txttoblock-song:hover { background-color: var(--color-song); color: white; opacity: 1.0; }
 
 .btn-invisible {
-    height: 2.8rem;
-    width: 2.8rem;
+    height: var(--radius-btn);
+    width: var(--radius-btn);
     float: left;
     background-color: white;
     opacity: 0.2;
     border-radius: 50%;
     margin-top: 0.4rem;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
     padding: 0;
 }
 .btn-invisible:hover { opacity: 1.0; }
@@ -135,12 +159,12 @@ button {
 .whiteblock-song { color: var(--color-song); }
 
 .fadetxt {
-    height: 3.6rem;
-    width: 35rem;
+    height: var(--height-btn);
+    width: 50%;
     opacity: 0.6;
     margin-left: 0.5rem;
     cursor: default;
-    transition: opacity: 0.3s;
+    transition: opacity: 0.4s;
 }
 .fadetxt:hover { opacity: 1.0; }
 
@@ -158,13 +182,13 @@ button {
 #filterinput {
     outline: none;
     font-family: courier;
-    height: 2.8rem;
+    height: var(--radius-btn);
     width: 30rem;
     margin: auto;
     font-size: var(--size-font-default);
     color: #999999;
     opacity: 0.6;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
     padding-left: 1rem;
     border: 0.1rem solid #999999;
     border-radius: 0.3rem;
@@ -176,13 +200,13 @@ button {
     color: #999999;
 }
 .yrmo {
-    height: 2.8rem;
-    width: 2.8rem;
+    height: var(--radius-btn);
+    width: var(--radius-btn);
     border-radius: 50%;    
     color: #999999;
     opacity: 0.6;
     background-color: #fafafa;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
     text-align: center;
     padding: 0;
     margin-top: 0rem;
@@ -194,7 +218,7 @@ button {
 
 /* clipboard */
 #footer {
-    height: 2.0rem;
+    height: var(--height-footer);
     width: 100%;
     /* bottom: 0; */
     margin: auto;
@@ -203,7 +227,7 @@ button {
     z-index: 200;
 }
 #container {
-    height: 2.0rem;
+    height: var(--height-footer);
     width: var(--width-toc);
     bottom: 0;
     margin-left: 0;
@@ -213,7 +237,7 @@ button {
     z-index: 200;
 }
 #clipboard {
-    height: 2.0rem;
+    height: var(--height-footer);
     width: 100%;
     margin-left: 0;
     /* top: 0; */
@@ -222,6 +246,29 @@ button {
     text-align: center;
 }
 #clipboardtxt {
-    margin-top: 0.3rem;
-    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    font-size: var(--size-font-footer);
+}
+#songlistfooter {
+    height: var(--height-footer);
+    width: 100%;
+    bottom: 0;
+    margin-left: 0;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    z-index: 200;
+}
+/* #clipboard { */
+/*     height: var(--height-footer); */
+/*     width: 100%; */
+/*     margin-left: 0; */
+/*     /\* top: 0; *\/ */
+/*     color: white; */
+/*     background-color: var(--color-default); */
+/*     text-align: center; */
+/* } */
+#songlisttxt {
+    margin-top: 0.5rem;
+    font-size: var(--size-font-footer);
 }

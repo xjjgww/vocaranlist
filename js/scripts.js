@@ -37,11 +37,12 @@ function darkendate(sm) {
     document.getElementById('d'+sm).style.opacity = "1";
     for(var i=0; i<42; i++)
     {
-        id = "tda"+i;
-        document.getElementById(id).innerHTML = "&nbsp;";
+        ida = "tda"+i;
+        document.getElementById(ida).innerHTML = "&nbsp;";
         if(i < jsonobj[sm].length)
         {
-            document.getElementById(id).innerHTML = jsonobj[sm][i]['title'];
+            document.getElementById(ida).href = jsonobj[sm][i]['url'];
+            document.getElementById(ida).innerHTML = jsonobj[sm][i]['title'];
         }
     }
 }
