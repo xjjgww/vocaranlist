@@ -33,11 +33,16 @@ function copylink(str, noti) {
     document.getElementById('clipboardtxt').innerHTML = "Copied "+noti+".";
 }
 
-function darkendate(str) {
-    document.getElementById(str).style.opacity = "1";
+function darkendate(sm) {
+    document.getElementById('d'+sm).style.opacity = "1";
+    for(var i=0; i<jsonobj[sm].length; i++)
+    {
+        id = "tda"+i;
+        document.getElementById(id).innerHTML = jsonobj[sm][i]['title'];
+    }
 }
-function fadedate(str) {
-    document.getElementById(str).style.opacity = "0.6";
+function fadedate(sm) {
+    document.getElementById('d'+sm).style.opacity = "0.6";
 }
 
 function statusbar(str) {
@@ -48,3 +53,5 @@ function appinput(str) {
     document.getElementById('filterinput').value += str;
     myfilter();
 }
+
+

@@ -1,7 +1,7 @@
 import re
 import json
 
-preparation = """
+prep1 = """
 <!DOCTYPE html>
 <html>
 
@@ -10,12 +10,25 @@ preparation = """
 <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww">
 <meta name="author" content="Erica Wang">
 <link rel="stylesheet" href="css/styles.css">
+<script data-main="js/scripts.js" src="js/songlist.js"></script>
+<script src="js/scripts.js"></script>
 </head>
 <title>週刊VOCALOIDとUTAUランキング</title>
 
 <body>
 <div id="body">
 <div id="ranlist">
+<table id="songlist">
+"""
+print(prep1)
+
+for i in range(0, 42):
+    print('<tr class="songitem" id="tr'+str(i)+'">')
+    print('<td class="songtext" id="tda'+str(i)+'">test placeholder '+str(i)+'</td>')
+    print('</tr>')
+
+prep2  = """
+</table>
 </div>
 <div id="toc">
 <div id="header">
@@ -24,10 +37,9 @@ preparation = """
 <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date">
 <button id="appyear" class="yrmo" onclick="appinput('年')" onmouseover="darkendate('appyear')" onmouseout="fadedate('appyear')">年</button>
 <button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
-<script src="js/scripts.js"></script>
 </div>
 """
-print(preparation)
+print(prep2)
 
 with open('json/episodelist.json') as json_file:
     data = json.load(json_file)
@@ -42,7 +54,7 @@ with open('json/episodelist.json') as json_file:
         datetxt = thislist[2]
         
         lineid = '#'+episode+' '+sm+' '+datetxt;
-        attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\'d'+sm+'\')" onmouseout="fadedate(\'d'+sm+'\')"'
+        attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\''+sm+'\')" onmouseout="fadedate(\''+sm+'\')"'
         urlanin = 'onmouseover="statusbar(\''+mylink+'\')" onmouseout="statusbar(\'&nbsp;\')"';
         urlanis = 'onmouseover="statusbar(\''+songrium+'\')" onmouseout="statusbar(\'&nbsp;\')"';
         webn = 'onmouseover="statusbar(\'&#187; NicoNico &#187;\')" onmouseout="statusbar(\'&nbsp;\')"';
