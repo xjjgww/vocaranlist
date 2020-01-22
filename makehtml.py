@@ -28,7 +28,7 @@ for i in range(0, 42):
 prep2  = """
 </table>
 <div id="songlistfooter">
-<p id="songlisttxt">&nbsp;</p>
+<p id="songlisttxt">Copyright © 2020 boundin</p>
 </div>
 </div>
 <div id="toc">

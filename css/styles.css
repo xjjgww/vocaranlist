@@ -74,6 +74,7 @@ p { font-size: var(--size-font-default); }
     background-color: inherit;
     transition: background-color 0.3s;
     color: var(--color-default);
+    outline: none;
 }
 .songitem:hover {
     background-color: var(--color-default);
@@ -271,4 +272,5 @@ button {
 #songlisttxt {
     margin-top: 0.5rem;
     font-size: var(--size-font-footer);
+    margin-right: 15%;
 }
