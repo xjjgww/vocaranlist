@@ -73,7 +73,7 @@ p { font-size: var(--size-font-default); }
     height: 100%;
     opacity: 0.5;
     transition: opacity 0.4s;
-    margin-bottom: 9%;
+    margin-bottom: 8rem;
     table-layout: fixed;
 }
 #songlist:hover {
@@ -85,7 +85,6 @@ p { font-size: var(--size-font-default); }
     margin-top: -14rem;
     margin-bottom: 0;
     margin-left: 0;
-    margin-right: 10%;
     position: fixed;
     background-color: white;
     z-index: 200;
@@ -93,10 +92,10 @@ p { font-size: var(--size-font-default); }
 #desc {
     text-align: left;
     width: 90%;
-    height: 80%;
+    height: 11rem;
     background-color: white;
     padding-left: 0;
-    padding-top: 1.5%;
+    padding-top: 1.5rem;
 }
 #descrip {
     font-size: 1.7rem;
