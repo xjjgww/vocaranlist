@@ -30,7 +30,7 @@ def findsonglist(url):
 # parse
 
 outputdict = {}
-with open('../json/episodelistcc.json') as json_file:
+with open('../json/episodelist.json') as json_file:
     data = json.load(json_file)
     for s in data:
         print(list(data[s])[0])
@@ -38,5 +38,5 @@ with open('../json/episodelistcc.json') as json_file:
         # outputdict[sm] = findsonglist('http://nicodb.jp/u/bgm/utaran/'+sm+'/?rss=1')
         outputdict[sm] = findsonglist('http://nicodb.jp/u/index.php/bgm/rankrss/'+sm)
 
-with open('../json/songlistcc.json', 'w') as outfile:
+with open('../json/songlist.json', 'w') as outfile:
     json.dump(outputdict, outfile, indent=2)

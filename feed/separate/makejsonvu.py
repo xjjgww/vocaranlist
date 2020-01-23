@@ -5,13 +5,9 @@ import json
 
 session = HTMLSession()
 
-urllist = ['https://www.nicovideo.jp/tag/%E9%80%B1%E5%88%8AVOCAL_Character%E3%81%A8UTAU%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0?sort=f&order=d']
-for i in range(1,13):
-    urllist.append('https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i))
-
 mylist = {}
-for url in urllist:
-    print(url)
+for i in range(1,13):
+    url = 'https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i)
     r = session.get(url)
     # seltit = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > p > a'
     # seldes = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > div.wrap > p.itemDescription'
@@ -28,8 +24,7 @@ for url in urllist:
         if len(vtit.absolute_links) <= 0: continue
 
         mytext = vtit.text
-        if '週刊VOCALOIDとUTAUランキング　#' not in mytext and '週刊VOCAL CharacterとUTAUランキング　#' not in mytext: continue
-        if mytext == lastr: continue
+        if '週刊VOCALOIDとUTAUランキング　#' not in mytext or mytext == lastr: continue
 
         number = re.search(r'#(\d)(\d)(\d)[^\s]+', mytext)
         episode = number.group(1)+number.group(2)+number.group(3)
@@ -39,8 +34,7 @@ for url in urllist:
         songrium = 'http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F'+sm
 
         mydescription = vdes.text
-        # date = re.search(r'VOCALOID：([^～]+～[^\s]+)', mydescription)
-        date = re.search(r'：([^～]+～[^\s]+)', mydescription)
+        date = re.search(r'VOCALOID：([^～]+～[^\s]+)', mydescription)
         datetxt = ''
         if date: datetxt = date.group(1)
 
