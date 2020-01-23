@@ -95,10 +95,12 @@ p { font-size: var(--size-font-default); }
     background-color: white;
     padding-left: 0;
     padding-top: 0rem;
+    z-index: 210;
 }
 #descrip {
     font-size: 1.7rem;
     color: #b3b3b3;
+    z-index: 220;
 }
 .boldp {
     color: #666666;
