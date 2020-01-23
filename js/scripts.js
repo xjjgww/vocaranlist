@@ -56,6 +56,7 @@ function darkendate(sm) {
         newtda.className = "songtext";
         newtda.innerHTML = songjsonobj[sm][i]['title'];
         newtda.href = songjsonobj[sm][i]['url'];
+        newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
     }
 }
