@@ -1,7 +1,7 @@
 import re
 import json
 
-prep1 = """
+prep = """
 <!DOCTYPE html>
 <html>
 
@@ -24,19 +24,12 @@ prep1 = """
 <p id="descrip"><a class="boldp">The Weekly VOCALOID and UTAU Ranking</a> (<a class="linkp" href="https://dic.nicovideo.jp/a/%E9%80%B1%E5%88%8Avocaloid%E3%81%A8utau%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" target="_blank">週刊VOCALOIDとUTAUランキング</\
 a>), abbreviated to <a class="boldp">Vocaran</a> (ぼからん),
 is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in <a class="linkp" href="https://www.nicovideo.jp/" target="_blank">Niconico</a> (ニコニコ).
-This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_blank">nicodb.jp</a>. <a class="boldp">Apologize for any possible mistake.</a></p>
+This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_blank">nicodb.jp</a>. Apologize for any possible mistake.</p>
 </div>
 </div>
 <table id="songlist">
-<tr class="songitemtitle" id="tr-1"><th class="songtitle" id="td-1"><a class="songtexttitle" id="tda-1">&nbsp;</a></th></tr>
-<tr class="songitemtitle" id="trdull"><th class="songtitle" id="tddull"><a class="songtexttitle" id="tdadull">&nbsp;</a></th></tr>
-"""
-print(prep1)
-
-for i in range(0, 42):
-    print('<tr class="songitem" id="tr'+str(i)+'"><td class="songunit" id="td'+str(i)+'"><a class="songtext" id="tda'+str(i)+'" href="#" target="_blank">&nbsp;</a></td></tr>')
-
-prep2  = """
+<tr class="songitemtitle" id="tr-1"><th id="td-1"><a class="songtexttitle" id="tda-1">&nbsp;</a></th></tr>
+<tr class="songitemtitle" id="trdull"><th id="tddull"><a class="songtexttitle" id="tdadull">&nbsp;</a></th></tr>
 </table>
 <div id="songlistfooter">
 <p id="songlisttxt">Copyright © 2020 boundin</p>
@@ -51,7 +44,7 @@ prep2  = """
 <button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
 </div>
 """
-print(prep2)
+print(prep)
 
 with open('json/episodelist.json') as json_file:
     data = json.load(json_file)

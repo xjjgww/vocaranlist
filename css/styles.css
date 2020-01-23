@@ -69,7 +69,7 @@ p { font-size: var(--size-font-default); }
 #songlist {
     border-collapse: collapse;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     opacity: 0.5;
     transition: opacity 0.3s;
     margin-bottom: 8rem;

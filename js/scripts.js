@@ -35,19 +35,28 @@ function copylink(str, noti) {
 
 function darkendate(sm) {
     document.getElementById('d'+sm).style.opacity = "1";
-    for(var i=-1; i<42; i++)
+    var thetab = document.getElementById('songlist');
+    for(var i=0; i<42; i++)
     {
-        ida = "tda"+i;
-        document.getElementById(ida).innerHTML = "&nbsp;";
-        if(i < 0)
-        {
-            document.getElementById(ida).innerHTML = '【'+episodejsonobj[sm][1]+'】 '+episodejsonobj[sm][2];
-        }
-        else if(i < songjsonobj[sm].length)
-        {
-            document.getElementById(ida).href = songjsonobj[sm][i]['url'];
-            document.getElementById(ida).innerHTML = songjsonobj[sm][i]['title'];
-        }
+        var eletr = document.getElementById('tr'+i);
+        if(eletr !== null) { eletr.remove(); }
+    }
+    document.getElementById('tda-1').innerHTML = '【'+episodejsonobj[sm][1]+'】 '+episodejsonobj[sm][2];
+    for(var i=0; i<songjsonobj[sm].length; i++)
+    {
+        var newtr = document.createElement("tr");
+        newtr.id = 'tr'+i;
+        newtr.className = "songitem";
+        thetab.appendChild(newtr);
+        var newtd = document.createElement("td");
+        newtd.id = 'td'+i;
+        newtr.appendChild(newtd);
+        var newtda = document.createElement("a");
+        newtda.id = 'tda'+i;
+        newtda.className = "songtext";
+        newtda.innerHTML = songjsonobj[sm][i]['title'];
+        newtda.href = songjsonobj[sm][i]['url'];
+        newtd.appendChild(newtda);
     }
 }
 function fadedate(sm) {
