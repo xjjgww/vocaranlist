@@ -46,7 +46,6 @@ p { font-size: var(--size-font-default); }
     /* float: left; */
 }
 #ranlist {
-    margin-left: -50%;
     height: 90%;
     width: 43%;
     margin-left: 50%;
@@ -91,7 +90,7 @@ p { font-size: var(--size-font-default); }
 }
 #desc {
     text-align: left;
-    width: 90%;
+    width: 70rem;
     height: 11rem;
     background-color: white;
     padding-left: 0;
