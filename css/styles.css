@@ -90,11 +90,11 @@ p { font-size: var(--size-font-default); }
 }
 #desc {
     text-align: left;
-    width: 70rem;
+    width: 75rem;
     height: 11rem;
     background-color: white;
     padding-left: 0;
-    padding-top: 1.5rem;
+    padding-top: 0rem;
 }
 #descrip {
     font-size: 1.7rem;
