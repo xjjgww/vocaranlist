@@ -73,7 +73,7 @@ p { font-size: var(--size-font-default); }
     height: 100%;
     opacity: 0.5;
     transition: opacity 0.4s;
-    margin-bottom: 10%;
+    margin-bottom: 9%;
     table-layout: fixed;
 }
 #songlist:hover {
@@ -134,6 +134,7 @@ p { font-size: var(--size-font-default); }
     color: var(--color-default);
     outline: none;
     padding-left: 7%;
+    padding-bottom: 0.3%;
 }
 #tr-1 {
     position: fixed;
