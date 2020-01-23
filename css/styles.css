@@ -132,8 +132,8 @@ p { font-size: var(--size-font-default); }
     background-color: white;
     color: var(--color-default);
     outline: none;
-    padding-left: 7%;
-    padding-bottom: 0.3%;
+    padding-left: 8rem;
+    padding-bottom: 0.2rem;
 }
 #tr-1 {
     position: fixed;
