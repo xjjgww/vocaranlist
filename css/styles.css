@@ -52,11 +52,20 @@ p { font-size: var(--size-font-default); }
     margin-left: 50%;
     float: right;
     position: fixed;
-    /* background-color: #fbfbfb; */
     z-index: 200;
     border: none;
     overflow: auto;
     display: block;
+}
+#header {
+    margin-top: -14rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+    height: 14rem;
+    width: var(--width-toc);
+    position: fixed;
+    background-color: white;
+    z-index: 200;
 }
 #songlist {
     border-collapse: collapse;
@@ -69,6 +78,39 @@ p { font-size: var(--size-font-default); }
 }
 #songlist:hover {
     opacity: 1.0;
+}
+#descholder {
+    width: 43%;
+    height: 14rem;
+    margin-top: -14rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 10%;
+    position: fixed;
+    background-color: white;
+    z-index: 200;
+}
+#desc {
+    text-align: left;
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    padding-left: 0;
+    padding-top: 1.5%;
+}
+#descrip {
+    font-size: 1.6rem;
+    color: #b3b3b3;
+}
+.boldp {
+    color: #666666;
+}
+.linkp {
+    color: var(--color-nico);
+    text-decoration: none;
+}
+.linkp:hover {
+    color: var(--color-song);
 }
 .songitem {
     height: 2.7rem;
@@ -91,7 +133,7 @@ p { font-size: var(--size-font-default); }
     background-color: white;
     color: var(--color-default);
     outline: none;
-    padding: 0;
+    padding-left: 7%;
 }
 #tr-1 {
     position: fixed;
