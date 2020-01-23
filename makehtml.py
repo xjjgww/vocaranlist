@@ -9,6 +9,7 @@ prep = """
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング">
 <meta name="author" content="Erica Wang">
+<link rel="icon" href="img/icon.png" type = "image/x-icon">
 <link rel="stylesheet" href="css/styles.css">
 <script data-main="js/scripts.js" src="js/episodelist.js"></script>
 <script data-main="js/scripts.js" src="js/songlist.js"></script>
