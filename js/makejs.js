@@ -1,4 +1,4 @@
 var songlistjson = `
 ...
 `;
-var jsonobj = JSON.parse(songlistjson);
+var songjsonobj = JSON.parse(songlistjson);
