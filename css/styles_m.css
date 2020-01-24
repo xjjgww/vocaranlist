@@ -42,7 +42,7 @@ body {
 }
 
 /* text */
-h1 { font-size: var(--size-font-header); }
+h1 { font-size: var(--size-font-header); display: block; }
 p { font-size: var(--size-font-default); }
 
 #header {
@@ -58,15 +58,18 @@ p { font-size: var(--size-font-default); }
     width: var(--width-toc);
     margin-top: 0;
     text-align: center;
-    position: float;
+    position: absolute;
+    padding: 0;
 }
 #filter{
     height: var(--height-filter-div);
     width: var(--width-toc);
     display: block;
-    margin-top: 0;
+    margin-top: var(--height-filter-div);
+    background-color: blue;
+    position: absolute;
+    padding-top: 0;
 }
-
 #filterinput {
     outline: none;
     font-family: courier;
@@ -78,6 +81,7 @@ p { font-size: var(--size-font-default); }
     padding-left: 1rem;
     border: 0.1rem solid #999999;
     border-radius: 0.3rem;
+    margin-top: 0;
 }
 #filterinput:hover {
     opacity: 1.0;
@@ -88,18 +92,18 @@ p { font-size: var(--size-font-default); }
 .yrmo {
     height: var(--radius-btn);
     width: var(--radius-btn);
-    border-radius: 50%;    
+    border-radius: 50%;
     color: #999999;
     opacity: 0.6;
     background-color: #fafafa;
     text-align: center;
     padding: 0;
-    margin-top: 0;
     font-size: var(--size-font-header);
+    margin-left: 0;
+    position: relative;
 }
-#appmonth {
-    margin-left: 0rem;
-}
+/* #appmonth { */
+/* } */
 
 #body {
     width: 100%;
