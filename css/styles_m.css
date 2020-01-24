@@ -81,6 +81,7 @@ p { font-size: var(--size-font-default); }
     color: #999999;
     opacity: 0.6;
     padding-left: 1rem;
+    padding-bottom: -0.1vh;
     border: 0.1rem solid #999999;
     border-radius: 0.3rem;
     margin-top: 0.1vh;
