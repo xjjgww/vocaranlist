@@ -10,7 +10,7 @@ html{
     --color-song: #D27979;
     --width-toc: 100%;
     --margin-toc: 0%;
-    --size-font-default: 1.88rem;
+    --size-font-default: 1.8rem;
     --size-font-footer: 1.9vh;
     --size-font-header: 2.5vh;
     --height-filter-div: 5.4vh;
@@ -66,7 +66,7 @@ p { font-size: var(--size-font-default); }
     width: var(--width-toc);
     display: block;
     margin-top: var(--height-filter-div);
-    background-color: blue;
+    background-color: green;
     position: absolute;
     padding-top: 0;
 }
@@ -100,6 +100,7 @@ p { font-size: var(--size-font-default); }
     padding: 0;
     font-size: var(--size-font-header);
     margin-left: 0;
+    margin-top: 0.1vh;
     position: relative;
 }
 /* #appmonth { */
