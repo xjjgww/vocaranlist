@@ -10,16 +10,17 @@ html{
     --color-song: #D27979;
     --width-toc: 100%;
     --margin-toc: 0%;
-    --size-font-default: 1.9rem;
+    --size-font-default: 1.88rem;
+    --size-font-footer: 1.6rem;
     --height-btn: 4.5rem;
     --height-list: 4.2rem;
-    --height-footer: 2.6rem;
-    --size-font-footer: 1.6rem;
-    --radius-btn: 3.0rem;
-    --height-header: 10rem;
-    --height-header-rev: -10rem;
-    --height-content-block-up: 35rem;
-    --height-content-block-down: 40rem;
+    --height-song-title: 2.5rem;
+    --radius-btn: 3.5rem;
+    --height-footer: 3vh;
+    --height-header: 11vh;
+    --height-header-rev: -11vh;
+    --height-content-block-up: 36vh;
+    --height-content-block-down: 48vh;
 }
 
 /* body */
@@ -42,6 +43,13 @@ p { font-size: var(--size-font-default); }
 
 #title { margin-top: 1rem; }
 
+#header {
+    height: var(--height-header);
+    margin-top: var(--height-header-rev);
+    width: var(--width-toc);
+    position: fixed;
+}
+
 #body {
     width: 100%;
     height: 90%;
@@ -58,27 +66,17 @@ p { font-size: var(--size-font-default); }
     position: fixed;
     display: block;
     overflow: auto;
-    background-color: white;
+    /* background-color: white; */
 }
 #ranlist {
     height: var(--height-content-block-down);
     width: var(--width-toc);
     margin-top: var(--height-content-block-up);
-    background-color: white;
+    /* background-color: white; */
     position: fixed;
     border: none;
     overflow: auto;
     display: block;
-}
-#header {
-    margin-top: var(--height-header-rev);
-    margin-bottom: 0rem;
-    margin-left: 0rem;
-    height: var(--height-header);
-    width: var(--width-toc);
-    position: fixed;
-    background-color: white;
-    z-index: 200;
 }
 #songlist {
     border-collapse: collapse;
@@ -102,11 +100,10 @@ p { font-size: var(--size-font-default); }
     color: white;
 }
 .songitemtitle {
-    height: 2.7rem;
+    height: var(--height-song-title);
     width: 100%;
     background-color: #cccccc;
     outline: none;
-    /* padding: auto 0; */
     padding-left: 1rem;
     border: 0.2rem dashed #cccccc;
     padding-top: 0.5rem;
@@ -124,15 +121,6 @@ p { font-size: var(--size-font-default); }
     text-decoration: none;
     font-size: var(--size-font-default);
     color: inherit;
-}
-
-#header {
-    height: var(--height-header);
-    margin-top: var(--height-header-rev);
-    width: var(--width-toc);
-    position: fixed;
-    background-color: white;
-    z-index: 200;
 }
 
 /* button */
@@ -159,7 +147,7 @@ button {
 
 .btn {
     height: var(--height-btn);
-    width: 11rem;
+    width: 12rem;
     float: left;
     display: block;
     opacity: 1.0;
@@ -189,7 +177,7 @@ button {
 .fadetxt {
     color: var(--color-song);
     height: var(--height-btn);
-    width: 38rem;
+    width: 37rem;
     opacity: 1.0;
     margin-left: 0.5rem;
     cursor: default;
@@ -201,7 +189,7 @@ button {
     outline: none;
     font-family: courier;
     height: var(--radius-btn);
-    width: 30rem;
+    width: 35rem;
     margin: auto;
     font-size: var(--size-font-default);
     color: #999999;
