@@ -50829,6 +50829,4 @@ var songlistjson = `
   "sm19024994": [],
   "sm18973867": [],
   "sm18908759": []
-}
-`;
-var songjsonobj = JSON.parse(songlistjson);
+}`; var songjsonobj = JSON.parse(songlistjson);
