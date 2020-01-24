@@ -10,7 +10,7 @@ html{
     --color-song: #D27979;
     --width-toc: 100%;
     --margin-toc: 0%;
-    --size-font-default: 1.7rem;
+    --size-font-default: 1.8rem;
     --size-font-footer: 1.9vh;
     --size-font-header: 2.5vh;
     --height-filter-div: 5.4vh;
@@ -141,9 +141,8 @@ p { font-size: var(--size-font-default); }
     border-collapse: collapse;
     width: 99.5%;
     opacity: 1.0;
-    margin-bottom: 0rem;
     table-layout: fixed;
-    margin-bottom: 10vh;
+    margin-bottom: 14vh;
 }
 .songitem {
     height: var(--height-list);
@@ -193,6 +192,7 @@ button {
     border: none;
     background-color: inherit;
     cursor: pointer;
+    padding: 0;
 }
 .btn-group {
     height: var(--height-btn);
