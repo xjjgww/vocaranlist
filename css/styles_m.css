@@ -11,12 +11,14 @@ html{
     --width-toc: 100%;
     --margin-toc: 0%;
     --size-font-default: 1.88rem;
-    --size-font-footer: 1.6rem;
+    --size-font-footer: 1.9vh;
+    --size-font-header: 2.2vh;
+    --height-filter: 3.4vh;
     --height-btn: 4.5rem;
     --height-list: 4.2rem;
-    --height-song-title: 2.5rem;
-    --radius-btn: 3.5rem;
-    --height-footer: 3vh;
+    --height-song-title: 3.0rem;
+    --radius-btn: 4vh;
+    --height-footer: 2.5vh;
     --height-header: 11vh;
     --height-header-rev: -11vh;
     --height-content-block-up: 36vh;
@@ -38,7 +40,10 @@ body {
 }
 
 /* text */
-h1 { font-size: var(--size-font-default); }
+h1 {
+    font-size: var(--size-font-header);
+    margin-bottom: 1.0vh;
+}
 p { font-size: var(--size-font-default); }
 
 #title { margin-top: 1rem; }
@@ -106,10 +111,11 @@ p { font-size: var(--size-font-default); }
     outline: none;
     padding-left: 1rem;
     border: 0.2rem dashed #cccccc;
-    padding-top: 0.5rem;
-    padding-bottom: 0;
+    /* padding-top: 0; */
+    /* padding-bottom: 0; */
 }
 #tr-1 {
+    height: var(--height-song-title);
     position: fixed;
 }
 .songtext {
@@ -118,9 +124,12 @@ p { font-size: var(--size-font-default); }
     color: inherit;
 }
 #tda-1 {
+    line-height: var(--height-song-title);
     text-decoration: none;
     font-size: var(--size-font-default);
     color: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* button */
@@ -188,10 +197,10 @@ button {
 #filterinput {
     outline: none;
     font-family: courier;
-    height: var(--radius-btn);
+    height: var(--height-filter);
     width: 35rem;
     margin: auto;
-    font-size: var(--size-font-default);
+    font-size: var(--size-font-header);
     color: #999999;
     opacity: 0.6;
     padding-left: 1rem;
@@ -214,6 +223,7 @@ button {
     text-align: center;
     padding: 0;
     margin-top: 0rem;
+    font-size: var(--size-font-header);
 }
 #appmonth {
     margin-left: 0rem;
@@ -250,7 +260,8 @@ button {
     text-align: center;
 }
 #clipboardtxt {
-    margin-top: 0.5rem;
+    line-height: var(--height-footer);
+    margin-top: 0;
     font-size: var(--size-font-footer);
 }
 #songlistfooter {
