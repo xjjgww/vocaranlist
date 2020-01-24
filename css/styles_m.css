@@ -27,7 +27,7 @@ html{
 
 /* body */
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     font-family: courier,Osaka;
     font-size: var(--size-font-default);
