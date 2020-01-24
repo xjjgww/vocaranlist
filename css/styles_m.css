@@ -1,0 +1,282 @@
+html{
+    font-size: 2vw;
+    overflow-y: scroll;
+}
+
+/* colors */
+:root {
+    --color-default: #484848;
+    --color-nico: #0C457D;
+    --color-song: #D27979;
+    --width-toc: 100%;
+    --margin-toc: 0%;
+    --size-font-default: 1.9rem;
+    --height-btn: 4.5rem;
+    --height-list: 4.2rem;
+    --height-footer: 2.6rem;
+    --size-font-footer: 1.6rem;
+    --radius-btn: 3.0rem;
+    --height-header: 10rem;
+    --height-header-rev: -10rem;
+    --height-content-block-up: 35rem;
+    --height-content-block-down: 40rem;
+}
+
+/* body */
+body {
+    height: 100%;
+    width: 100%;
+    font-family: courier,Osaka;
+    font-size: var(--size-font-default);
+    background-color: inherit;
+    color: var(--color-default);
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* text */
+h1 { font-size: var(--size-font-default); }
+p { font-size: var(--size-font-default); }
+
+#title { margin-top: 1rem; }
+
+#body {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    margin-top: var(--height-header);
+    z-index: 1;
+    position: relative;
+}
+#toc {
+    height: var(--height-content-block-up);
+    width: var(--width-toc);
+    text-aglin: center;
+    /* margin: auto; */
+    position: fixed;
+    display: block;
+    overflow: auto;
+    background-color: white;
+}
+#ranlist {
+    height: var(--height-content-block-down);
+    width: var(--width-toc);
+    margin-top: var(--height-content-block-up);
+    background-color: white;
+    position: fixed;
+    border: none;
+    overflow: auto;
+    display: block;
+}
+#header {
+    margin-top: var(--height-header-rev);
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+    height: var(--height-header);
+    width: var(--width-toc);
+    position: fixed;
+    background-color: white;
+    z-index: 200;
+}
+#songlist {
+    border-collapse: collapse;
+    width: 99.5%;
+    opacity: 1.0;
+    margin-bottom: 0rem;
+    table-layout: fixed;
+}
+.songitem {
+    height: var(--height-list);
+    width: 100%;
+    text-align: left;
+    background-color: inherit;
+    color: var(--color-default);
+    outline: none;
+    padding: 0;
+    border: 0.2rem dashed #cccccc;
+}
+.songitem:hover {
+    background-color: var(--color-default);
+    color: white;
+}
+.songitemtitle {
+    height: 2.7rem;
+    width: 100%;
+    background-color: #cccccc;
+    outline: none;
+    /* padding: auto 0; */
+    padding-left: 1rem;
+    border: 0.2rem dashed #cccccc;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+}
+#tr-1 {
+    position: fixed;
+}
+.songtext {
+    text-decoration: none;
+    font-size: var(--size-font-default);
+    color: inherit;
+}
+#tda-1 {
+    text-decoration: none;
+    font-size: var(--size-font-default);
+    color: inherit;
+}
+
+#header {
+    height: var(--height-header);
+    margin-top: var(--height-header-rev);
+    width: var(--width-toc);
+    position: fixed;
+    background-color: white;
+    z-index: 200;
+}
+
+/* button */
+button {
+    font-family: courier;
+    font-size: var(--size-font-default);
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.btn-group {
+    height: var(--height-btn);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.btn-group:hover { background-color: #f0f0f0; }
+
+.white-background { background-color: #white; }
+.gray-background { background-color: #fafafa; }
+.textalignleft { text-align: left; }
+.textaligncenter { text-align: center; }
+
+.btn {
+    height: var(--height-btn);
+    width: 11rem;
+    float: left;
+    display: block;
+    opacity: 1.0;
+}
+.leftfloat { float: left; }
+
+.txttoblock-nico { color: var(--color-nico); }
+.txttoblock-nico:hover { background-color: var(--color-nico); color: white; opacity: 1.0; }
+.txttoblock-song { color: var(--color-song); }
+.txttoblock-song:hover { background-color: var(--color-song); color: white; opacity: 1.0; }
+
+.btn-invisible {
+    height: var(--radius-btn);
+    width: var(--radius-btn);
+    float: left;
+    background-color: white;
+    opacity: 0.2;
+    border-radius: 50%;
+    margin-top: 0.4rem;
+    padding: 0;
+}
+.btn-invisible:hover { opacity: 1.0; }
+
+.whiteblock-nico { color: var(--color-nico); }
+.whiteblock-song { color: var(--color-song); }
+
+.fadetxt {
+    color: var(--color-song);
+    height: var(--height-btn);
+    width: 38rem;
+    opacity: 1.0;
+    margin-left: 0.5rem;
+    cursor: default;
+}
+
+/* search */
+
+#filterinput {
+    outline: none;
+    font-family: courier;
+    height: var(--radius-btn);
+    width: 30rem;
+    margin: auto;
+    font-size: var(--size-font-default);
+    color: #999999;
+    opacity: 0.6;
+    padding-left: 1rem;
+    border: 0.1rem solid #999999;
+    border-radius: 0.3rem;
+}
+#filterinput:hover {
+    opacity: 1.0;
+}
+::placeholder {
+    color: #999999;
+}
+.yrmo {
+    height: var(--radius-btn);
+    width: var(--radius-btn);
+    border-radius: 50%;    
+    color: #999999;
+    opacity: 0.6;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 0;
+    margin-top: 0rem;
+}
+#appmonth {
+    margin-left: 0rem;
+}
+
+
+/* clipboard */
+#footer {
+    height: var(--height-footer);
+    width: 100%;
+    /* bottom: 0; */
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    z-index: 200;
+}
+#container {
+    height: var(--height-footer);
+    width: var(--width-toc);
+    bottom: 0;
+    margin-left: 0;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    z-index: 200;
+}
+#clipboard {
+    height: var(--height-footer);
+    width: 100%;
+    margin-left: 0;
+    /* top: 0; */
+    color: white;
+    background-color: var(--color-default);
+    text-align: center;
+}
+#clipboardtxt {
+    margin-top: 0.5rem;
+    font-size: var(--size-font-footer);
+}
+#songlistfooter {
+    height: var(--height-footer);
+    width: 100%;
+    bottom: 0;
+    margin-left: 0;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    z-index: 200;
+}
+#songlisttxt {
+    margin-top: 0.5rem;
+    font-size: var(--size-font-footer);
+    margin-right: 62%;
+}
