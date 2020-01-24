@@ -17,10 +17,12 @@
 
   <body>
     <div id="header">
-      <h1 id="title">週刊VOCALOIDとUTAUランキング</h1>
+      <div id="title"><h1>週刊VOCALOIDとUTAUランキング</h1></div>
+      <div id="filter">
       <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date">
       <button id="appyear" class="yrmo" onclick="appinput('年')" onmouseover="darkendate('appyear')" onmouseout="fadedate('appyear')">年</button>
       <button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
+      </div>
     </div>
 
     <div id="body">
@@ -1488,14 +1490,11 @@
           <button id="nsm18908759" class="btn txttoblock-nico textaligncenter" onclick="window.open('https://www.nicovideo.jp/watch/sm18908759', '_blank');" onmouseover="statusbar('&#187; NicoNico &#187;')" onmouseout="statusbar('Copyright © 2020 boundin')">#259・201</button>
           <button id="dsm18908759" class="fadetxt textalignleft">2012年9月10日5時～9月17日5時</button>
         </div>
-
-        <div id="footer">
-        </div>
-        <div id="container">
-          <div id="clipboard">
-            <p id="clipboardtxt">Copyright © 2020 boundin</p>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="clipboard">
+        <p id="clipboardtxt">Copyright © 2020 boundin</p>
       </div>
     </div>
   </body>

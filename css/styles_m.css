@@ -12,17 +12,19 @@ html{
     --margin-toc: 0%;
     --size-font-default: 1.88rem;
     --size-font-footer: 1.9vh;
-    --size-font-header: 2.2vh;
-    --height-filter: 3.4vh;
+    --size-font-header: 2.5vh;
+    --height-filter-div: 5.4vh;
+    --height-filter: 3.5vh;
     --height-btn: 4.5rem;
     --height-list: 4.2rem;
     --height-song-title: 3.0rem;
     --radius-btn: 4vh;
-    --height-footer: 2.5vh;
+    --height-footer: 3vh;
     --height-header: 11vh;
-    --height-header-rev: -11vh;
+    --height-body: 86vh;
     --height-content-block-up: 36vh;
-    --height-content-block-down: 48vh;
+    --height-content-block-down: 50vh;
+    --margin-title-text: 1vh;
 }
 
 /* body */
@@ -40,28 +42,73 @@ body {
 }
 
 /* text */
-h1 {
-    font-size: var(--size-font-header);
-    margin-bottom: 1.0vh;
-}
+h1 { font-size: var(--size-font-header); }
 p { font-size: var(--size-font-default); }
-
-#title { margin-top: 1rem; }
 
 #header {
     height: var(--height-header);
-    margin-top: var(--height-header-rev);
     width: var(--width-toc);
+    margin: 0;
     position: fixed;
+    padding: 0;
+    display: block;
+}
+#title {
+    height: var(--height-filter-div);
+    width: var(--width-toc);
+    margin-top: 0;
+    text-align: center;
+    position: float;
+}
+#filter{
+    height: var(--height-filter-div);
+    width: var(--width-toc);
+    display: block;
+    margin-top: 0;
+}
+
+#filterinput {
+    outline: none;
+    font-family: courier;
+    height: var(--height-filter);
+    width: 35rem;
+    font-size: var(--size-font-header);
+    color: #999999;
+    opacity: 0.6;
+    padding-left: 1rem;
+    border: 0.1rem solid #999999;
+    border-radius: 0.3rem;
+}
+#filterinput:hover {
+    opacity: 1.0;
+}
+::placeholder {
+    color: #999999;
+}
+.yrmo {
+    height: var(--radius-btn);
+    width: var(--radius-btn);
+    border-radius: 50%;    
+    color: #999999;
+    opacity: 0.6;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    font-size: var(--size-font-header);
+}
+#appmonth {
+    margin-left: 0rem;
 }
 
 #body {
     width: 100%;
-    height: 90%;
+    height: var(--height-body);
     overflow: auto;
     margin-top: var(--height-header);
-    z-index: 1;
-    position: relative;
+    z-index: 200;
+    position: fixed;
+    padding: 0;
 }
 #toc {
     height: var(--height-content-block-up);
@@ -156,7 +203,7 @@ button {
 
 .btn {
     height: var(--height-btn);
-    width: 12rem;
+    width: 13rem;
     float: left;
     display: block;
     opacity: 1.0;
@@ -186,49 +233,11 @@ button {
 .fadetxt {
     color: var(--color-song);
     height: var(--height-btn);
-    width: 37rem;
+    width: 36rem;
     opacity: 1.0;
     margin-left: 0.5rem;
     cursor: default;
 }
-
-/* search */
-
-#filterinput {
-    outline: none;
-    font-family: courier;
-    height: var(--height-filter);
-    width: 35rem;
-    margin: auto;
-    font-size: var(--size-font-header);
-    color: #999999;
-    opacity: 0.6;
-    padding-left: 1rem;
-    border: 0.1rem solid #999999;
-    border-radius: 0.3rem;
-}
-#filterinput:hover {
-    opacity: 1.0;
-}
-::placeholder {
-    color: #999999;
-}
-.yrmo {
-    height: var(--radius-btn);
-    width: var(--radius-btn);
-    border-radius: 50%;    
-    color: #999999;
-    opacity: 0.6;
-    background-color: #fafafa;
-    text-align: center;
-    padding: 0;
-    margin-top: 0rem;
-    font-size: var(--size-font-header);
-}
-#appmonth {
-    margin-left: 0rem;
-}
-
 
 /* clipboard */
 #footer {
@@ -238,7 +247,6 @@ button {
     margin: auto;
     background-color: white;
     text-align: center;
-    z-index: 200;
 }
 #container {
     height: var(--height-footer);
@@ -254,28 +262,15 @@ button {
     height: var(--height-footer);
     width: 100%;
     margin-left: 0;
-    /* top: 0; */
+    margin-bottom: 0;
     color: white;
     background-color: var(--color-default);
     text-align: center;
+    z-index: 220;
 }
 #clipboardtxt {
     line-height: var(--height-footer);
     margin-top: 0;
     font-size: var(--size-font-footer);
 }
-#songlistfooter {
-    height: var(--height-footer);
-    width: 100%;
-    bottom: 0;
-    margin-left: 0;
-    background-color: white;
-    position: fixed;
-    text-align: center;
-    z-index: 200;
-}
-#songlisttxt {
-    margin-top: 0.5rem;
-    font-size: var(--size-font-footer);
-    margin-right: 62%;
-}
+
