@@ -10,7 +10,7 @@ html{
     --color-song: #D27979;
     --width-toc: 100%;
     --margin-toc: 0%;
-    --size-font-default: 1.8rem;
+    --size-font-default: 1.7rem;
     --size-font-footer: 1.9vh;
     --size-font-header: 2.5vh;
     --height-filter-div: 5.4vh;
@@ -22,8 +22,8 @@ html{
     --height-footer: 3vh;
     --height-header: 11vh;
     --height-body: 86vh;
-    --height-content-block-up: 36vh;
-    --height-content-block-down: 50vh;
+    --height-content-block-up: 32vh;
+    --height-content-block-down: 54vh;
     --margin-title-text: 1vh;
 }
 
@@ -66,7 +66,7 @@ p { font-size: var(--size-font-default); }
     width: var(--width-toc);
     display: block;
     margin-top: var(--height-filter-div);
-    background-color: green;
+    background-color: white;
     position: absolute;
     padding-top: 0;
 }
@@ -141,6 +141,7 @@ p { font-size: var(--size-font-default); }
     opacity: 1.0;
     margin-bottom: 0rem;
     table-layout: fixed;
+    margin-bottom: 10vh;
 }
 .songitem {
     height: var(--height-list);
