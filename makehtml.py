@@ -10,6 +10,7 @@ prep = """
 <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング">
 <meta name="description" content="The Weekly VOCALOID and UTAU Ranking (週刊VOCALOIDとUTAUランキング), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in Niconico (ニコニコ).">
 <meta name="author" content="Erica Wang">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="icon" href="https://xjjgww.github.io/vocaranlist/img/icon.png" type="image/x-icon">
 <link rel="stylesheet" href="css/styles.css">
 <script>

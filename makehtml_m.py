@@ -15,7 +15,9 @@ prep = """
 <link rel="stylesheet" href="css/styles_m.css">
 <script data-main="js/scripts.js" src="js/episodelist.js"></script>
 <script data-main="js/scripts.js" src="js/songlist.js"></script>
+<script data-main="js/loadtoc.js" src="js/episodelist.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/loadtoc.js"></script>
 </head>
 <title>週刊VOCALOIDとUTAUランキング</title>
 
@@ -46,30 +48,31 @@ prep = """
 """
 print(prep)
 
-with open('json/episodelist.json') as json_file:
-    data = json.load(json_file)
-    oe = 0
-    for s in data:
-        thislist = list(data[s])
-        sm = s
-        mylink = 'https://www.nicovideo.jp/watch/' + sm
-        songrium = 'http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F' + sm
-        episode = thislist[0]
-        number = thislist[1]
-        datetxt = thislist[2]
+# with open('json/episodelist.json') as json_file:
+#     data = json.load(json_file)
+#     oe = 0
+#     for s in data:
+#         thislist = list(data[s])
+#         sm = s
+#         mylink = 'https://www.nicovideo.jp/watch/' + sm
+#         songrium = 'http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F' + sm
+#         episode = thislist[0]
+#         number = thislist[1]
+#         datetxt = thislist[2]
         
-        lineid = '#'+episode+' '+sm+' '+datetxt;
-        attrs = 'type="line" id="'+lineid+'" onclick="darkendate(\''+sm+'\')"'
-        webn = '';
-        if oe%2==0: print('<div class="btn-group gray-background" '+attrs+'>')
-        else: print('<div class="btn-group white-background" '+attrs+'>')
-        print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');" '+webn+'>'+number+'</button>')
-        print('<button id="d'+sm+'" class="fadetxt textalignleft">'+datetxt+'</button>')
-        print('</div>')
-        oe = oe + 1
+#         lineid = '#'+episode+' '+sm+' '+datetxt;
+#         attrs = 'type="line" id="'+lineid+'" onclick="darkendate(\''+sm+'\')"'
+#         webn = '';
+#         if oe%2==0: print('<div class="btn-group gray-background" '+attrs+'>')
+#         else: print('<div class="btn-group white-background" '+attrs+'>')
+#         print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');" '+webn+'>'+number+'</button>')
+#         print('<button id="d'+sm+'" class="fadetxt textalignleft">'+datetxt+'</button>')
+#         print('</div>')
+#         oe = oe + 1
 
 board = """
 </div>
+<script>loadtoc()</script>
 </div>
 <div id="container">
 <div id="clipboard">

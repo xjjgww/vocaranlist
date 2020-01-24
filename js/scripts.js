@@ -3,24 +3,31 @@ function myFunction() {
     document.getElementById("title").innerHTML = "Welcome!";
 }
 
+function altercolor() {
+    var lines = document.getElementsByTagName('div');
+    var filteri = 0;
+    for(var i=0; i<lines.length; i++)
+    {
+        if(lines[i].getAttribute('type') != "line") continue;
+        if(lines[i].style.display == "none") continue;
+        if(filteri%2==0) { lines[i].className = "btn-group gray-background"; }
+        else { lines[i].className = "btn-group white-background"; }
+        filteri++;
+    }    
+}
+
 function myfilter() {
-    var input, i, lines, idd, filteri;
+    var input, i, lines, idd;
     input = document.getElementById('filterinput').value;
     lines = document.getElementsByTagName('div');
-    filteri = 0;
     for(i=0; i<lines.length; i++)
     {
         if(lines[i].getAttribute('type') != "line") continue;
         idd = lines[i].id;
-        if(idd.indexOf(input) > -1)
-        {
-            lines[i].style.display = "";
-            if(filteri%2==0) { lines[i].className = "btn-group gray-background"; }
-            else { lines[i].className = "btn-group white-background"; }
-            filteri++;
-        }
+        if(idd.indexOf(input) > -1) { lines[i].style.display = ""; }
         else { lines[i].style.display = "none"; }
     }
+    altercolor();
 }
 
 function copylink(str, noti) {
