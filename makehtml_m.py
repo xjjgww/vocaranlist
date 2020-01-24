@@ -10,6 +10,7 @@ prep = """
 <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング">
 <meta name="description" content="The Weekly VOCALOID and UTAU Ranking (週刊VOCALOIDとUTAUランキング), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in Niconico (ニコニコ).">
 <meta name="author" content="Erica Wang">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="icon" href="https://xjjgww.github.io/vocaranlist/img/icon.png" type="image/x-icon">
 <link rel="stylesheet" href="css/styles_m.css">
 <script data-main="js/scripts.js" src="js/episodelist.js"></script>
@@ -20,11 +21,17 @@ prep = """
 
 <body>
 <div id="header">
-<div id="title"><h1>週刊VOCALOIDとUTAUランキング</h1></div>
+<div id="title">
+<div id="titletext">
+週刊VOCALOIDとUTAUランキング
+</div>
+</div>
 <div id="filter">
+<div id="filtergroup">
 <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date">
-<button id="appyear" class="yrmo" onclick="appinput('年')" onmouseover="darkendate('appyear')" onmouseout="fadedate('appyear')">年</button>
-<button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
+<button id="appyear" class="yrmo" onclick="appinput('年')">年</button>
+<button id="appmonth" class="yrmo" onclick="appinput('月')">月</button>
+</div>
 </div>
 </div>
 
@@ -52,18 +59,11 @@ with open('json/episodelist.json') as json_file:
         datetxt = thislist[2]
         
         lineid = '#'+episode+' '+sm+' '+datetxt;
-        # attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\''+sm+'\')" onmouseout="fadedate(\''+sm+'\')"'
-        attrs = 'type="line" id="'+lineid+'" onmouseover="darkendate(\''+sm+'\')"'
-        urlanin = 'onmouseover="statusbar(\''+mylink+'\')" onmouseout="statusbar(\'Copyright © 2020 boundin\')"';
-        # urlanis = 'onmouseover="statusbar(\''+songrium+'\')" onmouseout="statusbar(\'&nbsp;\')"';
-        webn = 'onmouseover="statusbar(\'&#187; NicoNico &#187;\')" onmouseout="statusbar(\'Copyright © 2020 boundin\')"';
-        # webs = 'onmouseover="statusbar(\'&#187; songrium &#187;\')" onmouseout="statusbar(\'&nbsp;\')"';
+        attrs = 'type="line" id="'+lineid+'" onclick="darkendate(\''+sm+'\')"'
+        webn = '';
         if oe%2==0: print('<div class="btn-group gray-background" '+attrs+'>')
         else: print('<div class="btn-group white-background" '+attrs+'>')
         print('<button id="n'+sm+'" class="btn txttoblock-nico textaligncenter" onclick="window.open(\''+mylink +'\', \'_blank\');" '+webn+'>'+number+'</button>')
-        # print('<button class="btn-invisible whiteblock-nico" onclick="copylink(\''+sm+'\', \'the sm #\')" '+urlanin+'>N</button>')
-        # print('<button id="b'+sm+'" class="btn txttoblock-song textaligncenter" onclick="window.open(\''+songrium +'\', \'_blank\');" '+webs+'>'+sm+'</button>')
-        # print('<button class="btn-invisible whiteblock-song" onclick="copylink(\''+songrium+'\', \'the songrium link\')" '+urlanis+'>S</button>')
         print('<button id="d'+sm+'" class="fadetxt textalignleft">'+datetxt+'</button>')
         print('</div>')
         oe = oe + 1
@@ -73,7 +73,7 @@ board = """
 </div>
 <div id="container">
 <div id="clipboard">
-<p id="clipboardtxt">Copyright © 2020 boundin</p>
+<div id="clipboardtxt">Copyright © 2020 boundin</div>
 </div>
 </div>
 </body>
