@@ -10,11 +10,11 @@ html{
     --color-song: #D27979;
     --width-toc: 100%;
     --margin-toc: 0%;
-    --size-font-default: 1.8rem;
+    --size-font-default: 1.82rem;
     --size-font-footer: 1.9vh;
     --size-font-header: 2.5vh;
     --height-filter-div: 5.4vh;
-    --height-filter: 3.0vh;
+    --height-filter: 2.9vh;
     --height-btn: 4.5rem;
     --height-list: 4.2rem;
     --height-song-title: 3.0rem;
@@ -83,7 +83,7 @@ p { font-size: var(--size-font-default); }
     padding-left: 1rem;
     border: 0.1rem solid #999999;
     border-radius: 0.3rem;
-    margin-top: 0;
+    margin-top: 0.1vh;
 }
 #filterinput:hover {
     opacity: 1.0;
@@ -142,7 +142,7 @@ p { font-size: var(--size-font-default); }
     width: 99.5%;
     opacity: 1.0;
     table-layout: fixed;
-    margin-bottom: 14vh;
+    margin-bottom: 15vh;
 }
 .songitem {
     height: var(--height-list);
@@ -209,7 +209,7 @@ button {
 
 .btn {
     height: var(--height-btn);
-    width: 13rem;
+    width: 12rem;
     float: left;
     display: block;
     opacity: 1.0;
@@ -239,7 +239,7 @@ button {
 .fadetxt {
     color: var(--color-song);
     height: var(--height-btn);
-    width: 36rem;
+    width: 37rem;
     opacity: 1.0;
     margin-left: 0.5rem;
     cursor: default;

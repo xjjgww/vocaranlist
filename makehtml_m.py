@@ -20,10 +20,12 @@ prep = """
 
 <body>
 <div id="header">
-<h1 id="title">週刊VOCALOIDとUTAUランキング</h1>
+<div id="title"><h1>週刊VOCALOIDとUTAUランキング</h1></div>
+<div id="filter">
 <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date">
 <button id="appyear" class="yrmo" onclick="appinput('年')" onmouseover="darkendate('appyear')" onmouseout="fadedate('appyear')">年</button>
 <button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
+</div>
 </div>
 
 <div id="body">
@@ -67,13 +69,11 @@ with open('json/episodelist.json') as json_file:
         oe = oe + 1
 
 board = """
-<div id="footer">
+</div>
 </div>
 <div id="container">
 <div id="clipboard">
 <p id="clipboardtxt">Copyright © 2020 boundin</p>
-</div>
-</div>
 </div>
 </div>
 </body>
