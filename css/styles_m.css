@@ -14,7 +14,7 @@ html{
     --size-font-footer: 1.9vh;
     --size-font-header: 2.5vh;
     --height-filter-div: 5.4vh;
-    --height-filter: 3.5vh;
+    --height-filter: 3.0vh;
     --height-btn: 4.5rem;
     --height-list: 4.2rem;
     --height-song-title: 3.0rem;
@@ -33,7 +33,7 @@ body {
     width: 100%;
     font-family: courier,Osaka;
     font-size: var(--size-font-default);
-    background-color: inherit;
+    background-color: white;
     color: var(--color-default);
     text-align: center;
     border: none;
@@ -52,6 +52,7 @@ p { font-size: var(--size-font-default); }
     position: fixed;
     padding: 0;
     display: block;
+    background-color: white;
 }
 #title {
     height: var(--height-filter-div);
@@ -59,16 +60,17 @@ p { font-size: var(--size-font-default); }
     margin-top: 0;
     text-align: center;
     position: absolute;
-    padding: 0;
+    background-color: inherit;
+    padding-bottom: 0.3hv;
 }
 #filter{
     height: var(--height-filter-div);
     width: var(--width-toc);
     display: block;
     margin-top: var(--height-filter-div);
-    background-color: white;
     position: absolute;
     padding-top: 0;
+    background-color: inherit;
 }
 #filterinput {
     outline: none;
@@ -123,17 +125,17 @@ p { font-size: var(--size-font-default); }
     position: fixed;
     display: block;
     overflow: auto;
-    /* background-color: white; */
+    background-color: white;
 }
 #ranlist {
     height: var(--height-content-block-down);
     width: var(--width-toc);
     margin-top: var(--height-content-block-up);
-    /* background-color: white; */
     position: fixed;
     border: none;
     overflow: auto;
     display: block;
+    background-color: #fafafa;
 }
 #songlist {
     border-collapse: collapse;
@@ -164,8 +166,6 @@ p { font-size: var(--size-font-default); }
     outline: none;
     padding-left: 1rem;
     border: 0.2rem dashed #cccccc;
-    /* padding-top: 0; */
-    /* padding-bottom: 0; */
 }
 #tr-1 {
     height: var(--height-song-title);
