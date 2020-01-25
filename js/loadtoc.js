@@ -1,5 +1,5 @@
 
-function loadtoc()
+function loadtoc_m()
 {
     var thetoc = document.getElementById('toc');
     for(var sm in episodejsonobj)
@@ -29,11 +29,8 @@ function loadtoc()
         btnd.innerHTML = datetxt;
         line.appendChild(btnd);
 
-        var nicolink = 'https://www.nicovideo.jp/watch/'+sm.valueOf();
-        document.getElementById('n'+sm).onclick = function() { window.open(nicolink.valueOf(), '_blank'); }
-        // if(episode=="604") { document.getElementById('title').innerHTML = document.getElementById('n'+sm).onclick; }
-        if(episode=="604") { document.getElementById('title').innerHTML = nicolink; }
-        // document.getElementById(lineid).onclick = function() { darkendate(sm); } 
+        btnn.setAttribute("onclick", "window.open('https://www.nicovideo.jp/watch/"+sm+"')");
+        line.setAttribute("onclick", "darkendate('"+sm+"')");
     }
     altercolor();
 }
