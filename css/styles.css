@@ -276,7 +276,8 @@ button {
     margin-top: 0;
     padding: 0;
     text-align: center;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-color: var(--color-default);
     outline: none;
 }
 
@@ -285,9 +286,10 @@ button {
     width: var(--width-rightpanel);
     position: fixed;
     margin-left: 0;
-    margin-top: 0.3vh;
+    margin-top: 0.2vh;
     text-align: center;
-    color: var(--color-default);
+    /* color: var(--color-default); */
+    color: white;
     font-size: var(--size-font-songlist);
     font-weight: bold;
     outline: none;
