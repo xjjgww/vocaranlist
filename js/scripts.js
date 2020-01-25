@@ -37,7 +37,7 @@ function copylink(str, noti) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    document.getElementById('clipboardtxt').innerHTML = "Copied "+noti+".";
+    document.getElementById('clipboard').innerHTML = "Copied "+noti+".";
 }
 
 function darkendate(sm) {
@@ -72,7 +72,7 @@ function fadedate(sm) {
 }
 
 function statusbar(str) {
-    document.getElementById('clipboardtxt').innerHTML = str;
+    document.getElementById('clipboard').innerHTML = str;
 }
 
 function appinput(str) {
