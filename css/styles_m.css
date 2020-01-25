@@ -247,8 +247,8 @@ button {
     margin: auto;
     text-align: center;
 }
-.btn-group:active { background-color: #b3b3b3; }
-/* .btn-group:hover { background-color: #f0f0f0; } */
+/* .btn-group:active { background-color: #b3b3b3; } */
+.btn-group:hover { background-color: #cccccc; }
 
 .white-background { background-color: #white; }
 .gray-background { background-color: #f2f2f2; }
