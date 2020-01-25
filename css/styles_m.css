@@ -6,7 +6,6 @@ html{
 
 /* colors */
 :root {
-    /* --color-default: #484848; */
     --color-default: #525252;
     --color-nico: #0C457D;
     --color-song: #D27979;
@@ -23,10 +22,10 @@ html{
     --height-footer: 3vh;
     --height-header: 10vh;
     --height-body: 87vh;
-    --height-content-block-up: 30vh;
+    --height-content-block-up: 31vh;
     --height-song-title: 3vh;
     --height-content-block-down: 53vh;
-    --position-songlist: 33vh;
+    --position-songlist: 34vh;
     --margin-title-text: 1vh;
 }
 
