@@ -48,7 +48,7 @@ function darkendate(sm) {
         var eletr = document.getElementById('tr'+i);
         if(eletr !== null) { eletr.remove(); }
     }
-    document.getElementById('tda-1').innerHTML = '【'+episodejsonobj[sm][1]+'】 '+episodejsonobj[sm][2];
+    document.getElementById('tr-1').innerHTML = episodejsonobj[sm][1]+' '+episodejsonobj[sm][2];
     for(var i=0; i<songjsonobj[sm].length; i++)
     {
         var newtr = document.createElement("tr");
