@@ -156,7 +156,7 @@ p { font-size: var(--size-font-default); }
 }
 #songlist {
     border-collapse: collapse;
-    width: 99.8vw;
+    width: 100%;
     opacity: 1.0;
     table-layout: fixed;
     margin-bottom: 15vh;
@@ -169,7 +169,8 @@ p { font-size: var(--size-font-default); }
     color: var(--color-default);
     outline: none;
     padding: 0;
-    border: 0.2rem dashed #cccccc;
+    border-top: 0.2rem dashed #cccccc;
+    border-bottom: 0.2rem dashed #cccccc;
 }
 .songitem:hover {
     background-color: var(--color-default);
@@ -184,7 +185,7 @@ p { font-size: var(--size-font-default); }
 
 #tr-1container {
     height: var(--height-song-title);
-    width: 99.8vw;
+    width: 100%;
     position: fixed;
     margin-left: 0;
     margin-top: var(--height-content-block-up);
@@ -196,7 +197,7 @@ p { font-size: var(--size-font-default); }
 
 #tr-1 {
     height: var(--height-song-title);
-    width: 99.8vw;
+    width: 100%;
     position: fixed;
     margin-left: 0;
     margin-top: 0.2vh;

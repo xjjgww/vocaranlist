@@ -23,10 +23,10 @@ html{
     --size-font-footer: 1rem;
     --height-footer: 2.8vh;
     --height-header: 12vh;
-    --height-toc: 85vh;
+    --height-toc: 85.2vh;
     --height-filter-div: 6vh;
     --height-list-title: 3vh;
-    --height-ranlist: 81vh;
+    --height-ranlist: 82vh;
     --height-btn: 2.2rem;
     --height-list: 2.1rem;
 }
@@ -323,8 +323,8 @@ button {
     color: var(--color-default);
     outline: none;
     padding: 0;
-    border-top: 0.3vh dashed #cccccc;
-    border-bottom: 0.3vh dashed #cccccc;
+    border-top: 0.26vh dashed #cccccc;
+    border-bottom: 0.26vh dashed #cccccc;
     transition: background-color 0.3s;
 }
 .songitem:hover {

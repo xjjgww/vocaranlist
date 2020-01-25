@@ -60,7 +60,6 @@ function loadtoc()
         btnd.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         line.setAttribute("onclick", "darkendate('"+sm+"')");
-        // line.setAttribute("onmouseover", "darkendate('"+sm+"')");
     }
     altercolor();
 }

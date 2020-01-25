@@ -20,7 +20,9 @@ prep = """
 </script>
 <script data-main="js/scripts.js" src="js/episodelist.js"></script>
 <script data-main="js/scripts.js" src="js/songlist.js"></script>
+<script data-main="js/loadtoc.js" src="js/episodelist.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/loadtoc.js"></script>
 </head>
 <title>週刊VOCALOIDとUTAUランキング</title>
 
@@ -52,7 +54,7 @@ This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_bl
 <button id="appmonth" class="yrmo" onclick="appinput('月')" onmouseover="darkendate('appmonth')" onmouseout="fadedate('appmonth')">月</button>
 </div>
 """
-print(prep)
+# print(prep)
 
 with open('json/episodelist.json') as json_file:
     data = json.load(json_file)
@@ -81,8 +83,7 @@ with open('json/episodelist.json') as json_file:
         print('<button id="d'+sm+'" class="fadetxt textalignleft">'+datetxt+'</button>')
         print('</div>')
         oe = oe + 1
-
-board = """
+board="""
 <div id="footer">
 </div>
 <div id="container">
@@ -95,4 +96,4 @@ board = """
 </body>
 </html>
 """
-print(board)
+print(prep)
