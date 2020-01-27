@@ -76,7 +76,7 @@ p { font-size: var(--size-font-default); }
     font-weight: bold;
     position: absolute;
     left: 0;
-    top: 1vh;
+    top: 0.5vh;
 }
 #filter {
     height: var(--height-filter-div);
@@ -284,9 +284,9 @@ button {
 #tr-1 {
     height: var(--height-list-title);
     width: var(--width-rightpanel);
-    position: fixed;
-    margin-left: 0;
-    margin-top: 0.2vh;
+    position: absolute;
+    left: 0;
+    top: 0;
     text-align: center;
     /* color: var(--color-default); */
     color: white;
@@ -355,9 +355,9 @@ button {
 #clipboard {
     height: var(--height-footer);
     width: var(--width-toc);
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: -0.2vh;
+    bottom: -0.27vh;
     background-color: var(--color-default);
     color: white;
     font-size: var(--size-font-footer);
@@ -378,8 +378,9 @@ button {
 #footerright {
     height: var(--height-footer);
     width: var(--width-rightpanel);
-    margin-left: 0;
-    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: -0.27vh;
     font-size: var(--size-font-footer);
     text-align: center;
 }

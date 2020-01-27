@@ -1,5 +1,10 @@
 var episodelistjson = `
 {
+  "sm36276808": [
+    "642",
+    "#642\u30fb584",
+    "2020\u5e741\u670813\u65e50\u6642\uff5e1\u670820\u65e50\u6642"
+  ],
   "sm36242061": [
     "641",
     "#641\u30fb583",
@@ -1820,6 +1825,4 @@ var episodelistjson = `
     "#259\u30fb201",
     "2012\u5e749\u670810\u65e55\u6642\uff5e9\u670817\u65e55\u6642"
   ]
-}
-`;
-var episodejsonobj = JSON.parse(episodelistjson);
+}`; var episodejsonobj = JSON.parse(episodelistjson);
