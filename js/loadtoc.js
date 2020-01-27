@@ -35,7 +35,7 @@ function loadtoc()
         btnvn.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         var btnb = document.createElement('button');
-        btnb.id = 'd'+sm;
+        btnb.id = 'b'+sm;
         btnb.className = "btn txttoblock-song textaligncenter";
         btnb.innerHTML = sm;
         line.appendChild(btnb);
