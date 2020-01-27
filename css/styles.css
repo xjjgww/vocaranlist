@@ -1,6 +1,8 @@
 html{
     font-size: 1vw;
     overflow-y: scroll;
+    height: 100%;
+    width: 100%;
 }
 
 /* colors */
@@ -34,8 +36,8 @@ html{
 
 /* body */
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     font-family: courier,Osaka;
     font-size: var(--size-font-default);
     background-color: white;

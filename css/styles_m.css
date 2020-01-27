@@ -31,7 +31,7 @@ html{
 
 /* body */
 body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: courier,Osaka;
     font-size: var(--size-font-default);
