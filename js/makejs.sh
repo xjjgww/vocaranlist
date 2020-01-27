@@ -2,7 +2,7 @@
 
 set -x
 
-cp ../json/songlist.json songlist.js
+cp ../json/songlist_fix.json songlist.js
 songsuffix='`;
 var songjsonobj = JSON.parse(songlistjson);
 '
