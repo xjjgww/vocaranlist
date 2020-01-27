@@ -18,6 +18,7 @@ html{
     --position-rightpanel: 50vw;
     --size-font-header: 1.5rem;
     --size-font-default: 1.1rem;
+    --size-font-input: 1.0rem;
     --size-font-desc: 0.95rem;
     --size-font-songlist: 1.1rem;
     --size-font-footer: 1rem;
@@ -101,7 +102,7 @@ p { font-size: var(--size-font-default); }
     opacity: 0.6;
     border: 0.1rem solid #999999;
     border-radius: 0.3rem;
-    font-size: var(--size-font-default);
+    font-size: var(--size-font-input);
     padding: 0;
     padding-left: 0.6rem;
     padding-top: 0.7vh;
