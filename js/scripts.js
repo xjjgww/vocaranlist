@@ -44,6 +44,7 @@ function copylink(str, noti) {
 }
 
 function darkendate(sm) {
+    // document.getElementById('iconholder').style.display = "none";
     var thetab = document.getElementById('songlist');
     for(var i=0; i<100; i++)
     {
