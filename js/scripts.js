@@ -69,7 +69,7 @@ function darkendate(sm) {
         newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
 
-        if(songjsonobj[sm][i]['title'].indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#D27979"; }
+        if(songjsonobj[sm][i]['title'].indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#CC6666"; }
     }
 }
 function fadedate(sm) {

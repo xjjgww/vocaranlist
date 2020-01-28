@@ -7,8 +7,8 @@ html{
 /* colors */
 :root {
     --color-default: #525252;
-    --color-nico: #0C457D;
-    --color-song: #D27979;
+    --color-nico: #206EB6;
+    --color-song: #CC6666;
     --width-toc: 100%;
     --margin-toc: 0%;
     --size-font-default: 1.88rem;
@@ -247,7 +247,6 @@ button {
     margin: auto;
     text-align: center;
 }
-/* .btn-group:active { background-color: #b3b3b3; } */
 .btn-group:hover { background-color: #cccccc; }
 
 .white-background { background-color: #white; }

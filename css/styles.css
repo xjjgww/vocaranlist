@@ -8,8 +8,8 @@ html{
 /* colors */
 :root {
     --color-default: #525252;
-    --color-nico: #0C457D;
-    --color-song: #D27979;
+    --color-nico: #206EB6;
+    --color-song: #CC6666;
     --width-toc: 47vw;
     --width-desc: 46vw;
     --width-rightpanel: 46vw;
@@ -219,13 +219,13 @@ button {
 
 .txttoblock-nico {
     color: var(--color-nico);
-    transition: color 0.3s;
+    transition: color 0.2s;
     width: var(--width-shortbtn-n);
 }
 .txttoblock-nico:hover { background-color: var(--color-nico); color: white; opacity: 1.0; }
 .txttoblock-song {
     color: var(--color-song);
-    transition: color 0.3s;
+    transition: color 0.2s;
     width: var(--width-shortbtn-s);
 }
 .txttoblock-song:hover { background-color: var(--color-song); color: white; opacity: 1.0; }
