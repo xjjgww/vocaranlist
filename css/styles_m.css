@@ -313,3 +313,23 @@ button {
     color: white;
     font-size: var(--size-font-footer);
 }
+
+#iconholder {
+    height: 54vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 20vh 0;
+    margin: auto;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  opacity: 80%;
+}
+
