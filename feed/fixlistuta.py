@@ -17,7 +17,7 @@ with open('../json/songlist.json') as json_file:
             if ii == (len(rawdict)-1):
                 rawdict[ii]['title'] = re.sub(r'.+\uff1a', 'Ending\uff1a', rawdict[ii]['title'], 1)
             elif utarank >= 1:
-                rawdict[ii]['title'] = re.sub(r'.+\uff1a', 'UTAU'+str(utarank)+'\uff1a', rawdict[ii]['title'], 1)
+                rawdict[ii]['title'] = re.sub(r'.+\uff1a', 'UTAU'+str(utarank)+'\u4f4d\uff1a', rawdict[ii]['title'], 1)
                 utarank -= 1
             if tag==0:
                 if re.search(r'^[23][^0]\u4f4d\uff1a', rawdict[ii]['title']):
