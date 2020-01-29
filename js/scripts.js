@@ -66,7 +66,7 @@ function darkendate(sm) {
         newtda.id = 'tda'+i;
         newtda.className = "songtext";
         newtda.innerHTML = songjsonobj[sm][i]['title'];
-        newtda.href = songjsonobj[sm][i]['url'];
+        newtda.href = "https://www.nicovideo.jp/watch/"+songjsonobj[sm][i]['id'];
         newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
 

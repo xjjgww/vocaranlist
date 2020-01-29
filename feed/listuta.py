@@ -1,7 +1,6 @@
 import re
 import json
 import requests
-# from html.parser import HTMLParser
 from bs4 import BeautifulSoup
 
 def findsonglist(url):
@@ -19,10 +18,10 @@ def findsonglist(url):
         tt = ii.find('title').text
         ll = ii.find('url').text
         aa = ii.find('description').find('img')['alt']
-        # tt = tt.replace(aa, '')
+        ss = ll.replace('http://www.nicovideo.jp/watch/', '')
         thisitem = {}
         thisitem['title'] = tt
-        thisitem['url'] = ll
+        thisitem['id'] = ss
         thisitem['alt'] = aa
         mylist.append(thisitem)
     return mylist
