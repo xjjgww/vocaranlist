@@ -312,7 +312,7 @@ button {
 #songlist {
     border-collapse: collapse;
     width: var(--width-rightpanel);
-    opacity: 0.8;
+    opacity: 0.95;
     table-layout: fixed;
     margin-bottom: 0;
     transition: opacity 0.3s;
