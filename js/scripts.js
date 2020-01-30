@@ -60,25 +60,42 @@ function darkendate(sm) {
     document.getElementById('tr-1').innerHTML = episodejsonobj[sm][1]+' '+episodejsonobj[sm][2];
     for(var i=0; i<songjsonobj[sm].length; i++)
     {
+        var songsm = songjsonobj[sm][i]['id'];
         var newtr = document.createElement("tr");
         newtr.id = 'tr'+i;
         newtr.className = "songitem";
         thetab.appendChild(newtr);
+        var newtp = document.createElement("td");
+        newtp.id = 'tp'+i;
+        newtp.width = "30%";
+        newtr.appendChild(newtp);
+        if(songsm in songdbjsonobj)
+        {
+            var newpa = document.createElement("a");
+            newpa.href = "https://www.nicovideo.jp/watch/"+songsm;
+            newpa.setAttribute('target', '_blank');
+            newtp.appendChild(newpa)
+            var newpp = document.createElement("img");
+            newpp.style.width = "100%";
+            newpp.src = songdbjsonobj[songsm]["largeThumbnailURL"];
+            newpa.appendChild(newpp);
+        }
         var newtd = document.createElement("td");
         newtd.id = 'td'+i;
+        newtd.style.padding = "2vw";
         newtr.appendChild(newtd);
         var newtda = document.createElement("a");
         newtda.id = 'tda'+i;
         newtda.className = "songtext";
-        var songname = songjsonobj[sm][i]['title']+' \u220e ';
-        var songsm = songjsonobj[sm][i]['id'];
+        var songname = songjsonobj[sm][i]['title']+'<br>\u220e ';
         if(songsm in songdbjsonobj) { songname += songdbjsonobj[songsm]['owner']; }
         newtda.innerHTML = songname;
-        newtda.href = "https://www.nicovideo.jp/watch/"+songjsonobj[sm][i]['id'];
+        newtda.href = "https://www.nicovideo.jp/watch/"+songsm;
         newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
 
         if(songname.indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#CC6666"; }
+        // if(songsm in songdbjsonobj) { newtr.style.backgroundImage = "url('"+songdbjsonobj[songsm]["largeThumbnailURL"]+"')" }
     }
 }
 function fadedate(sm) {
