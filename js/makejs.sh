@@ -16,4 +16,11 @@ var episodejsonobj = JSON.parse(episodelistjson);
 sed -i '1i\var episodelistjson = `' episodelist.js
 echo $episodesuffix >> episodelist.js
 
+cp ../json/songdblist.json songdblist.js
+songdbsuffix='`;
+var songdbjsonobj = JSON.parse(songdblistjson);
+'
+sed -i '1i\var songdblistjson = `' songdblist.js
+echo $songdbsuffix >> songdblist.js
+
 set +x
