@@ -26,7 +26,12 @@ function myfilter() {
         idd = lines[i].id;
         var sm = idd.match(/sm\d+/g);
         var findmatch = '';
-        for(var jitem in songjsonobj[sm]) { findmatch += (' '+songjsonobj[sm][jitem]["alt"]); }
+        for(var jitem in songjsonobj[sm])
+        {
+            var songsm = songjsonobj[sm][jitem]["id"];
+            findmatch += (' '+songjsonobj[sm][jitem]["alt"]);
+            if(songsm in songdbjsonobj) { findmatch += (' '+songdbjsonobj[songsm]["owner"]); }
+        }
         if(idd.indexOf(input) > -1 || findmatch.indexOf(input) > -1) { lines[i].style.display = ""; }
         else { lines[i].style.display = "none"; }
     }
@@ -73,7 +78,7 @@ function darkendate(sm) {
         newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
 
-        if(songjsonobj[sm][i]['title'].indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#CC6666"; }
+        if(songname.indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#CC6666"; }
     }
 }
 function fadedate(sm) {
