@@ -7,8 +7,9 @@ def getvideo(sm):
     session = HTMLSession()
     r = session.get('https://www.nicovideo.jp/watch/'+sm) # HTMLResponse
     # print(r.__dict__.keys())
+    # print(r.headers)
     # 'X-XSS-Protection': '1; mode=block'
-    if 'X-XSS-Protection' or sm=="sm35714718" in dict(r.headers):
+    if 'X-XSS-Protection' in dict(r.headers) or sm=="sm35714718":
         mylist['err'] = 1
         return mylist
     ele = r.html.find('#js-initial-watch-data') # list
