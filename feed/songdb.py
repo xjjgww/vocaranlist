@@ -8,13 +8,9 @@ def getvideo(sm):
     r = session.get('https://www.nicovideo.jp/watch/'+sm) # HTMLResponse
     # print(r.__dict__.keys())
     # print(r.headers)
-    # 'X-XSS-Protection': '1; mode=block'
-    if 'X-XSS-Protection' in dict(r.headers) or sm=="sm35714718":
-        mylist['err'] = 1
-        return mylist
     ele = r.html.find('#js-initial-watch-data') # list
     if len(ele) == 0:
-        mylist['err'] = 2
+        mylist['err'] = 1
         return mylist
     dataapi = ele[0].attrs['data-api-data'] # str
     dataapi = re.sub(r"\"description\".+?\"thumbnailURL\"", "\"thumbnailURL\"", dataapi)
@@ -36,29 +32,36 @@ outputdict = {}
 with open('../json/songdb.json') as json_file:
     outputdict = json.load(json_file)
 
-errortag = 0
+deadsm = {}
+with open('deadlist.json') as json_file:
+    deadsm = json.load(json_file)
+    
 with open('../json/songlist.json') as json_file:
     data = json.load(json_file)
+    count = 0
     for s in data: # dict
         print("\033[36;1m"+s+"\033[0m")
         for item in list(data[s]):
             sm = item['id']
             if sm in outputdict: continue
+            if sm in deadsm: continue
             print(sm)
-            getlist = getvideo(sm)
-            if "err" in getlist:
-                if getlist["err"]==1:
-                    print("\033[31;1mdeleted\033[0m")
-                    continue
-                if getlist["err"]==2:
-                    print("\033[31;1mfailed\033[0m")
-                    errortag = 1
+            retry = 0
+            while retry < 30:
+                getlist = getvideo(sm)
+                if "err" in getlist:
+                    retry += 1
+                    print("\033[31mretry "+str(retry)+"\033[0m\r")
+                else:
+                    outputdict[sm] = getlist
                     break
-            outputdict[sm] = getlist
-        if errortag > 0: break
-        # print(outputdict)
+            if retry==30: deadsm[sm] = 1
+            count += 1 # count
+        with open('../json/songdb.json', 'w') as outfile:
+            json.dump(outputdict, outfile, indent=2)
+        with open('deadlist.json', 'w') as outfile:
+            json.dump(deadsm, outfile, indent=2)
+        if count > 50: break # count
+         
 
-with open('../json/songdb.json', 'w') as outfile:
-    json.dump(outputdict, outfile, indent=2)
 
-exit(errortag)
