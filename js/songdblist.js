@@ -3671,5 +3671,95 @@ var songdblistjson = `
     "owner": "\u771e\u7530\u5c45\u9593",
     "ownerid": "22667632",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2266/22667632.jpg?1556280910"
+  },
+  "sm35735519": {
+    "title": "\u3010\u91cd\u97f3\u30c6\u30c8\u3011\u306a\u3046\uff01\u3010\u30aa\u30ea\u30b8\u30ca\u30eb\u3011",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35735519/35735519.60982470",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35735519/35735519.60982470.original/a960x540l?key=81768e97d435711283bb3c70657227dcf8666d1391b6b442437c16486dddc330",
+    "postedDateTime": "2019/09/27 00:01:01",
+    "owner": "\u6708\uff08\u3064\u304d\uff09",
+    "ownerid": "11293617",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/1129/11293617.jpg?1492351614"
+  },
+  "sm35708486": {
+    "title": "\u3010\u6ef2\u97f3\u304b\u3053\u3044\u3011\u53f0\u98a8\u524d\u591c\u3010\u30aa\u30ea\u30b8\u30ca\u30eb\u3011",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35708486/35708486.81128374",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35708486/35708486.81128374.original/a960x540l?key=645444e7c5846721379ddd7ceaf6e3dc5d68088c662d23288d2b0df6e511047a",
+    "postedDateTime": "2019/09/20 22:15:01",
+    "owner": "\u4e8c\u9320",
+    "ownerid": "91515576",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/9151/91515576.jpg?1569084488"
+  },
+  "sm35719338": {
+    "title": "\u30db\u30ed\u30a6\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35719338/35719338.96375105",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35719338/35719338.96375105.original/a960x540l?key=ad0a0980c0a2cc81804d94a5764310e53a480b3289ee616e6c8fb3df9e84e21f",
+    "postedDateTime": "2019/09/23 02:20:02",
+    "owner": "\u71d0\u5bf8",
+    "ownerid": "91565940",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/9156/91565940.jpg?1569172945"
+  },
+  "sm33209979": {
+    "title": "\u3010\u521d\u97f3\u30df\u30af\u3011\u3074\u3093\u304f\u30b7\u30e3\u30ef\u30fc\u3010\u30aa\u30ea\u30b8\u30ca\u30eb\u66f2\u3011",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/33209979/33209979",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/33209979/33209979.original/a960x540l?key=dc4878888f5978141e892b9bc357ea24d0a4ba380ec509bb5f39f6822f406836",
+    "postedDateTime": "2018/05/14 21:41:13",
+    "owner": "Mg(magmo)",
+    "ownerid": "26542122",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2654/26542122.jpg?1424561672"
+  },
+  "sm35675654": {
+    "title": "DECO*27 - \u30b7\u30f3\u30bb\u30ab\u30a4\u6848\u5185\u6240 feat. \u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35675654/35675654.72658403",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35675654/35675654.72658403.original/a960x540l?key=ed583c65cd08525e14f912f772a1c916fe25ed4b93324f2c6a6d54309e006058",
+    "postedDateTime": "2019/09/13 20:00:00",
+    "owner": "DECO*27",
+    "ownerid": "811012",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/81/811012.jpg?1377147532"
+  },
+  "sm35663527": {
+    "title": "sasakure. UK - \u30ec\u30d5\u309a\u30ea\u30ab  MV  feat.\u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35663527/35663527.29050403",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35663527/35663527.29050403.original/a960x540l?key=64921c0234ca5c456ddfc417a3ccc5b439d5e81df219ccf52fe9607b97449260",
+    "postedDateTime": "2019/09/10 19:00:00",
+    "owner": "sasakure.UK",
+    "ownerid": "461870",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/46/461870.jpg?1294420217"
+  },
+  "sm35680547": {
+    "title": "\u7d04\u675f / \u306f\u308b\u307e\u304d\u3054\u306f\u3093 feat.\u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35680547/35680547.16485731",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35680547/35680547.16485731.original/a960x540l?key=b7a7e6273ef310e05b04fc2942d95eb97e977d700f7ff914ea739ea62798eac8",
+    "postedDateTime": "2019/09/14 19:01:05",
+    "owner": "\u306f\u308b\u307e\u304d\u3054\u306f\u3093",
+    "ownerid": "33802565",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/3380/33802565.jpg?1533479296"
+  },
+  "sm35679029": {
+    "title": "\u3010\u9cf4\u82b1\u30df\u30b3\u30c8\u3011\u30b7\u30e3\u30eb\u30eb \u3010\u30ab\u30d0\u30fc\u3011",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35679029/35679029.89356545",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35679029/35679029.89356545.original/a960x540l?key=243fa33b13bdb993eb41ebd680c8473644d71e10db84175bf50e80733fa8dbf8",
+    "postedDateTime": "2019/09/14 12:04:03",
+    "owner": "cillia",
+    "ownerid": "14043659",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/1404/14043659.jpg?1436672765"
+  },
+  "sm35701373": {
+    "title": "[\u3086\u304b\u305a\u3093]\u3000The Never Ending Story\u3000[VOCALOID\u30ab\u30d0\u30fc]",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35701373/35701373.35855928",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35701373/35701373.35855928.original/a960x540l?key=a1424675cf85f0f2ee3aed3e9f7dd49fbf2db995ab1da3f4bab62a5535b2b0f7",
+    "postedDateTime": "2019/09/19 07:21:00",
+    "owner": "\u8c5a\u91ce\u90ce",
+    "ownerid": "1136144",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/113/1136144.jpg?1527667334"
+  },
+  "sm35684291": {
+    "title": "\u3010shino\u3011Room/ \u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35684291/35684291.73689763",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35684291/35684291.73689763.original/a960x540l?key=fc1df1e1e5fb9801b788c38a2c9dcd1404633527cf07db2d02d60bc85b9dc7c0",
+    "postedDateTime": "2019/09/15 19:00:00",
+    "owner": "shino",
+    "ownerid": "67308156",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/6730/67308156.jpg?1496629997"
   }
 }`; var songdbjsonobj = JSON.parse(songdblistjson);
