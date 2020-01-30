@@ -29,11 +29,15 @@ def findsonglist(url):
 # parse
 
 outputdict = {}
+with open('../json/songlist.json') as json_file:
+    outputdict = json.load(json_file)
+
 with open('../json/episodelist.json') as json_file:
     data = json.load(json_file)
     for s in data:
-        print(list(data[s])[0])
         sm = s
+        if sm in outputdict: continue
+        print(list(data[s])[0])
         # outputdict[sm] = findsonglist('http://nicodb.jp/u/bgm/utaran/'+sm+'/?rss=1')
         outputdict[sm] = findsonglist('http://nicodb.jp/u/index.php/bgm/rankrss/'+sm)
 
