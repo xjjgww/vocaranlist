@@ -67,7 +67,7 @@ function darkendate(sm) {
         thetab.appendChild(newtr);
         var newtp = document.createElement("td");
         newtp.id = 'tp'+i;
-        newtp.width = "30%";
+        newtp.width = "35%";
         newtr.appendChild(newtp);
         if(songsm in songdbjsonobj)
         {
@@ -78,11 +78,12 @@ function darkendate(sm) {
             var newpp = document.createElement("img");
             newpp.style.width = "100%";
             newpp.src = songdbjsonobj[songsm]["largeThumbnailURL"];
+            // newpp.src = songdbjsonobj[songsm]["thumbnailURL"];
             newpa.appendChild(newpp);
         }
         var newtd = document.createElement("td");
         newtd.id = 'td'+i;
-        newtd.style.padding = "2vw";
+        newtd.style.padding = "1vw";
         newtr.appendChild(newtd);
         var newtda = document.createElement("a");
         newtda.id = 'tda'+i;

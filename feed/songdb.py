@@ -14,16 +14,27 @@ def getvideo(sm):
         return mylist
     dataapi = ele[0].attrs['data-api-data'] # str
     dataapi = re.sub(r"\"description\".+?\"thumbnailURL\"", "\"thumbnailURL\"", dataapi)
-    jvideo = json.loads(dataapi)['video'] # dict
-    jowner = json.loads(dataapi)['owner'] # dict
-
-    mylist['title'] = jvideo['title']
-    mylist['thumbnailURL'] = jvideo['thumbnailURL']
-    mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
-    mylist['postedDateTime'] = jvideo['postedDateTime']
-    mylist['owner'] = jowner['nickname'].replace(' \u3055\u3093', '')
-    mylist['ownerid'] = jowner['id']
-    mylist['ownericon'] = jowner['iconURL']
+    # print(dataapi)
+    mylist = {
+        "title": "",
+        "thumbnailURL": "",
+        "largeThumbnailURL": "",
+        "postedDateTime": "",
+        "owner": "",
+        "ownerid": "",
+        "ownericon": ""
+        }
+    if "video" in json.loads(dataapi):
+        jvideo = json.loads(dataapi)['video'] # dict
+        mylist['title'] = jvideo['title']
+        mylist['thumbnailURL'] = jvideo['thumbnailURL']
+        mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
+        mylist['postedDateTime'] = jvideo['postedDateTime']
+    if "owner" in json.loads(dataapi):
+        jowner = json.loads(dataapi)['owner'] # dict
+        mylist['owner'] = jowner['nickname'].replace(' \u3055\u3093', '')
+        mylist['ownerid'] = jowner['id']
+        mylist['ownericon'] = jowner['iconURL']
     
     return mylist
 
@@ -57,11 +68,11 @@ with open('../json/songlist.json') as json_file:
                     break
             if retry==30: deadsm[sm] = 1
             count += 1 # count
-        with open('../json/songdb.json', 'w') as outfile:
-            json.dump(outputdict, outfile, indent=2)
+            with open('../json/songdb.json', 'w') as outfile:
+                json.dump(outputdict, outfile, indent=2)
         with open('deadlist.json', 'w') as outfile:
             json.dump(deadsm, outfile, indent=2)
-        if count > 50: break # count
+        # if count > 1000: break # count
          
 
 
