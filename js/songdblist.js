@@ -1,5 +1,4 @@
-var songdblistjson = `
-{
+var songdbjsonobj = {
   "sm36235479": {
     "title": "DECO*27 - \u30dd\u30b8\u30c6\u30a3\u30d6\u30fb\u30d1\u30ec\u30fc\u30c9 feat. \u521d\u97f3\u30df\u30af",
     "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/36235479/36235479.26898253",
@@ -36549,4 +36548,5 @@ var songdblistjson = `
     "ownerid": "6393953",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/639/6393953.jpg?1275744709"
   }
-}`; var songdbjsonobj = JSON.parse(songdblistjson);
+}
+;

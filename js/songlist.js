@@ -1,5 +1,4 @@
-var songlistjson = `
-{
+var songjsonobj = {
   "sm36276808": [
     {
       "title": "1\u4f4d\uff1aDECO*27 - \u30dd\u30b8\u30c6\u30a3\u30d6\u30fb\u30d1\u30ec\u30fc\u30c9 feat. \u521d\u97f3\u30df\u30af",
@@ -50456,4 +50455,5 @@ var songlistjson = `
   "sm19024994": [],
   "sm18973867": [],
   "sm18908759": []
-}`; var songjsonobj = JSON.parse(songlistjson);
+}
+;
