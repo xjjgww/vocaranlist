@@ -69,18 +69,19 @@ function darkendate(sm) {
         newtp.id = 'tp'+i;
         newtp.width = "35%";
         newtr.appendChild(newtp);
+        var newpa = document.createElement("a");
+        newpa.href = "https://www.nicovideo.jp/watch/"+songsm;
+        newpa.setAttribute('target', '_blank');
+        newtp.appendChild(newpa);
+        var newpp = document.createElement("img");
+        newpp.style.width = "100%";
         if(songsm in songdbjsonobj)
         {
-            var newpa = document.createElement("a");
-            newpa.href = "https://www.nicovideo.jp/watch/"+songsm;
-            newpa.setAttribute('target', '_blank');
-            newtp.appendChild(newpa)
-            var newpp = document.createElement("img");
-            newpp.style.width = "100%";
             newpp.src = songdbjsonobj[songsm]["largeThumbnailURL"];
             // newpp.src = songdbjsonobj[songsm]["thumbnailURL"];
-            newpa.appendChild(newpp);
         }
+        else { newpp.src = 'img/deletethumb.png'; }
+        newpa.appendChild(newpp);
         var newtd = document.createElement("td");
         newtd.id = 'td'+i;
         newtd.style.padding = "1vw";

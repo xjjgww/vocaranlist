@@ -1,11 +1,14 @@
 import json
 from requests_html import HTMLSession
 import re
+import urllib.request
+from bs4 import BeautifulSoup 
 
 def getvideo(sm):
     mylist = {}
     session = HTMLSession()
     r = session.get('https://www.nicovideo.jp/watch/'+sm) # HTMLResponse
+    # print(r.html)
     # print(r.__dict__.keys())
     # print(r.headers)
     ele = r.html.find('#js-initial-watch-data') # list
@@ -46,7 +49,8 @@ with open('../json/songdb.json') as json_file:
 deadsm = {}
 with open('deadlist.json') as json_file:
     deadsm = json.load(json_file)
-    
+
+retries = 30
 with open('../json/songlist.json') as json_file:
     data = json.load(json_file)
     count = 0
@@ -58,21 +62,25 @@ with open('../json/songlist.json') as json_file:
             if sm in deadsm: continue
             print(sm)
             retry = 0
-            while retry < 30:
+            while retry < retries:
                 getlist = getvideo(sm)
                 if "err" in getlist:
                     retry += 1
                     print("\033[31mretry "+str(retry)+"\033[0m\r")
+                    exit
                 else:
                     outputdict[sm] = getlist
-                    break
-            if retry==30: deadsm[sm] = 1
+                    if sm in deadsm: del deadsm[sm]
+                    # break
+                    continue
+            if retry==retries: deadsm[sm] = 1
             count += 1 # count
+            # break
             with open('../json/songdb.json', 'w') as outfile:
                 json.dump(outputdict, outfile, indent=2)
-        with open('deadlist.json', 'w') as outfile:
-            json.dump(deadsm, outfile, indent=2)
-        # if count > 1000: break # count
+            with open('deadlist.json', 'w') as outfile:
+                json.dump(deadsm, outfile, indent=2)
+
          
 
 
