@@ -75,6 +75,7 @@ function darkendate(sm) {
         newtp.appendChild(newpa);
         var newpp = document.createElement("img");
         newpp.style.width = "100%";
+        newpp.style.opacity = "0.95";
         if(songsm in songdbjsonobj)
         {
             newpp.src = songdbjsonobj[songsm]["largeThumbnailURL"];
