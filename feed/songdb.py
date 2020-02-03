@@ -67,12 +67,11 @@ with open('../json/songlist.json') as json_file:
                 if "err" in getlist:
                     retry += 1
                     print("\033[31mretry "+str(retry)+"\033[0m\r")
-                    exit
+                    continue
                 else:
                     outputdict[sm] = getlist
                     if sm in deadsm: del deadsm[sm]
-                    # break
-                    continue
+                    break
             if retry==retries: deadsm[sm] = 1
             count += 1 # count
             # break
