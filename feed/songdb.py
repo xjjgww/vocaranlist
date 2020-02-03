@@ -29,15 +29,17 @@ def getvideo(sm):
         }
     if "video" in json.loads(dataapi):
         jvideo = json.loads(dataapi)['video'] # dict
-        mylist['title'] = jvideo['title']
-        mylist['thumbnailURL'] = jvideo['thumbnailURL']
-        mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
-        mylist['postedDateTime'] = jvideo['postedDateTime']
+        if jvideo != None:
+            mylist['title'] = jvideo['title']
+            mylist['thumbnailURL'] = jvideo['thumbnailURL']
+            mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
+            mylist['postedDateTime'] = jvideo['postedDateTime']
     if "owner" in json.loads(dataapi):
         jowner = json.loads(dataapi)['owner'] # dict
-        mylist['owner'] = jowner['nickname'].replace(' \u3055\u3093', '')
-        mylist['ownerid'] = jowner['id']
-        mylist['ownericon'] = jowner['iconURL']
+        if jowner != None:
+            mylist['owner'] = jowner['nickname'].replace(' \u3055\u3093', '')
+            mylist['ownerid'] = jowner['id']
+            mylist['ownericon'] = jowner['iconURL']
     
     return mylist
 
@@ -67,14 +69,12 @@ with open('../json/songlist.json') as json_file:
                 if "err" in getlist:
                     retry += 1
                     print("\033[31mretry "+str(retry)+"\033[0m\r")
-                    continue
                 else:
                     outputdict[sm] = getlist
                     if sm in deadsm: del deadsm[sm]
                     break
             if retry==retries: deadsm[sm] = 1
             count += 1 # count
-            # break
             with open('../json/songdb.json', 'w') as outfile:
                 json.dump(outputdict, outfile, indent=2)
             with open('deadlist.json', 'w') as outfile:
