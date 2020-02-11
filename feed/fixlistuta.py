@@ -4,11 +4,13 @@ from bs4 import BeautifulSoup
 
 with open('../json/songlist.json') as json_file:
     data = json.load(json_file)
-    tag = 0
     for sm in data:
-        if sm == 'sm35323499': tag += 1 # 1
-        if sm == 'sm35104863': tag += 1 # 2
-        if tag > 1: break
+        smnumber = int(sm.replace("sm", ""))
+        tag = 2
+        if smnumber > 35323499: tag = 0
+        if smnumber > 35104863 and smnumber <= 35323499: tag = 1
+
+        if tag > 1: continue
         print(sm)
         rawdict = data[sm]
         ii = len(rawdict)-1
