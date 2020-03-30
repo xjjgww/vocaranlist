@@ -5,7 +5,7 @@ import json
 
 session = HTMLSession()
 
-urllist = ['https://www.nicovideo.jp/tag/%E9%80%B1%E5%88%8AVOCAL_Character%E3%81%A8UTAU%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0?sort=f&order=d']
+urllist = ['https://www.nicovideo.jp/tag/VOCAL_Character%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0']
 for i in range(1,13):
     urllist.append('https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i))
 
