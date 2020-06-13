@@ -20,7 +20,10 @@ with open('../json/songlist.json') as json_file:
         if smnumber > 35323499: tag = 0
         if smnumber > 35104863 and smnumber <= 35323499: tag = 1
 
-        if tag > 1: continue
+        if tag > 1:
+            data[sm] = data_origin[sm]
+            continue
+
         print(sm)
         rawdict = data_origin[sm]
         ii = len(rawdict)-1
