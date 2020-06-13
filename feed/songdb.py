@@ -4,6 +4,12 @@ import re
 import urllib.request
 from bs4 import BeautifulSoup 
 
+print('\033[33;1m\
+########################################\n\
+#       songdb.py > songdb.json        #\n\
+########################################\n\
+\033[0m')
+
 def getvideo(sm):
     mylist = {}
     session = HTMLSession()
@@ -40,7 +46,6 @@ def getvideo(sm):
             mylist['owner'] = jowner['nickname'].replace(' \u3055\u3093', '')
             mylist['ownerid'] = jowner['id']
             mylist['ownericon'] = jowner['iconURL']
-    
     return mylist
 
 # parse
@@ -52,33 +57,50 @@ deadsm = {}
 with open('deadlist.json') as json_file:
     deadsm = json.load(json_file)
 
+episode = {}
+with open('../json/episodelist.json') as json_file:
+    episode = json.load(json_file)
+    
 retries = 30
 with open('../json/songlist.json') as json_file:
     data = json.load(json_file)
+
+for s in data: # dict
+    print("\033[32;7m"+episode[s][1]+"\033[0m\r", end='', flush=True)
     count = 0
-    for s in data: # dict
-        print("\033[36;1m"+s+"\033[0m")
-        for item in list(data[s]):
-            sm = item['id']
-            if sm in outputdict: continue
-            if sm in deadsm: continue
-            print(sm)
-            retry = 0
-            while retry < retries:
-                getlist = getvideo(sm)
-                if "err" in getlist:
-                    retry += 1
-                    print("\033[31mretry "+str(retry)+"\033[0m\r")
-                else:
-                    outputdict[sm] = getlist
-                    if sm in deadsm: del deadsm[sm]
-                    break
-            if retry==retries: deadsm[sm] = 1
-            count += 1 # count
-            with open('../json/songdb.json', 'w') as outfile:
-                json.dump(outputdict, outfile, indent=2)
-            with open('deadlist.json', 'w') as outfile:
-                json.dump(deadsm, outfile, indent=2)
+    songretry = 0
+    for item in list(data[s]):
+        sm = item['id']
+        if sm in outputdict: continue
+        # if sm in deadsm and sm < 'sm33659242': continue
+        if sm in deadsm: continue
+        retry = 0
+        while retry < retries:
+            getlist = getvideo(sm)
+            if "err" in getlist:
+                if retry == 0 and songretry > 0: print('')
+                retry += 1
+                songretry += 1
+                if retry>=retries: print("\033[31;1m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
+                else: print("\033[31m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
+            else:
+                outputdict[sm] = getlist
+                if sm in deadsm: del deadsm[sm]
+                if retry > 0 or count==0: print('')
+                print(getlist['title'])
+                break
+        if retry==retries: deadsm[sm] = 1
+        count += 1 # count
+    if songretry > 0: print('')
+    
+sorted_outputdict = {}
+for s in sorted(outputdict):
+    sorted_outputdict[s] = outputdict[s]
+        
+with open('../json/songdb.json', 'w') as outfile:
+    json.dump(sorted_outputdict, outfile, indent=2)
+with open('deadlist.json', 'w') as outfile:
+    json.dump(deadsm, outfile, indent=2)
 
          
 

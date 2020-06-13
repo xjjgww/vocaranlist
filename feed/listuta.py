@@ -3,6 +3,12 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+print('\033[33;1m\
+########################################\n\
+#      listuta.py > songlist.json      #\n\
+########################################\n\
+\033[0m')
+
 def findsonglist(url):
     readweb = requests.get(url).text
     readweb = readweb.replace('<![CDATA[', '')
@@ -41,5 +47,9 @@ with open('../json/episodelist.json') as json_file:
         # outputdict[sm] = findsonglist('http://nicodb.jp/u/bgm/utaran/'+sm+'/?rss=1')
         outputdict[sm] = findsonglist('http://nicodb.jp/u/index.php/bgm/rankrss/'+sm)
 
+sorted_outputdict = {}
+for epi in sorted(outputdict):
+    sorted_outputdict[epi] = outputdict[epi]
+        
 with open('../json/songlist.json', 'w') as outfile:
-    json.dump(outputdict, outfile, indent=2)
+    json.dump(sorted_outputdict, outfile, indent=2)

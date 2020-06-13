@@ -2,9 +2,19 @@ import re
 import json
 from bs4 import BeautifulSoup
 
-with open('../json/songlist.json') as json_file:
+print('\033[33;1m\
+########################################\n\
+#  fixlistuta.py > songlist_fix.json   #\n\
+########################################\n\
+\033[0m')
+
+with open('../json/songlist_fix.json') as json_file:
     data = json.load(json_file)
-    for sm in data:
+
+with open('../json/songlist.json') as json_file:
+    data_origin = json.load(json_file)
+    for sm in data_origin:
+        if sm in data: continue
         smnumber = int(sm.replace("sm", ""))
         tag = 2
         if smnumber > 35323499: tag = 0
@@ -12,7 +22,7 @@ with open('../json/songlist.json') as json_file:
 
         if tag > 1: continue
         print(sm)
-        rawdict = data[sm]
+        rawdict = data_origin[sm]
         ii = len(rawdict)-1
         utarank = 10
         while ii >= 0:
@@ -28,6 +38,11 @@ with open('../json/songlist.json') as json_file:
                 rawdict[ii-1]['title'] = re.sub(r'.+\uff1a', 'Pick Up\uff1a', rawdict[ii-1]['title'], 1)
                 utarank -=1
             ii -= 1
+        data[sm] = rawdict
 
+sorted_data = {}
+for epi in sorted(data):
+    sorted_data[epi] = data[epi]
+        
 with open('../json/songlist_fix.json', 'w') as outfile:
-    json.dump(data, outfile, indent=2)
+    json.dump(sorted_data, outfile, indent=2)
