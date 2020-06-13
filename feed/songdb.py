@@ -33,6 +33,7 @@ def getvideo(sm):
         "ownerid": "",
         "ownericon": ""
         }
+    tmp = json.loads(dataapi)
     if "video" in json.loads(dataapi):
         jvideo = json.loads(dataapi)['video'] # dict
         if jvideo != None:
