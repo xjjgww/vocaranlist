@@ -1,7 +1,10 @@
 
+var nicopl = ['3165526', '3271200', '3409323', '2951756', '3900779'];
+
 function loadtoc()
 {
     var thetoc = document.getElementById('toc');
+    var count = 0;
     for(var sm in episodejsonobj)
     {
         var theitem = episodejsonobj[sm];
@@ -59,7 +62,18 @@ function loadtoc()
         btnd.setAttribute("onmouseover", "statusbar('Click to get the song list of "+sm+".')");
         btnd.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
+        var btnpl = document.createElement('button');
+        btnpl.className = "btn-invisible-right whiteblock-nico";
+        btnpl.innerHTML = "PL";
+        line.appendChild(btnpl);
+        btnpl.setAttribute("onclick", "window.open('https://www.nicovideo.jp/mylist/"+nicopl[episode%5]+"', '_blank')");
+        btnpl.setAttribute("onmouseover", "statusbar('Click to get the playlist of "+sm+".')");
+        btnpl.setAttribute("onmouseout", "statusbar('&nbsp;')");
+
+        if(count >= 5) { btnpl.style.display = "none"; }
+
         line.setAttribute("onclick", "darkendate('"+sm+"')");
+        count = count+1;
     }
     altercolor();
 }

@@ -16,7 +16,7 @@ html{
     --width-shortbtn-n: 7.5vw;
     --width-shortbtn-s: 8vw;
     --radius-btn: 2.2rem;
-    --width-longbtn: 25vw;
+    --width-longbtn: 22vw;
     --position-rightpanel: 50vw;
     --size-font-header: 1.5rem;
     --size-font-default: 1.1rem;
@@ -247,6 +247,21 @@ button {
 
 .whiteblock-nico { color: var(--color-nico); }
 .whiteblock-song { color: var(--color-song); }
+
+.btn-invisible-right {
+    height: var(--radius-btn);
+    width: var(--radius-btn);
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 50%;
+    float: right;
+    padding: 0;
+    transition: opacity 0.3s;
+    /* display: inline; */
+    vertical-align: middle;
+    margin-right: 1.0vw;
+}
+.btn-invisible-right:hover { opacity: 1.0; }
 
 .fadetxt {
     height: var(--height-btn);
