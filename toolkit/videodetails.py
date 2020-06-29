@@ -11,7 +11,7 @@ print('''\033[33;1m
 \033[0m''')
 
 ssmm = 'sm37023967'
-if len(sys.argv) > 1: ssmm = str(sys.argv)[1]
+if len(sys.argv) > 1: ssmm = sys.argv[1]
 retries = 30
 
 def getvideo(sm):
@@ -55,18 +55,19 @@ def getvideo(sm):
 
 # parse
 print("\033[32;7m"+ssmm+"\033[0m")
+print('')
 sm = ssmm
 getlist = getvideo(sm)
 retry = 0
 while retry < retries:
     if "err" in getlist:
         retry += 1
-        songretry += 1
         if retry>=retries: print("\033[31;1m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
         else: print("\033[31m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
     else:
         if retry > 0: print('')
-        print('\033[2mTitle: \033[0m'+getlist['title'])
+        print('\033[2mtitle: \033[0m'+getlist['title'])
+        print('\033[2mtitleRaw: \033[0m'+json.dumps(getlist['title']))
         print('\033[2mthumbnailURL: \033[0m'+getlist['thumbnailURL'])
         print('\033[2mlargeThumbnailURL: \033[0m'+getlist['largeThumbnailURL'])
         print('\033[2mpostedDateTime: \033[0m'+getlist['postedDateTime'])
