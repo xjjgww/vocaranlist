@@ -69,7 +69,6 @@ function loadtoc()
         btnpl.setAttribute("onclick", "window.open('https://www.nicovideo.jp/mylist/"+nicopl[episode%5]+"', '_blank')");
         btnpl.setAttribute("onmouseover", "statusbar('Click to get the playlist of "+sm+".')");
         btnpl.setAttribute("onmouseout", "statusbar('&nbsp;')");
-
         if(count >= 5) { btnpl.style.display = "none"; }
 
         line.setAttribute("onclick", "darkendate('"+sm+"')");
@@ -81,6 +80,7 @@ function loadtoc()
 function loadtoc_m()
 {
     var thetoc = document.getElementById('toc');
+    var count = 0;
     for(var sm in episodejsonobj)
     {
         var theitem = episodejsonobj[sm];
@@ -98,7 +98,8 @@ function loadtoc_m()
 
         var btnn = document.createElement('button');
         btnn.id = 'n'+sm;
-        btnn.className = "btn txttoblock-nico textaligncenter";
+        // btnn.className = "btn txttoblock-nico textaligncenter";
+        btnn.className = "btn txttoblock-nico textalignleft";
         btnn.innerHTML = number;
         line.appendChild(btnn);
         btnn.setAttribute("onclick", "window.open('https://www.nicovideo.jp/watch/"+sm+"')");
@@ -109,7 +110,18 @@ function loadtoc_m()
         btnd.innerHTML = datetxt;
         line.appendChild(btnd);
 
+        var btnpl = document.createElement('button');
+        btnpl.className = "btn-invisible-right whiteblock-nico";
+        btnpl.innerHTML = "PL";
+        line.appendChild(btnpl);
+        btnpl.setAttribute("onclick", "window.open('https://www.nicovideo.jp/mylist/"+nicopl[episode%5]+"', '_blank')");
+        btnpl.setAttribute("onmouseover", "statusbar('Click to get the playlist of "+sm+".')");
+        btnpl.setAttribute("onmouseout", "statusbar('&nbsp;')");
+        if(count >= 5) { btnpl.style.display = "none"; }
+        
         line.setAttribute("onclick", "darkendate('"+sm+"')");
+
+        count = count+1;
     }
     altercolor();
 }

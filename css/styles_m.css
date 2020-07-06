@@ -256,7 +256,7 @@ button {
 
 .btn {
     height: var(--height-btn);
-    width: 12rem;
+    width: 11rem;
     float: left;
     display: block;
     opacity: 1.0;
@@ -264,7 +264,7 @@ button {
 .leftfloat { float: left; }
 
 .txttoblock-nico { color: var(--color-nico); }
-.txttoblock-song { color: var(--color-song); }
+.txttoblock-song { color: var(--color-default); }
 
 .btn-invisible {
     height: var(--radius-btn);
@@ -278,16 +278,31 @@ button {
 }
 .btn-invisible:hover { opacity: 1.0; }
 
+.btn-invisible-right {
+    height: var(--radius-btn);
+    width: var(--radius-btn);
+    background-color: white;
+    opacity: 1.0;
+    border-radius: 50%;
+    float: right;
+    margin-right: 0.5rem;
+    padding: 0;
+    vertical-align: middle;
+    margin-top: 0.6rem;
+}
+
 .whiteblock-nico { color: var(--color-nico); }
-.whiteblock-song { color: var(--color-song); }
+.whiteblock-song { color: var(--color-default); }
 
 .fadetxt {
     height: var(--height-btn);
-    width: 37rem;
-    color: var(--color-song);
+    width: 35rem;
+    color: var(--color-default);
     opacity: 1.0;
     margin-left: 0;
+    padding: 0;
     cursor: default;
+    float: left;
 }
 
 #container {
