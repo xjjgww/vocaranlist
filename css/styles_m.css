@@ -256,10 +256,11 @@ button {
 
 .btn {
     height: var(--height-btn);
-    width: 11rem;
+    width: 12rem;
     float: left;
     display: block;
     opacity: 1.0;
+    padding-left: 1rem;
 }
 .leftfloat { float: left; }
 
@@ -296,7 +297,7 @@ button {
 
 .fadetxt {
     height: var(--height-btn);
-    width: 35rem;
+    width: 34rem;
     color: var(--color-default);
     opacity: 1.0;
     margin-left: 0;

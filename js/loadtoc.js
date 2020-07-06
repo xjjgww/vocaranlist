@@ -115,8 +115,6 @@ function loadtoc_m()
         btnpl.innerHTML = "PL";
         line.appendChild(btnpl);
         btnpl.setAttribute("onclick", "window.open('https://www.nicovideo.jp/mylist/"+nicopl[episode%5]+"', '_blank')");
-        btnpl.setAttribute("onmouseover", "statusbar('Click to get the playlist of "+sm+".')");
-        btnpl.setAttribute("onmouseout", "statusbar('&nbsp;')");
         if(count >= 5) { btnpl.style.display = "none"; }
         
         line.setAttribute("onclick", "darkendate('"+sm+"')");
