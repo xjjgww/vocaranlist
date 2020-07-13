@@ -32399,6 +32399,15 @@ var songdbjsonobj = {
     "ownerid": "1136144",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/113/1136144.jpg?1527667334"
   },
+  "sm35591002": {
+    "title": "\u3010\u521d\u97f3\u30df\u30af\u3011azur\u3010\u30aa\u30ea\u30b8\u30ca\u30ebMV\u3011",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35591002/35591002.53773629",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/35591002/35591002.53773629.original/a960x540l?key=c096f9de2636e5e03ab8474c8f88bd4f0480f39b0c369598272c60556cd5811c",
+    "postedDateTime": "2019/08/25 20:30:00",
+    "owner": "spurblue.",
+    "ownerid": "57818718",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/5781/57818718.jpg?1462977695"
+  },
   "sm35591193": {
     "title": "\u3010\u307f\u304d\u3068P\u3011\u970a\u3005\u97f3\u982d\u3066\u3099\u307e\u305f\u6765\u4e16\uff0f\u521d\u97f3\u30df\u30af\u3010ATY\u3011",
     "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/35591193/35591193.9475013",
@@ -41021,6 +41030,15 @@ var songdbjsonobj = {
     "ownerid": "32646403",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/3264/32646403.jpg?1545129532"
   },
+  "sm37083899": {
+    "title": "\u30e9\u30b9\u30c8\u30ef\u30f3\u30ec\u30b3\u30fc\u30c9 / \u305f\u3079\u3063\u3053 feat.\u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37083899/37083899.43727761",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37083899/37083899.43727761.original/a960x540l?key=38269b68c453dfd6b51541d575b2e3d31b481a59db1361e23fe520b0f3090ea6",
+    "postedDateTime": "2020/06/24 20:15:00",
+    "owner": "\u305f\u3079\u3063\u3053",
+    "ownerid": "36735782",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/3673/36735782.jpg?1538684998"
+  },
   "sm37085156": {
     "title": "\u30b7\u30ce\u30ce\u30e1 / \u307e\u3089\u3057\u3043 feat.\u521d\u97f3\u30df\u30af",
     "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37085156/37085156.13066455",
@@ -41057,6 +41075,15 @@ var songdbjsonobj = {
     "ownerid": "582229",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/58/582229.jpg?1399437036"
   },
+  "sm37092156": {
+    "title": "SO HOW? / \u30bd\u30fc\u30db\u30fc and \u30b7\u30e1\u30b5\u30d0\u30c4\u30a4\u30b9\u30bf\u30fc\u30ba",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37092156/37092156.56274677",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37092156/37092156.56274677.original/a960x540l?key=90eb6cbab93eee4c44937c4ea098ec8ff48fdde5dd5143c1e99ec0e3e6af1fc8",
+    "postedDateTime": "2020/06/26 20:00:00",
+    "owner": "\u3057\u3081\u3055\u3070",
+    "ownerid": "565959",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/56/565959.jpg?1256785098"
+  },
   "sm37092723": {
     "title": "\u3042\u3057\u3085\u3089\u3057\u3085\u3089 \uff0f GUMI",
     "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37092723/37092723.18654178",
@@ -41084,6 +41111,15 @@ var songdbjsonobj = {
     "ownerid": "29879984",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2987/29879984.jpg?1582847130"
   },
+  "sm37096615": {
+    "title": "\u30c6\u30c8\u30ea\u30b9\u3093\u3054\u306e\u3046\u305f\uff08TYPE-A\uff09",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37096615/37096615.21910237",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37096615/37096615.21910237.original/a960x540l?key=ca8940c1eb71ffe01fa1bf70815edeb8c970a652fd3365dd71a73ff74a217b8a",
+    "postedDateTime": "2020/06/27 03:55:03",
+    "owner": "\u56f9\u570f",
+    "ownerid": "53295368",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/5329/53295368.jpg?1593239869"
+  },
   "sm37096973": {
     "title": "\u3072\u3068\u3067\u3093\u3054\u306e\u3046\u305f",
     "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37096973/37096973.39191133",
@@ -41092,6 +41128,24 @@ var songdbjsonobj = {
     "owner": "\u308b\u304d\u307f\u3093\u3002",
     "ownerid": "5671151",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/567/5671151.jpg?1259051216"
+  },
+  "sm37097645": {
+    "title": "\u30a2\u30ab\u30ea\u30ad\u30e9\u30ea",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37097645/37097645.70015767",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37097645/37097645.70015767.original/a960x540l?key=67e4afbf2ad0c302f1cbab416ba633c58e7002a3f978dd9d75584d37530c5d95",
+    "postedDateTime": "2020/06/27 10:49:02",
+    "owner": "YOSHIKI\u308a\u30b6\u30e1",
+    "ownerid": "29879984",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2987/29879984.jpg?1582847130"
+  },
+  "sm37098542": {
+    "title": "\u30c9\u5909 / \u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37098542/37098542.71791012",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37098542/37098542.71791012.original/a960x540l?key=e74e595c6f9b26ca2960ab9f4cb321c629169d7b187347a8d5d9ebf1503da5aa",
+    "postedDateTime": "2020/06/27 17:30:00",
+    "owner": "Inagi",
+    "ownerid": "25068192",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2506/25068192.jpg?1592148035"
   },
   "sm37098826": {
     "title": "\u3010O\u0418E\u3011\u77e5\u3089\u3093\u3002",
@@ -41110,6 +41164,123 @@ var songdbjsonobj = {
     "owner": "Keeno",
     "ownerid": "10821010",
     "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/1082/10821010.jpg?1283933250"
+  },
+  "sm37105028": {
+    "title": "\u3010\u91cd\u97f3\u30c6\u30c8\u3011\u7d75\u306b\u63cf\u3044\u305f\u304a\u3082\u3061\u3010\u30aa\u30ea\u30b8\u30ca\u30eb\u3011by ____natural",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37105028/37105028.21988181",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37105028/37105028.21988181.original/a960x540l?key=e338492c4e77cf9a45a71249733558ea0c135864e65ecb7c75f257276e3040c8",
+    "postedDateTime": "2020/06/28 18:00:00",
+    "owner": "____natural",
+    "ownerid": "16976390",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/1697/16976390.jpg?1580638676"
+  },
+  "sm37105916": {
+    "title": "3\u7a2e\u306e\u6771\u5317\u304d\u308a\u305f\u3093\u3067\u300c\u30af\u30a4\u30fc\u30f3\u30aa\u30d6\u30cf\u30fc\u30c8\u300d\u30ab\u30d0\u30fc\uff08\u6b4c\u30dc&UTAU&NEUTRINO\uff09",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37105916/37105916.35449899",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37105916/37105916.35449899.original/a960x540l?key=79cd208be96c3d37c0c90d8ecdc239ddc04de9123b55e834aee2672504981894",
+    "postedDateTime": "2020/06/28 18:45:02",
+    "owner": "\u304f\u308d\u5dde",
+    "ownerid": "47330453",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/4733/47330453.jpg?1453035715"
+  },
+  "sm37106351": {
+    "title": "Hotel Moon(go)side",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37106351/37106351.73001184",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37106351/37106351.73001184.original/a960x540l?key=9c9fd11229e177b5b234148eef84eb7e4c711ff953bfc1e50ed6b28c2ffbd1e2",
+    "postedDateTime": "2020/06/28 20:13:02",
+    "owner": "YOSHIKI\u308a\u30b6\u30e1",
+    "ownerid": "29879984",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2987/29879984.jpg?1582847130"
+  },
+  "sm37109838": {
+    "title": "\u7f8e\u306b\u5165\u308a\u5f69\u3092\u7a7f\u3064\u3093\u3054\u306e\u3046\u305f",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37109838/37109838.51136320",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37109838/37109838.51136320.original/a960x540l?key=9b0ca4c9d7055b6eabc25b48bedfe23b8b428db477ba527ebc25b1808b1e8319",
+    "postedDateTime": "2020/06/29 14:23:02",
+    "owner": "YOSHIKI\u308a\u30b6\u30e1",
+    "ownerid": "29879984",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2987/29879984.jpg?1582847130"
+  },
+  "sm37110200": {
+    "title": "\u590f\u7a7a\u6708\u6b69 / A:me feat. \u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37110200/37110200.10182900",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37110200/37110200.10182900.original/a960x540l?key=063aed22b6a0abb001bee3ae4b6bc6ab2ffde39a5b403cdfa54b18e44f6a6a53",
+    "postedDateTime": "2020/06/29 20:00:00",
+    "owner": "A:me",
+    "ownerid": "88980139",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/8898/88980139.jpg?1556698721"
+  },
+  "sm37116156": {
+    "title": "66 / GUMI - YM",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37116156/37116156.24480212",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37116156/37116156.24480212.original/a960x540l?key=5016d28e23765140b0246bc8b296e5d1fd63d4bea51923de5fb2d2e618600c3a",
+    "postedDateTime": "2020/06/30 19:00:00",
+    "owner": "YM",
+    "ownerid": "4027531",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/402/4027531.jpg?1405930741"
+  },
+  "sm37119891": {
+    "title": "\u30bf\u30df\u30d5\u30eb\u30ea\u30f3\u30b4\uff03\u305f\u3079\u308b\u3093\u3054",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37119891/37119891.37974654",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37119891/37119891.37974654.original/a960x540l?key=6e15fd7a453acb9f4da70c8fb9ac0178b82b55aa85548af0eb33ade375376da4",
+    "postedDateTime": "2020/07/01 13:31:02",
+    "owner": "\u5deb\u9ce5",
+    "ownerid": "96666500",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/9666/96666500.jpg?1590024614"
+  },
+  "sm37121480": {
+    "title": "\u76ee\u30f2\u958b\u30b1\u30c6\u898b\u30eb\u5922 / \u521d\u97f3\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37121480/37121480.3900658",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37121480/37121480.3900658.original/a960x540l?key=a4469be5f7f1f93bbfc3bb68a28eeda0b1ad826b79498951474256e957a0f904",
+    "postedDateTime": "2020/07/01 19:38:03",
+    "owner": "\u304b\u3057\u3053\u3002",
+    "ownerid": "48706739",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/4870/48706739.jpg?1585825018"
+  },
+  "sm37121732": {
+    "title": "\u30ec\u30b8\u888b\u304f\u3060\u3055\u3044\u3000/\u3000  \u7d50\u6708\u3086\u304b\u308a",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37121732/37121732.42940023",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37121732/37121732.42940023.original/a960x540l?key=1ebf50acccbb442de8edbe0f665a333564a71ded75eb7db55643b17a84a80694",
+    "postedDateTime": "2020/07/01 20:25:17",
+    "owner": "\u30e4\u30c5\u30ad\u6fc0\u304a\u3053P",
+    "ownerid": "13437277",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/1343/13437277.jpg?1436254595"
+  },
+  "sm37122216": {
+    "title": "\u30bf\u30df\u30d5\u30eb\u3093\u3054\u30fc\u305f\u3079\u308b\u3093\u3054\u8e0a\u3063\u3066\u307f\u305f \u3093\u3054\u30fc #\u30e6\u30cb\u30c3\u30c8\u540d\u52df\u96c6\u4e2d",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37122216/37122216.71169812",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37122216/37122216.71169812.original/a960x540l?key=54459f14a2a81db8b5327d9ca6d5638c435637c53cfee67c166625d4fc5710cb",
+    "postedDateTime": "2020/07/02 00:00:00",
+    "owner": "ni-san",
+    "ownerid": "25755543",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/2575/25755543.jpg?1327856944"
+  },
+  "sm37129473": {
+    "title": "\u6bd2\u3005\uff0f\u97f3\u8857\u30a6\u30ca",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37129473/37129473.62179820",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37129473/37129473.62179820.original/a960x540l?key=5bf1cadd40a99c87fc99300399f4f9cd6ecf817e02f1b319fe0fb84c8f7b72bd",
+    "postedDateTime": "2020/07/04 20:00:00",
+    "owner": "\u4e00\u4e8c\u4e09",
+    "ownerid": "2798037",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/279/2798037.jpg?1531441426"
+  },
+  "sm37131495": {
+    "title": "\u6f6e\u98a8\u3092\u7d50\u3046/\u30df\u30af",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37131495/37131495.33738333",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37131495/37131495.33738333.original/a960x540l?key=d014e7b2ce9fb85974bc68692199b1134de9d15add7837b8e0fde797b273522a",
+    "postedDateTime": "2020/07/03 20:00:00",
+    "owner": "\u30ed\u30c6",
+    "ownerid": "82423727",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/8242/82423727.jpg?1592711816"
+  },
+  "sm37136620": {
+    "title": "\u7a32\u8449\u66c7\u300e\u30ab\u30bc\u30de\u30c1\u30b0\u30b5\u300fVo. \u9cf4\u82b1\u30d2\u30e1",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/37136620/37136620.28721349",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/37136620/37136620.28721349.original/a960x540l?key=bef81a2ef26e75066c04b4d0a0d7ae545cda82f32982af44961d11b007a0409b",
+    "postedDateTime": "2020/07/04 20:00:00",
+    "owner": "\u7a32\u8449\u66c7",
+    "ownerid": "42833430",
+    "ownericon": "https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/4283/42833430.jpg?1545219077"
   },
   "sm5094908": {
     "title": "\u3010\u93e1\u97f3\u30ea\u30f3\u30ec\u30f3\u3011trick and treat\u3010\u30aa\u30ea\u30b8\u30ca\u30eb\u66f2\u3011",

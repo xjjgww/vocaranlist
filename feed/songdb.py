@@ -92,7 +92,6 @@ for s in data: # dict
                 break
         if retry==retries: deadsm[sm] = 1
         count += 1 # count
-    if songretry > 0: print('')
     
 sorted_outputdict = {}
 for s in sorted(outputdict):
