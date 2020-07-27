@@ -79,7 +79,6 @@ for s in data: # dict
         while retry < retries:
             getlist = getvideo(sm)
             if "err" in getlist:
-                if retry == 0 and songretry > 0: print('')
                 retry += 1
                 songretry += 1
                 if retry>=retries: print("\033[31;1m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
