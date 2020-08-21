@@ -43,7 +43,7 @@ with open('../json/episodelist.json') as json_file:
     for s in data:
         sm = s
         if sm in outputdict: continue
-        print(list(data[s])[0])
+        print(list(data[s])[0]+' '+'http://nicodb.jp/u/index.php/bgm/rankrss/'+sm)
         # outputdict[sm] = findsonglist('http://nicodb.jp/u/bgm/utaran/'+sm+'/?rss=1')
         outputdict[sm] = findsonglist('http://nicodb.jp/u/index.php/bgm/rankrss/'+sm)
 

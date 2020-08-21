@@ -62,7 +62,7 @@ episode = {}
 with open('../json/episodelist.json') as json_file:
     episode = json.load(json_file)
     
-retries = 30
+retries = 40
 with open('../json/songlist.json') as json_file:
     data = json.load(json_file)
 
