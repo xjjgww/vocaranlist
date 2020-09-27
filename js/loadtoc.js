@@ -1,5 +1,5 @@
 
-var nicopl = ['3165526', '3271200', '3409323', '2951756', '3900779'];
+var nicopl = ['3165526', '3271200', '3409323', '2951756', '3900779']; // playlist of latest 5 episode
 
 function loadtoc()
 {

@@ -92,6 +92,7 @@ function darkendate(sm) {
         newtda.className = "songtext";
         var songname = songjsonobj[sm][i]['title']+'<br>\u220e ';
         if(songsm in songdbjsonobj) { songname += songdbjsonobj[songsm]['owner']; }
+        songname += ('<br><br>\u23CF ' + songdbjsonobj[songsm]['postedDateTime'])
         newtda.innerHTML = songname;
         newtda.href = "https://www.nicovideo.jp/watch/"+songsm;
         newtda.setAttribute('target', '_blank');
