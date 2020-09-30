@@ -418,6 +418,10 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 15%;
-  opacity: 70%;
+  width: 100%;
+  opacity: 90%;
+}
+
+.thumbnail {
+    width: 40%;
 }

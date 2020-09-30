@@ -11,7 +11,7 @@ html{
     --color-song: #CC6666;
     --width-toc: 100%;
     --margin-toc: 0%;
-    --size-font-default: 1.88rem;
+    --size-font-default: 1.7rem;
     --size-font-footer: 2.1vh;
     --size-font-header: 2.4vh;
     --height-filter-div: 5.4vh;
@@ -345,7 +345,10 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
-  opacity: 80%;
+  width: 100%;
+  opacity: 90%;
 }
 
+.thumbnail {
+    width: 50%;
+}

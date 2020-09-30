@@ -67,15 +67,13 @@ function darkendate(sm) {
         thetab.appendChild(newtr);
         var newtp = document.createElement("td");
         newtp.id = 'tp'+i;
-        newtp.width = "35%";
+        newtp.className = "thumbnail";
         newtr.appendChild(newtp);
         var newpa = document.createElement("a");
         newpa.href = "https://www.nicovideo.jp/watch/"+songsm;
         newpa.setAttribute('target', '_blank');
         newtp.appendChild(newpa);
         var newpp = document.createElement("img");
-        newpp.style.width = "100%";
-        newpp.style.opacity = "0.95";
         if(songsm in songdbjsonobj)
         {
             newpp.src = songdbjsonobj[songsm]["largeThumbnailURL"];
