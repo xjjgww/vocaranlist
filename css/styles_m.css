@@ -363,7 +363,7 @@ img {
     /* background-color: white; */
     text-align: center;
     padding: auto 0;
-    font-size: var(--size-font-header);
+    font-size: var(--size-font-default);
     position: relative;
     display: inline;
     vertical-align: middle;
