@@ -14860,8 +14860,8 @@ var songdbjsonobj = {
   },
   "sm30177801": {
     "title": "\u30c0\u30f3\u30b9\u30ed\u30dc\u30c3\u30c8\u30c0\u30f3\u30b9 / \u521d\u97f3\u30df\u30af",
-    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/30177801/30177801.31979925",
-    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/30177801/30177801.31979925.original/a960x540l?key=8ecf676604c4c9b044ac39040898923baeaa17b3b08a3ecdd89b0f446ca0edd4",
+    "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/30177801/30177801.97461989",
+    "largeThumbnailURL": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/30177801/30177801.97461989.original/a960x540l?key=30062cd14c59945ca3b4fbd2f498d06c35c74052a4417ccb8e65a4a7adec8d7f",
     "postedDateTime": "2016/12/06 19:45:25",
     "owner": "\u30ca\u30e6\u30bf\u30f3\u661f\u4eba",
     "ownerid": "49716308",
