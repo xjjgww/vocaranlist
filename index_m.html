@@ -25,11 +25,16 @@
           週刊VOCAL CharacterとUTAUランキング
         </div>
       </div>
+      <div id="filtergroup"></div>
       <div id="filter">
-        <div id="filtergroup">
+        <div id="filtergroup_m">
           <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="#/sm/date/up/song">
           <button class="yrmo" onclick="appinput('年')">年</button>
           <button class="yrmo" onclick="appinput('月')">月</button>
+        </div>
+        <div id="back" style="display: none">
+          <!-- <button class="btnback" onclick="goback()" style="display: none">Back</button> -->
+          <button class="btnback" onclick="goback()">&#171; Back &#187;</button>
         </div>
       </div>
     </div>
@@ -38,10 +43,8 @@
       <div id="toc">
       </div>
       <script>loadtoc_m()</script>
-      <div id="ranlist">
-        <!-- <div id="iconholder"> -->
-        <!--   <img src="img/icon.png" alt="iconholder"> -->
-        <!-- </div> -->
+      <div id="ranlist" style="display: none">
+      <!-- <div id="ranlist"> -->
         <table id="songlist">
         </table>
       </div>

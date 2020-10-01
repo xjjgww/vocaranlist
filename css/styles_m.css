@@ -22,9 +22,9 @@ html{
     --height-footer: 3vh;
     --height-header: 10vh;
     --height-body: 87vh;
-    --height-content-block-up: 33vh;
+    --height-content-block-up: 87vh; /*33vh*/
     /* --height-song-title: 3vh; */
-    --height-content-block-down: 54vh;
+    --height-content-block-down: 87vh; /*54vh*/
     --position-songlist: 33vh;
     --margin-title-text: 1vh;
 }
@@ -146,7 +146,8 @@ p { font-size: var(--size-font-default); }
 #ranlist {
     height: var(--height-content-block-down);
     width: var(--width-toc);
-    margin-top: var(--position-songlist);
+    /* margin-top: var(--position-songlist); */
+    margin-top: 0vh;
     position: fixed;
     border: none;
     overflow: auto;
@@ -351,4 +352,19 @@ img {
 
 .thumbnail {
     width: 50%;
+}
+
+.btnback {
+    height: var(--radius-btn);
+    width: 80%;
+    border-top: 0.2rem dashed white;
+    color: white;
+    opacity: 0.95;
+    /* background-color: white; */
+    text-align: center;
+    padding: auto 0;
+    font-size: var(--size-font-header);
+    position: relative;
+    display: inline;
+    vertical-align: middle;
 }
