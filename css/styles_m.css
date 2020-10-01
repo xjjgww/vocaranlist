@@ -357,7 +357,7 @@ img {
 .btnback {
     height: var(--radius-btn);
     width: 80%;
-    border-top: 0.2rem dashed white;
+    border-top: 0.15rem dashed white;
     color: white;
     opacity: 0.95;
     /* background-color: white; */
