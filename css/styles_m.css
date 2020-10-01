@@ -249,6 +249,8 @@ button {
     width: 100%;
     margin: auto;
     text-align: center;
+    /* border-bottom: 0.1rem dashed #cccccc; */
+    border-top: 0.1rem dashed #cccccc;
 }
 .btn-group:hover { background-color: #cccccc; }
 
