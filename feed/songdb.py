@@ -36,17 +36,31 @@ def getvideo(sm):
     tmp = json.loads(dataapi)
     if "video" in json.loads(dataapi):
         jvideo = json.loads(dataapi)['video'] # dict
+        # print(jvideo)
         if jvideo != None:
             mylist['title'] = jvideo['title']
-            mylist['thumbnailURL'] = jvideo['thumbnailURL']
-            mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
-            mylist['postedDateTime'] = jvideo['postedDateTime']
+            if "thumbnailURL" in jvideo:
+                mylist['thumbnailURL'] = jvideo['thumbnailURL']
+            else:
+                mylist['thumbnailURL'] = jvideo['thumbnail']['url']
+            if "largeThumbnailURL" in jvideo:
+                mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
+            else:
+                mylist['largeThumbnailURL'] = jvideo['thumbnail']['largeUrl']
+            if "postedDateTime" in jvideo:
+                mylist['postedDateTime'] = jvideo['postedDateTime']
+            else:
+                mylist['postedDateTime'] = jvideo['registeredAt']
     if "owner" in json.loads(dataapi):
         jowner = json.loads(dataapi)['owner'] # dict
+        # print(jowner)
         if jowner != None:
             mylist['owner'] = jowner['nickname'].replace(' \u3055\u3093', '')
             mylist['ownerid'] = jowner['id']
-            mylist['ownericon'] = jowner['iconURL']
+            if "iconURL" in jowner:
+                mylist['ownericon'] = jowner['iconURL']
+            elif "iconUrl" in jowner:
+                mylist['ownericon'] = jowner['iconUrl']
     return mylist
 
 # parse
