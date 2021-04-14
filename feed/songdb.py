@@ -11,6 +11,7 @@ print('\033[33;1m\
 \033[0m')
 
 def getvideo(sm):
+    print(sm)
     mylist = {}
     session = HTMLSession()
     r = session.get('https://www.nicovideo.jp/watch/'+sm) # HTMLResponse
@@ -22,8 +23,22 @@ def getvideo(sm):
         mylist['err'] = 1
         return mylist
     dataapi = ele[0].attrs['data-api-data'] # str
-    dataapi = re.sub(r"\"description\".+?\"thumbnailURL\"", "\"thumbnailURL\"", dataapi)
+    # if "thumbnailURL" in dataapi:
+    #     dataapi = re.sub(r"\"description\".+?\"thumbnailURL\"", "\"thumbnailURL\"", dataapi)
+    # else:
     # print(dataapi)
+    # print("1 -------------------------------------")
+    dataapi = re.sub(r"^.+?\"owner\":{\"", "{\"owner\":{\"", dataapi)
+    dataapi = re.sub(r"^.+?\"owner\":null", "{\"owner\":null", dataapi)
+    # print(dataapi)
+    # print("2 -------------------------------------")
+    dataapi = re.sub(r"\"viewer\":null}.+?\"video\":{\"id\":", "\"viewer\":null},\"video\":{\"id\":", dataapi)
+    # print(dataapi)
+    # print("3 -------------------------------------")
+    dataapi= re.sub(r"\"description\":.+?\"count\":{", "\"count\":{", dataapi)
+
+    # if sm == "sm38217206":
+    print(dataapi)
     mylist = {
         "title": "",
         "thumbnailURL": "",
