@@ -33,7 +33,7 @@ def getvideo(sm):
     # print(dataapi)
     # print("3 -------------------------------------")
     dataapi= re.sub(r"\"description\":.+?\"count\":{", "\"count\":{", dataapi)
-    # print(dataapi)
+    print(dataapi)
 
     mylist = {
         "title": "",
@@ -57,7 +57,8 @@ def getvideo(sm):
             if "largeThumbnailURL" in jvideo:
                 mylist['largeThumbnailURL'] = jvideo['largeThumbnailURL']
             else:
-                mylist['largeThumbnailURL'] = jvideo['thumbnail']['largeUrl']
+                # mylist['largeThumbnailURL'] = jvideo['thumbnail']['largeUrl']
+                mylist['largeThumbnailURL'] = jvideo['thumbnail']['middleUrl']
             if "postedDateTime" in jvideo:
                 mylist['postedDateTime'] = jvideo['postedDateTime']
             else:
