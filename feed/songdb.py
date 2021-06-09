@@ -33,7 +33,7 @@ def getvideo(sm):
     # print(dataapi)
     # print("3 -------------------------------------")
     dataapi= re.sub(r"\"description\":.+?\"count\":{", "\"count\":{", dataapi)
-    print(dataapi)
+    # print(dataapi)
 
     mylist = {
         "title": "",
