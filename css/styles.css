@@ -196,7 +196,7 @@ button {
 }
 .btn-group {
     height: var(--height-btn);
-    width: var(--width-toc);
+    width: calc(var(--width-toc)*0.97);
     /* margin: auto; */
     text-align: left;
     padding: 0;
@@ -288,7 +288,7 @@ button {
 
 #tr-1container {
     height: var(--height-list-title);
-    width: var(--width-rightpanel);
+    width: calc(var(--width-rightpanel)*0.95);
     position: fixed;
     margin-left: 0;
     margin-top: 0;
@@ -316,7 +316,7 @@ button {
 
 #ranlist {
     height: var(--height-ranlist);
-    width: var(--width-rightpanel);
+    width: calc(var(--width-rightpanel));
     position: fixed;
     margin-left: 0;
     margin-top: var(--height-list-title);
@@ -327,7 +327,7 @@ button {
 }
 #songlist {
     border-collapse: collapse;
-    width: var(--width-rightpanel);
+    width: calc(var(--width-rightpanel)*0.95);
     opacity: 0.95;
     table-layout: fixed;
     margin-bottom: 0;
