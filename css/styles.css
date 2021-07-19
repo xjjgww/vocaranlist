@@ -295,7 +295,7 @@ button {
     padding: 0;
     text-align: center;
     /* background-color: #f0f0f0; */
-    background-color: var(--color-default);
+    /* background-color: var(--color-default); */
     outline: none;
 }
 
@@ -307,9 +307,10 @@ button {
     top: 0;
     text-align: center;
     /* color: var(--color-default); */
-    color: white;
+    /* color: white; */
+    color: var(--color-default);
     font-size: var(--size-font-songlist);
-    font-weight: bold;
+    /* font-weight: bold; */
     outline: none;
 }
 
@@ -348,8 +349,10 @@ button {
     transition: background-color 0.3s;
 }
 .songitem:hover {
-    background-color: var(--color-default);
-    color: white;
+    /* background-color: var(--color-default); */
+    /* color: white; */
+    background-color: #eeeeee;
+    color: black;
 }
 .songtext {
     text-decoration: none;
@@ -366,7 +369,7 @@ button {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: var(--color-default);
+    /* background-color: var(--color-default); */
     text-align: center;
     /* z-index: 200; */
 }
@@ -376,8 +379,9 @@ button {
     position: absolute;
     left: 0;
     bottom: -0.27vh;
-    background-color: var(--color-default);
-    color: white;
+    /* background-color: var(--color-default); */
+    /* color: white; */
+    color: var(--color-default);
     font-size: var(--size-font-footer);
     text-align: center;
 }
