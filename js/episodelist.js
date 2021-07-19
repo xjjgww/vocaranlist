@@ -1,4 +1,4 @@
-{
+var episodejsonobj = {
   "sm39047941": [
     "719",
     "#719\u30fb661",

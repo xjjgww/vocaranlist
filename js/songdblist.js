@@ -1,4 +1,4 @@
-{
+var songdbjsonobj = {
   "1433329792": {
     "title": "\u2517|\u2235|\u2513\u6681\u6708\u591c-\u30a2\u30ab\u30c4\u30ad\u30c5\u30af\u30e8-\uff0fHoneyWorks feat.\u93e1\u97f3\u30ea\u30f3",
     "thumbnailURL": "https://nicovideo.cdn.nimg.jp/thumbnails/26405782/26405782",
