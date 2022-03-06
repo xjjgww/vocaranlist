@@ -22,7 +22,7 @@ function loadtoc()
 
         var btnn = document.createElement('button');
         btnn.id = 'n'+sm;
-        btnn.className = "btn txttoblock-nico textaligncenter";
+        btnn.className = "btn left hovercolor";
         btnn.innerHTML = number;
         line.appendChild(btnn);
         btnn.setAttribute("onclick", "window.open('https://www.nicovideo.jp/watch/"+sm+"','_blank')");
@@ -30,8 +30,8 @@ function loadtoc()
         btnn.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         var btnvn = document.createElement('button');
-        btnvn.className = "btn-invisible whiteblock-nico";
-        btnvn.innerHTML = "N";
+        btnvn.className = "btn left hovercolor";
+        btnvn.innerHTML = '<i class="fa-regular fa-copy"></i>';
         line.appendChild(btnvn);
         btnvn.setAttribute("onclick", "copylink('"+sm+"', 'the sm #')");
         btnvn.setAttribute("onmouseover", "statusbar('https://www.nicovideo.jp/watch/"+sm+"')");
@@ -39,7 +39,7 @@ function loadtoc()
 
         var btnb = document.createElement('button');
         btnb.id = 'b'+sm;
-        btnb.className = "btn txttoblock-song textaligncenter";
+        btnb.className = "btn left hovercolor";
         btnb.innerHTML = sm;
         line.appendChild(btnb);
         btnb.setAttribute("onclick", "window.open('http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F"+sm+"', '_blank')");
@@ -47,8 +47,8 @@ function loadtoc()
         btnb.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         var btnvs = document.createElement('button');
-        btnvs.className = "btn-invisible whiteblock-song";
-        btnvs.innerHTML = "S";
+        btnvs.className = "btn left hovercolor";
+        btnvs.innerHTML = '<i class="fa-regular fa-copy"></i>';
         line.appendChild(btnvs);
         btnvs.setAttribute("onclick", "copylink('http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F"+sm+"', 'the songrium link')");
         btnvs.setAttribute("onmouseover", "statusbar('songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp//rss//"+sm+"')");
@@ -56,22 +56,21 @@ function loadtoc()
 
         var btnd = document.createElement('button');
         btnd.id = 'd'+sm;
-        btnd.className = "fadetxt textalignleft";
+        btnd.className = "btn left";
         btnd.innerHTML = datetxt;
         line.appendChild(btnd);
-        btnd.setAttribute("onmouseover", "statusbar('Click to get the song list of "+sm+".')");
-        btnd.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         var btnpl = document.createElement('button');
-        btnpl.className = "btn-invisible-right whiteblock-nico";
+        btnpl.className = "btn right hovercolor";
         btnpl.innerHTML = "PL";
         line.appendChild(btnpl);
         btnpl.setAttribute("onclick", "window.open('https://www.nicovideo.jp/mylist/"+nicopl[episode%5]+"', '_blank')");
-        btnpl.setAttribute("onmouseover", "statusbar('Click to get the playlist of "+sm+".')");
+        btnpl.setAttribute("onmouseover", "statusbar('&#187; Playlist &#187;.')");
         btnpl.setAttribute("onmouseout", "statusbar('&nbsp;')");
         if(count >= 5) { btnpl.style.display = "none"; }
 
         line.setAttribute("onclick", "darkendate('"+sm+"')");
+        if(count==0) darkendate(sm);
         count = count+1;
     }
     altercolor();

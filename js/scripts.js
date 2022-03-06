@@ -49,9 +49,9 @@ function copylink(str, noti) {
 }
 
 function darkendate(sm) {
-    document.getElementById('ranlist').style.display = "block";
-    document.getElementById('back').style.display = "block";
-    document.getElementById('filtergroup_m').style.display = "none";
+    // document.getElementById('ranlist').style.display = "block";
+    // document.getElementById('back').style.display = "block";
+    // document.getElementById('filtergroup_m').style.display = "none";
     
     var thetab = document.getElementById('songlist');
     for(var i=0; i<100; i++)

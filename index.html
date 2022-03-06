@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング,週刊VOCAL CharacterとUTAUランキング">
     <meta name="description" content="The Weekly VOCALOID and UTAU Ranking (週刊VOCALOIDとUTAUランキング), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in Niconico (ニコニコ).">
-    <meta name="author" content="Erica Wang">
+    <meta name="author" content="boundin">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="https://xjjgww.github.io/vocaranlist/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b7d79a1ac.js" crossorigin="anonymous"></script>        
     <script>
-      if (screen.width <= 1300) {
-          window.location = "https://xjjgww.github.io/vocaranlist/index_m.html";
+      if (screen.width <= 800) {
+          // window.location = "https://xjjgww.github.io/vocaranlist/index_m.html";
+          window.location = "index_m.html";
       }
     </script>
     <script data-main="js/scripts.js" src="js/episodelist.js"></script>
@@ -25,63 +28,37 @@
 
   <body>
 
-    <div id="header">
-      <div id="title">
-        <div id="titletext">
-          週刊VOCAL CharacterとUTAUランキング
-        </div>
-      </div>
-      <div id="filter">
-        <div id="filtergroup_m"></div>
-        <div id="filtergroup">
+    <div class="leftpanel">
+      <div class="header">
+        <h1>週刊VOCAL CharacterとUTAUランキング</h1>
+        <div class="filter">
           <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="Search... #/sm/date/song/up">
           <button class="yrmo" onclick="appinput('年')">年</button>
           <button class="yrmo" onclick="appinput('月')">月</button>
         </div>
-        <div id="back" style="display: none">
-          <!-- <button class="btnback" onclick="goback()" style="display: none">Back</button> -->
-          <button class="btnback" onclick="goback()"></button>
-	</div>
+      </div>
+      <div id="toc">
+      </div>
+      <div id="clipboard" class="footer">&nbsp;</div>
+    </div>
+
+    <div class="rightpanel">
+      <div class="desc">
+        The Weekly VOCALOID and UTAU Ranking (<a class="linkp" href="https://dic.nicovideo.jp/a/%E9%80%B1%E5%88%8Avocaloid%E3%81%A8utau%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" target="_blank">週刊VOCALOIDとUTAUランキング</a>), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in <a class="linkp" href="https://www.nicovideo.jp/" target="_blank">Niconico</a> (ニコニコ).
+        This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_blank">nicodb.jp</a>.
+      </div>
+
+      <div class="ranlist">
+        <div id="tr-1"></div>
+        <table id="songlist"></table>
+      </div>
+
+      <div class="footer">
+        Copyright © 2022 boundin
       </div>
     </div>
 
-    <div id="descholder">
-      <div id="desc">
-        <div id="desctext"><a class="boldp">The Weekly VOCALOID and UTAU Ranking</a> (<a class="linkp" href="https://dic.nicovideo.jp/a/%E9%80%B1%E5%88%8Avocaloid%E3%81%A8utau%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" target="_blank">週刊VOCALOIDとUTAUランキング</a>), abbreviated to <a class="boldp">Vocaran</a> (ぼからん),
-          is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in <a class="linkp" href="https://www.nicovideo.jp/" target="_blank">Niconico</a> (ニコニコ).
-          This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_blank">nicodb.jp</a>. Apologize for any possible incorrect information.</div>
-      </div>
-    </div>
-
-    <div id="toc">
-    </div>
     <script>loadtoc()</script>
-
-    <div id="container">
-      <div id="clipboard">&nbsp;</div>
-    </div>
-
-    <div id="ranlistgroup">
-      <div id="tr-1container">
-        <div id="tr-1">
-          ～ Song list ～
-        </div>
-      </div>
-      <div id="ranlist">
-        <!-- <div id="iconholder"> -->
-        <!--   <img src="img/icon.png" alt="iconholder"> -->
-	<!-- </div> -->
-        <table id="songlist">
-        </table>
-      </div>
-    </div>
-
-    <div id="footercontainerright">
-      <div id="footerright">
-        Copyright © 2020 boundin
-      </div>
-    </div>
-
   </body>
 </html>
 
