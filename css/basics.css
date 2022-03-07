@@ -1,0 +1,208 @@
+:root {
+    --color-default: black;
+    --color-red: #C03945;
+    --color-gray: #f9f9f9;
+    --color-darkgray: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    color: var(--color-default);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: inherit;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    vertical-align: middle;
+    /* padding: 1rem 1rem; */
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /* opacity: 90%; */
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.leftpanel {
+    position: fixed;
+    top: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    position: absolte;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+.filter {
+    width: 100%;
+}
+
+.filter input {
+    outline: none;
+    border-radius: 0.3rem;
+    border: 1px solid var(--color-default);
+    /* ::placeholder { */
+    /*     color: var(--color-default); */
+    /* } */
+    display: inline;
+    vertical-align: middle;
+    padding-left: 1rem;
+}
+
+.yrmo {
+    border-radius: 0.3rem;
+    opacity: 1;
+    background-color: var(--color-gray);
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+    display: inline;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
+}
+
+#toc {
+    position: absolute;
+    margin: 0;
+    background-color: white;
+    display: block;
+    overflow: auto;
+}
+
+.btn-group {
+    display: table;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0;
+}
+
+.white-background { background-color: white; }
+.gray-background { background-color: var(--color-gray); }
+
+.linkp {
+    color: var(--color-red);
+    text-decoration: none;
+}
+
+.rightpanel {
+    position: fixed;
+    top: 0;
+    margin: 0;
+}
+
+.desc {
+    position: absolute;
+    top: 0;
+    background-color: white;
+}
+
+.ranlist {
+    position: absolute;
+    border: none;
+    overflow: auto;
+    display: block;
+    background-color: white;
+    padding-bottom: 2rem;
+}
+
+.ranlist table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: absolute;
+    margin-bottom: 0;
+}
+
+.songitem {
+    width: 100%;
+    text-align: left;
+    background-color: inherit;
+    color: var(--color-default);
+    outline: none;
+    padding: 0;
+}
+
+.songtext {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+@keyframes fadeint {
+    from { transform: translateY(-5%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeinb {
+    from { transform: translateY(5%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeinl {
+    from { transform: translateX(-2%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeinr {
+    from { transform: translateX(5%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.header { animation: fadeint 2s ease 0s 1; }
+#toc { animation: fadeinb 2s ease 0s 1; }
+img { animation: fadeinl 2s ease 0s 1; }
+#tr-1, .songtext { animation: fadein 2s ease 0s 1; }

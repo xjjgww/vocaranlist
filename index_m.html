@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング">
     <meta name="description" content="The Weekly VOCALOID and UTAU Ranking (週刊VOCALOIDとUTAUランキング), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in Niconico (ニコニコ).">
-    <meta name="author" content="Erica Wang">
+    <meta name="author" content="boundin">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="https://xjjgww.github.io/vocaranlist/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/basics.css">
     <link rel="stylesheet" href="css/styles_m.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b7d79a1ac.js" crossorigin="anonymous"></script>
     <script data-main="js/scripts.js" src="js/episodelist.js"></script>
     <script data-main="js/scripts.js" src="js/songlist.js"></script>
     <script data-main="js/scripts.js" src="js/songdblist.js"></script>
@@ -19,42 +22,33 @@
   <title>週刊VOCAL CharacterとUTAUランキング</title>
 
   <body>
-    <div id="header">
-      <div id="title">
-        <div id="titletext">
-          週刊VOCAL CharacterとUTAUランキング
-        </div>
-      </div>
-      <div id="filtergroup"></div>
-      <div id="filter">
-        <div id="filtergroup_m">
+
+    <div class="leftpanel">
+      <div class="header">
+        <h1>週刊VOCAL CharacterとUTAUランキング</h1>
+        <div class="filter">
           <input type="text" id="filterinput" onkeyup="myfilter()" placeholder="#/sm/date/up/song">
           <button class="yrmo" onclick="appinput('年')">年</button>
           <button class="yrmo" onclick="appinput('月')">月</button>
         </div>
-        <div id="back" style="display: none">
-          <!-- <button class="btnback" onclick="goback()" style="display: none">Back</button> -->
-          <button class="btnback" onclick="goback()">&#171; Back &#187;</button>
-        </div>
       </div>
+      <div id="toc"></div>
+      <div id="clipboard" class="footer">Copyright © 2022 boundin</div>
     </div>
 
-    <div id="body">
-      <div id="toc">
+    <div class="rightpanel hideinmobile" id="rightpanel">
+      <div class="desc">
+        <div id="tr-1"></div>
+        <div id="back" onclick="document.getElementById('rightpanel').style.display = 'none';"><p>&times</p></div>
       </div>
-      <script>loadtoc_m()</script>
-      <div id="ranlist" style="display: none">
-      <!-- <div id="ranlist"> -->
-        <table id="songlist">
-        </table>
-      </div>
-    </div>
-
-    <div id="tr-1container">
-      <div id="tr-1">
-        Copyright © 2020 boundin
+      <div class="ranlist">
+        <table id="songlist"></table>
       </div>
     </div>
+    <div class="footer">
+      Copyright © 2022 boundin
+    </div>
+    <script>loadtoc()</script>
   </body>
 </html>
 
