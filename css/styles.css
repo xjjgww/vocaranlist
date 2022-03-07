@@ -86,6 +86,8 @@
     .thumbnail { width: 45%; }
 
     .ranlist { padding-bottom: 20vh; }
+
+    .footer { position: fixed; }
     
     .back {
         display: block;
