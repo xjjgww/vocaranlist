@@ -26,6 +26,15 @@ body {
     background-color: white;
 }
 
+.header .middle {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 h1 {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -71,7 +80,7 @@ img {
 .header {
     height: var(--height-header);
     width: 100%;
-    position: absolte;
+    position: relative;
     top: 0;
     left: 0;
     background-color: white;
@@ -85,7 +94,7 @@ img {
 .filter input {
     outline: none;
     border-radius: 0.3rem;
-    border: 1px solid var(--color-default);
+    border: 1px solid #999;
     display: inline;
     vertical-align: middle;
     padding-left: 0.7rem;
@@ -218,9 +227,9 @@ img {
     to { opacity: 1; }
 }
 
-.header { animation: fadeint 2s ease 0s 1; }
+/* .header { animation: fadeint 2s ease 0s 1; } */
 #toc { animation: fadeinb 2s ease 0s 1; }
 img { animation: fadeinl 2s ease 0s 1; }
 .desct { animation: fadeinr 2s ease 0s 1; }
-#tr-1, .songtext { animation: fadein 2s ease 0s 1; }
+.header, #tr-1, .songtext { animation: fadein 2s ease 0s 1; }
 
