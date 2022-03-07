@@ -116,7 +116,7 @@ img {
     height: calc(100vh - var(--height-header));
     top: var(--height-header);
     left: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 10vh;
     position: absolute;
     margin: 0;
     background-color: white;
@@ -168,7 +168,7 @@ img {
     overflow: auto;
     display: block;
     background-color: white;
-    padding-bottom: 2rem;
+    padding-bottom: 10vh;
 }
 
 .ranlist table {
