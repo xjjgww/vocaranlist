@@ -14,6 +14,7 @@ html{
     height: 100%;
     width: 100%;
     color: var(--color-default);
+    overflow-y: hidden;
 }
 
 body {
@@ -72,8 +73,9 @@ img {
 .leftpanel {
     width: var(--width-left);
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
     margin: 0;
 }
 
@@ -145,7 +147,7 @@ img {
 .rightpanel {
     width: var(--width-right);
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     margin: 0;
 }
