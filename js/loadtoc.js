@@ -26,7 +26,7 @@ function loadtoc()
         btnn.innerHTML = number;
         line.appendChild(btnn);
         btnn.setAttribute("onclick", "window.open('https://www.nicovideo.jp/watch/"+sm+"','_blank')");
-        btnn.setAttribute("onmouseover", "statusbar('&#187; NicoNico &#187;')");
+        btnn.setAttribute("onmouseover", "statusbar('https://www.nicovideo.jp/watch/"+sm+"')");
         btnn.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         var btnvn = document.createElement('button');
@@ -43,7 +43,7 @@ function loadtoc()
         btnb.innerHTML = sm;
         line.appendChild(btnb);
         btnb.setAttribute("onclick", "window.open('http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F"+sm+"', '_blank')");
-        btnb.setAttribute("onmouseover", "statusbar('&#187; songrium &#187;')");
+        btnb.setAttribute("onmouseover", "statusbar('songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp//rss//"+sm+"')");
         btnb.setAttribute("onmouseout", "statusbar('&nbsp;')");
 
         var btnvs = document.createElement('button');

@@ -1,54 +1,54 @@
-:root {
-    --width-left: 50%;
-    --width-right: 50%;
-    --height-header: 8vw;
-}
-
-html{
-    font-size: 0.9vw;
-}
-
-h1 {
-    font-size: 1.5rem;
-    padding: 1.3rem;
-}
-
-.filter input {
-    width: 40%;
-}
-
-.btn-group {
-    width: 90%;
-}
-
-.btn {
-    padding: 0.7rem;
-    transition: color 0.3s ease;
-}
-
-.rightpanel {
-    left: var(--width-left);
-}
-
-.desc {
-    padding: 2% 15% 0 0;
-    text-align: left;
-}
-
-#tr-1 {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 0 0.5rem 0;
-    text-align: center;
-}
-
-.thumbnail {
-    width: 40%;
-}
-
 @media (orientation:landscape) {
+    :root {
+        --width-left: 50%;
+        --width-right: 50%;
+        --height-header: 8vw;
+    }
+
+    html{
+        font-size: 0.9vw;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 1.3rem;
+    }
+
+    .filter input {
+        width: 40%;
+    }
+
+    .btn-group {
+        width: 90%;
+    }
+
+    .btn {
+        padding: 0.7rem;
+        transition: color 0.3s ease;
+    }
+
+    .rightpanel {
+        left: var(--width-left);
+    }
+
+    .desc {
+        padding: 2% 15% 0 0;
+        text-align: left;
+    }
+
+    .thumbnail {
+        width: 40%;
+    }
+
+    #tr-1 {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 0 0.5rem 0;
+        text-align: center;
+    }
+
     .back { display: none; }
     .btn-group:hover { background-color: var(--color-darkgray); }
     .linkp:hover { text-decoration: underline; }
@@ -118,10 +118,6 @@ h1 {
         margin-block-end: 0;
         font-size: 1.7rem;
     }
-
-    /* .footer { */
-    /*     color: var(--color-darkgray); */
-    /* } */
 
     .hideinmobile {
         display: none;
