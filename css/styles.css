@@ -5,13 +5,13 @@
         --height-header: 10vw;
     }
 
-    html{
+    html {
         font-size: 0.95vw;
     }
 
     h1 {
         font-size: 1.5rem;
-        padding: 0 0 0.5rem 0;
+        padding: 0 0 0.8rem 0;
     }
 
     .filter input {
@@ -108,6 +108,10 @@
         width: 45%;
     }
 
+    .ranlist {
+        padding-bottom: 20vh;
+    }
+    
     .back {
         display: block;
         position: absolute;

@@ -111,19 +111,6 @@ img {
     transition: opacity 0.3s ease;
 }
 
-#toc {
-    width: 100%;
-    height: calc(100vh - var(--height-header));
-    top: var(--height-header);
-    left: 0;
-    padding-bottom: 10vh;
-    position: absolute;
-    margin: 0;
-    background-color: white;
-    display: block;
-    overflow: auto;
-}
-
 .btn-group {
     display: table;
     margin: 0 auto;
@@ -133,6 +120,18 @@ img {
 
 .hovercolor:hover {
     color: var(--color-red);
+}
+
+.ranlist {
+    height: calc(100vh - var(--height-header));
+    width: 100%;
+    top: var(--height-header);
+    position: absolute;
+    border: none;
+    overflow: auto;
+    display: block;
+    background-color: white;
+    padding-bottom: 2rem;
 }
 
 .white-background { background-color: white; }
@@ -157,18 +156,6 @@ img {
     position: absolute;
     top: 0;
     background-color: white;
-}
-
-.ranlist {
-    height: calc(100vh - var(--height-header));
-    width: 100%;
-    top: var(--height-header);
-    position: absolute;
-    border: none;
-    overflow: auto;
-    display: block;
-    background-color: white;
-    padding-bottom: 10vh;
 }
 
 .ranlist table {
