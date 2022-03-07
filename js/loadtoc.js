@@ -59,6 +59,7 @@ function loadtoc()
         btnd.className = "btn left";
         btnd.innerHTML = datetxt;
         line.appendChild(btnd);
+        btnd.setAttribute("onclick", "darkendate('"+sm+"'); document.getElementById('rightpanel').style.display = 'block';");
 
         var btnpl = document.createElement('button');
         btnpl.className = "btn right linkp";
@@ -69,7 +70,6 @@ function loadtoc()
         btnpl.setAttribute("onmouseout", "statusbar('&nbsp;')");
         if(count >= 5) { btnpl.style.display = "none"; }
 
-        line.setAttribute("onclick", "darkendate('"+sm+"'); document.getElementById('rightpanel').style.display = 'block';");
         if(count==0) darkendate(sm);
         count = count+1;
     }

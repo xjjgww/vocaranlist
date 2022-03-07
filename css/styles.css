@@ -113,6 +113,7 @@
         position: absolute;
         top: 0.8vh;
         right: 5vw;
+        cursor: pointer;
     }
     .back p {
         margin-block-start: 0;
