@@ -98,7 +98,7 @@ function darkendate(sm) {
         newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
 
-        if(songname.indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#CC6666"; }
+        if(songname.indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#C03945"; }
         // if(songsm in songdbjsonobj) { newtr.style.backgroundImage = "url('"+songdbjsonobj[songsm]["largeThumbnailURL"]+"')" }
     }
 }

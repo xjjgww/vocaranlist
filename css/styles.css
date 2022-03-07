@@ -13,88 +13,117 @@ h1 {
     padding: 1.3rem;
 }
 
-/* -------> Left Panel <------- */
-
-.leftpanel {
-    width: var(--width-left);
-    height: 100%;
-}
-
-.header {
-    height: var(--height-header);
-}
-
 .filter input {
     width: 40%;
-}
-
-/* -------> Left Panel: toc <------- */
-
-#toc {
-    width: 100%;
-    height: calc(100vh - var(--height-header));
-    top: var(--height-header);
-    left: 0;
-    padding-bottom: 2rem;
 }
 
 .btn-group {
     width: 90%;
 }
-.btn-group:hover { background-color: var(--color-darkgray); }
 
 .btn {
     padding: 0.7rem;
     transition: color 0.3s ease;
 }
 
-.hovercolor:hover {
-    color: var(--color-red);
-}
-
-/* -------> Right Panel <------- */
-
 .rightpanel {
-    width: var(--width-right);
-    height: 100%;
     left: var(--width-left);
 }
 
 .desc {
-    width: 100%;
-    height: var(--height-header);
     padding: 2% 15% 0 0;
     text-align: left;
 }
 
-.linkp:hover {
-    text-decoration: underline;
-}
-
-/* -------> Right Panel: ranlist <------- */
-
-.ranlist {
-    height: calc(100vh - var(--height-header));
-    width: 100%;
-    top: var(--height-header);
-}
-
 #tr-1 {
-    position: sticky;
-    top: 0;
-    padding: 0 0 1rem 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0 0.5rem 0;
     text-align: center;
-    background-color: white;
-    z-index: 10;
-}
-
-.songitem:hover {
-    background-color: #eeeeee;
 }
 
 .thumbnail {
     width: 40%;
 }
 
+@media (orientation:landscape) {
+    .back { display: none; }
+    .btn-group:hover { background-color: var(--color-darkgray); }
+    .linkp:hover { text-decoration: underline; }
+    .songitem:hover { background-color: #eeeeee; }
+}
 
-.desc { animation: fadeinr 2s ease 0s 1; }
+@media (orientation:portrait) {
+    :root {
+        --width-left: 100%;
+        --width-right: 100%;
+        --height-header: 18%;
+    }
+
+    html {
+        font-size: 3.3vw;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        padding: 4vh 0 2vh 0;
+    }
+
+    .filter input {
+        width: 60%;
+    }
+
+    .btn-group {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 1rem 0.5rem;
+    }
+
+    .rightpanel {
+        left: 0;
+    }
+
+    .desc {
+        padding: 0;
+        text-align: center;
+    }
+
+    #tr-1 {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 1.2rem;
+        z-index: 10;
+    }
+
+    .thumbnail {
+        width: 45%;
+    }
+
+    .back {
+        display: block;
+        position: absolute;
+        top: 0.8vh;
+        right: 5vw;
+    }
+    .back p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1.7rem;
+    }
+
+    /* .footer { */
+    /*     color: var(--color-darkgray); */
+    /* } */
+
+    .hideinmobile {
+        display: none;
+    }
+}

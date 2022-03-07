@@ -61,12 +61,15 @@ img {
 .right { float: right; }
 
 .leftpanel {
+    width: var(--width-left);
+    height: 100%;
     position: fixed;
     top: 0;
     margin: 0;
 }
 
 .header {
+    height: var(--height-header);
     width: 100%;
     position: absolte;
     top: 0;
@@ -103,6 +106,11 @@ img {
 }
 
 #toc {
+    width: 100%;
+    height: calc(100vh - var(--height-header));
+    top: var(--height-header);
+    left: 0;
+    padding-bottom: 2rem;
     position: absolute;
     margin: 0;
     background-color: white;
@@ -117,6 +125,10 @@ img {
     padding: 0;
 }
 
+.hovercolor:hover {
+    color: var(--color-red);
+}
+
 .white-background { background-color: white; }
 .gray-background { background-color: var(--color-gray); }
 
@@ -126,18 +138,25 @@ img {
 }
 
 .rightpanel {
+    width: var(--width-right);
+    height: 100%;
     position: fixed;
     top: 0;
     margin: 0;
 }
 
 .desc {
+    width: 100%;
+    height: var(--height-header);
     position: absolute;
     top: 0;
     background-color: white;
 }
 
 .ranlist {
+    height: calc(100vh - var(--height-header));
+    width: 100%;
+    top: var(--height-header);
     position: absolute;
     border: none;
     overflow: auto;
@@ -205,4 +224,6 @@ img {
 .header { animation: fadeint 2s ease 0s 1; }
 #toc { animation: fadeinb 2s ease 0s 1; }
 img { animation: fadeinl 2s ease 0s 1; }
+.desct { animation: fadeinr 2s ease 0s 1; }
 #tr-1, .songtext { animation: fadein 2s ease 0s 1; }
+

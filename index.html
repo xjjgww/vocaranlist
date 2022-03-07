@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+  <title>週刊VOCAL CharacterとUTAUランキング</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="vocaran,vocaloid,songrium,xjjgww,週刊VOCALOIDとUTAUランキング">
@@ -12,12 +13,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1b7d79a1ac.js" crossorigin="anonymous"></script>        
-    <script>
-      if (screen.width <= screen.height) {
-          // window.location = "https://xjjgww.github.io/vocaranlist/index_m.html";
-          window.location = "index_m.html";
-      }
-    </script>
     <script data-main="js/scripts.js" src="js/episodelist.js"></script>
     <script data-main="js/scripts.js" src="js/songlist.js"></script>
     <script data-main="js/scripts.js" src="js/songdblist.js"></script>
@@ -25,7 +20,6 @@
     <script src="js/scripts.js"></script>
     <script src="js/loadtoc.js"></script>
   </head>
-  <title>週刊VOCAL CharacterとUTAUランキング</title>
 
   <body>
 
@@ -42,14 +36,15 @@
       <div id="clipboard" class="footer">&nbsp;</div>
     </div>
 
-    <div class="rightpanel">
+    <div class="rightpanel hideinmobile" id="rightpanel">
       <div class="desc">
-        The Weekly VOCALOID and UTAU Ranking (<a class="linkp" href="https://dic.nicovideo.jp/a/%E9%80%B1%E5%88%8Avocaloid%E3%81%A8utau%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" target="_blank">週刊VOCALOIDとUTAUランキング</a>), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in <a class="linkp" href="https://www.nicovideo.jp/" target="_blank">Niconico</a> (ニコニコ).
-        This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_blank">nicodb.jp</a>.
+        <div class="hideinmobile desct">The Weekly VOCALOID and UTAU Ranking (<a class="linkp" href="https://dic.nicovideo.jp/a/%E9%80%B1%E5%88%8Avocaloid%E3%81%A8utau%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" target="_blank">週刊VOCALOIDとUTAUランキング</a>), abbreviated to Vocaran (ぼからん), is a record chart tabulating the weekly popularity of Vocaloid and Utau songs in <a class="linkp" href="https://www.nicovideo.jp/" target="_blank">Niconico</a> (ニコニコ).
+          This website is based on <a class="linkp" href="http://nicodb.jp/v/" target="_blank">nicodb.jp</a></div>
+        <div id="tr-1"></div>
+        <div class="back" onclick="document.getElementById('rightpanel').style.display = 'none';"><p>&times</p></div>
       </div>
 
       <div class="ranlist">
-        <div id="tr-1"></div>
         <table id="songlist"></table>
       </div>
 
