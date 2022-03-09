@@ -182,6 +182,9 @@ img {
     text-decoration: none;
     color: inherit;
 }
+.songtext p {
+    display: inline;
+}
 
 .footer {
     width: 100%;
