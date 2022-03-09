@@ -36,6 +36,7 @@ function myfilter() {
         else { lines[i].style.display = "none"; }
     }
     altercolor();
+    searchmatch();
 }
 
 function copylink(str, noti) {
@@ -87,20 +88,18 @@ function darkendate(sm) {
         var newtda = document.createElement("a");
         newtda.id = 'tda'+i;
         newtda.className = "songtext";
-        var songname = songjsonobj[sm][i]['title']+'<br><i class="fa-solid fa-user"></i> ';
+        var songname = '<p class="info">'+songjsonobj[sm][i]['title']+'</p></br><i class="fa-solid fa-user"></i> ';
         if(songsm in songdbjsonobj)
-            songname += songdbjsonobj[songsm]['owner'];
-        songname += '<br><i class="fa-solid fa-upload"></i> ';
+            songname += '<p class="info">'+songdbjsonobj[songsm]['owner']+'</p></br>';
+        songname += '<i class="fa-solid fa-upload"></i> ';
         if(songsm in songdbjsonobj)
-            songname += songdbjsonobj[songsm]['postedDateTime'];
+            songname += '<p class="info">'+songdbjsonobj[songsm]['postedDateTime']+'</p></br>';
         newtda.innerHTML = songname;
         newtda.href = "https://www.nicovideo.jp/watch/"+songsm;
         newtda.setAttribute('target', '_blank');
         newtd.appendChild(newtda);
-
-        if(songname.indexOf(input) > -1 && input != '') { newtda.style.color = "white"; newtda.style.backgroundColor = "#C03945"; }
-        // if(songsm in songdbjsonobj) { newtr.style.backgroundImage = "url('"+songdbjsonobj[songsm]["largeThumbnailURL"]+"')" }
     }
+    searchmatch();        
 }
 function fadedate(sm) {
     document.getElementById('d'+sm).style.opacity = "0.8";
@@ -119,4 +118,20 @@ function goback() {
     document.getElementById('ranlist').style.display = "none";
     document.getElementById('back').style.display = "none";
     document.getElementById('filtergroup_m').style.display = "block";
+}
+
+function searchmatch() {
+    var input = document.getElementById('filterinput').value;
+    var songname = document.getElementsByClassName('info');
+    var matchstyle = 'style="color: white; background-color: #C03945;"';
+    for(let i = 0;i < songname.length; i++)
+    {
+        var ss = songname[i];
+        var songtext = ss.innerHTML;
+        songtext = songtext.replaceAll('<a '+matchstyle+'>', '');
+        songtext = songtext.replaceAll('</a>', '');
+        if(input != '')
+            songtext = songtext.replaceAll(input, '<a '+matchstyle+'>' + input + '</a>');
+        ss.innerHTML = songtext;
+    }
 }
