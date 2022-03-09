@@ -12,8 +12,6 @@ print('\033[33;1m\
 \033[0m')
 
 urllist = ['https://www.nicovideo.jp/tag/VOCAL_Character%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0?sort=f&order=d']
-# for i in range(1,13):
-#     urllist.append('https://www.nicovideo.jp/tag/週刊VOCALOIDとUTAUランキング?sort=f&order=d&page='+str(i))
 
 mylist = {}
 with open('../json/episodelist.json') as json_file:

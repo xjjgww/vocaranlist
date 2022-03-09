@@ -30,7 +30,7 @@ function myfilter() {
         {
             var songsm = songjsonobj[sm][jitem]["id"];
             findmatch += (' '+songjsonobj[sm][jitem]["alt"]);
-            if(songsm in songdbjsonobj) { findmatch += (' '+songdbjsonobj[songsm]["owner"]); }
+            if(songsm in songdbjsonobj) { findmatch += (' '+songdbjsonobj[songsm]["owner"]+' '+songdbjsonobj[songsm]['postedDateTime']); }
         }
         if(idd.indexOf(input) > -1 || findmatch.indexOf(input) > -1) { lines[i].style.display = ""; }
         else { lines[i].style.display = "none"; }
@@ -123,7 +123,7 @@ function goback() {
 function searchmatch() {
     var input = document.getElementById('filterinput').value;
     var songname = document.getElementsByClassName('info');
-    var matchstyle = 'style="color: white; background-color: #C03945;"';
+    var matchstyle = 'class="match"';
     for(let i = 0;i < songname.length; i++)
     {
         var ss = songname[i];

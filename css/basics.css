@@ -1,13 +1,16 @@
 :root {
     --color-default: black;
-    --color-red: #C03945;
+    --color-red: #df0909;
     --color-gray: #f9f9f9;
     --color-darkgray: #f0f0f0;
+    --color-yellow: #FFF200;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
 }
 
 html{
@@ -184,6 +187,10 @@ img {
 }
 .songtext p {
     display: inline;
+}
+.songtext .match {
+    background-color: var(--color-yellow);
+    font-weight: 500;
 }
 
 .footer {
