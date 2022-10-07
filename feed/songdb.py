@@ -35,6 +35,11 @@ def getvideo(sm):
     dataapi= re.sub(r"\"description\":.+?\"count\":{", "\"count\":{", dataapi)
     # print(dataapi)
 
+    try:
+        json.loads(dataapi)
+    except ValueError as e:
+        return mylist
+
     mylist = {
         "title": "",
         "thumbnailURL": "",
@@ -44,7 +49,7 @@ def getvideo(sm):
         "ownerid": "",
         "ownericon": ""
         }
-    tmp = json.loads(dataapi)
+
     if "video" in json.loads(dataapi):
         jvideo = json.loads(dataapi)['video'] # dict
         # print(jvideo)
@@ -109,6 +114,9 @@ for s in data: # dict
                 songretry += 1
                 if retry>=retries: print("\033[31;1m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
                 else: print("\033[31m>> Retry "+str(retry)+"\033[0m\r", end='', flush=True)
+            elif getlist == {}:
+                print("\033[31m>> Bad json: "+sm+"\033[0m")
+                break
             else:
                 outputdict[sm] = getlist
                 if sm in deadsm: del deadsm[sm]
