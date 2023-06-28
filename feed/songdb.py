@@ -48,7 +48,7 @@ def getvideo(sm):
         "owner": "",
         "ownerid": "",
         "ownericon": ""
-        }
+    }
 
     if "video" in json.loads(dataapi):
         jvideo = json.loads(dataapi)['video'] # dict
@@ -125,11 +125,11 @@ for s in data: # dict
                 break
         if retry==retries: deadsm[sm] = 1
         count += 1 # count
-    
+        
 sorted_outputdict = {}
 for s in sorted(outputdict):
     sorted_outputdict[s] = outputdict[s]
-        
+    
 with open('../json/songdb.json', 'w') as outfile:
     json.dump(sorted_outputdict, outfile, indent=2)
 with open('deadlist.json', 'w') as outfile:
