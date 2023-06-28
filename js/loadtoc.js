@@ -31,7 +31,7 @@ function loadtoc()
 
     var btnvn = document.createElement('button');
     btnvn.className = "btn left hovercolor hideinmobile";
-    btnvn.innerHTML = '<i class="fa-regular fa-clone"></i>';
+    btnvn.innerHTML = '<i class="fa-regular fa-clipboard"></i>';
     line.appendChild(btnvn);
     btnvn.setAttribute("onclick", "copylink('"+sm+"', 'the sm #')");
     btnvn.setAttribute("onmouseover", "statusbar('https://www.nicovideo.jp/watch/"+sm+"')");
@@ -48,7 +48,7 @@ function loadtoc()
 
     var btnvs = document.createElement('button');
     btnvs.className = "btn left hovercolor hideinmobile";
-    btnvs.innerHTML = '<i class="fa-regular fa-clone"></i>';
+    btnvs.innerHTML = '<i class="fa-regular fa-clipboard"></i>';
     line.appendChild(btnvs);
     btnvs.setAttribute("onclick", "copylink('http://songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp%252Frss%252F"+sm+"', 'the songrium link')");
     btnvs.setAttribute("onmouseover", "statusbar('songrium.jp/map/#!/playlist?type=feed&feed_uri=nicodb.jp//rss//"+sm+"')");
