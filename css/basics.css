@@ -105,7 +105,7 @@ img {
     position: relative;
     top: 0;
     left: 0;
-    /* background-color: white; */
+    background-color: var(--color-back);
     z-index: 2;
 }
 
@@ -151,7 +151,7 @@ img {
     border: none;
     overflow: auto;
     display: block;
-    /* background-color: white; */
+    background-color: var(--color-back);
     padding-bottom: 2rem;
 }
 
@@ -172,7 +172,7 @@ i.clipb:hover { opacity: 0.6; }
     position: absolute;
     top: 0;
     margin: 0;
-    /* background-color: white; */
+    background-color: var(--color-back);
     z-index: 3;
 }
 
@@ -181,7 +181,7 @@ i.clipb:hover { opacity: 0.6; }
     height: var(--height-header);
     position: absolute;
     top: 0;
-    /* background-color: white; */
+    background-color: var(--color-back);
 }
 
 .ranlist table {
