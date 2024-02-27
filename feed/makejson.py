@@ -22,9 +22,11 @@ for url in urllist:
     r = session.get(url)
     # seltit = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > p > a'
     # seldes = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent > div.wrap > p.itemDescription'
-    sel = 'body > div.BaseLayout > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent'
+    sel = 'body > div.BaseLayout > div.BaseLayout-container > div.BaseLayout-contents > div.container.columns.column700-300 > div > div.column.main > div.contentBody.video.uad.videoList.videoList01 > ul:nth-child(2) > li > div.itemContent'
 
+    # print(r.content)
     vresults = r.html.find(sel)
+    # print(vresults)
 
     for vresult in vresults:
         if len(vresult.find('a')) <= 0 or len(vresult.find('p.itemDescription')) <= 0: continue
