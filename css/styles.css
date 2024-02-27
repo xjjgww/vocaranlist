@@ -44,7 +44,7 @@
     .back { display: none; }
     .btn-group:hover { background-color: var(--color-darkgray); }
     .linkp:hover { text-decoration: underline; }
-    .songitem:hover { background-color: #eeeeee; }
+    .songitem:hover { background-color: var(--color-gray); }
 }
 
 @media (orientation:portrait) {

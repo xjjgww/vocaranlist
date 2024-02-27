@@ -1,9 +1,10 @@
 :root {
-    --color-default: black;
-    --color-red: #df0909;
-    --color-gray: #f9f9f9;
-    --color-darkgray: #f0f0f0;
-    --color-yellow: #FFF200;
+    --color-back: #455C7B;
+    --color-gray: #405672;
+    --color-default: #F4E0E5;
+    --color-red: #FFBC67;
+    --color-darkgray: #685C79;
+    --color-yellow: #CD6BA3;
 }
 
 * {
@@ -17,7 +18,17 @@ html{
     height: 100%;
     width: 100%;
     color: var(--color-default);
+    background-color: var(--color-back);
     overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    background: var(--color-back);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-darkgray);
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
 }
 
 body {
@@ -27,7 +38,7 @@ body {
     border: none;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: var(--color-back);
 }
 
 .header .middle {
@@ -60,6 +71,13 @@ button {
 input {
     font-family: inherit;
     font-size: inherit;
+    border: 1px solid var(--color-darkgray);
+    background-color: var(--color-gray);
+    color: var(--color-red);
+}
+::placeholder {
+  color: var(--color-red);
+  opacity: 0.5; 
 }
 
 img {
@@ -67,7 +85,6 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    /* opacity: 90%; */
 }
 
 .left { float: left; }
@@ -88,7 +105,7 @@ img {
     position: relative;
     top: 0;
     left: 0;
-    background-color: white;
+    /* background-color: white; */
     z-index: 2;
 }
 
@@ -99,7 +116,6 @@ img {
 .filter input {
     outline: none;
     border-radius: 0.3rem;
-    border: 1px solid #999;
     display: inline;
     vertical-align: middle;
     padding-left: 0.7rem;
@@ -135,11 +151,11 @@ img {
     border: none;
     overflow: auto;
     display: block;
-    background-color: white;
+    /* background-color: white; */
     padding-bottom: 2rem;
 }
 
-.white-background { background-color: white; }
+.white-background { background-color: var(--color-back); }
 .gray-background { background-color: var(--color-gray); }
 
 .linkp {
@@ -147,13 +163,16 @@ img {
     text-decoration: none;
 }
 
+i.clipb { font-size: 0.8em; opacity: 0.1; }
+i.clipb:hover { opacity: 0.6; }
+
 .rightpanel {
     width: var(--width-right);
     height: 100%;
     position: absolute;
     top: 0;
     margin: 0;
-    background-color: white;
+    /* background-color: white; */
     z-index: 3;
 }
 
@@ -162,7 +181,7 @@ img {
     height: var(--height-header);
     position: absolute;
     top: 0;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .ranlist table {
@@ -198,7 +217,7 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: var(--color-back);
     text-align: center;
     z-index: 10;
 }
